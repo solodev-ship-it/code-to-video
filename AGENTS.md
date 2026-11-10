@@ -1,9 +1,15 @@
 # Instructions for Codex and future AI coding agents
 
+## Workspace control plane
+
+This public repository may sit beside a private sibling, `../development-control/`. When `../development-control/RESUME.md` exists, read it before choosing the next task. That file points at the structured state and the active milestone. The sibling is outside this repository. When it is absent, follow this file and `docs/ROADMAP.md` only. Do not create `development-control` inside this repository.
+
+Rules in this file still apply to framework code. A parent `AGENTS.md` above this Git root is not loaded by agents that bind to the repository root. Grok and Codex use this file. Do not add a project `CLAUDE.md` unless it imports this file: Claude Code skips `AGENTS.md` when a project `CLAUDE.md` exists in the working directory or a parent.
+
 ## Required context
 
 - Read `docs/CODE_TO_VIDEO_BLUEPRINT.md` and `docs/ARCHITECTURE.md` before implementing features. Read `docs/ROADMAP.md` for the current gate.
-- Phase 3D.2 authorized icons/Dynamic Island, Phase 3D.3 authorized data visualizations, and the later Phase 3D.4A request authorized only bounded clay materials on top of Phase 3D.1 surfaces/Phase 3C reliability. Read `docs/ICONS_AND_DYNAMIC_ISLAND.md`, `docs/ADVANCED_SURFACES.md`, `docs/DATA_VISUALIZATION.md`, and `docs/CLAY_MATERIALS.md` for APIs/evidence. Human visual baseline approval remains pending. Phase 3D.4B authorizes bounded external media compositing and cinematic effects; read docs/CINEMATIC_EFFECTS.md. Complete templates, further Phase 3D work, general 3D, AI automation and external-project storage remain out of scope. Never claim a planned capability is implemented, exported, tested, or runnable.
+- Phase 3D.2 authorized icons/Dynamic Island, Phase 3D.3 authorized data visualizations, and the later Phase 3D.4A request authorized only bounded clay materials on top of Phase 3D.1 surfaces/Phase 3C reliability. Read `docs/ICONS_AND_DYNAMIC_ISLAND.md`, `docs/ADVANCED_SURFACES.md`, `docs/DATA_VISUALIZATION.md`, and `docs/CLAY_MATERIALS.md` for APIs/evidence. Human visual baseline approval remains pending. Phase 3D.4B authorizes bounded external media compositing and cinematic effects; read docs/CINEMATIC_EFFECTS.md. Without the sibling control plane, complete templates, further Phase 3D work, general 3D, AI automation, and external-project storage remain out of scope. When the sibling state marks a milestone AUTHORIZED or IN_PROGRESS, that status is the scope boundary. Never claim a planned capability is implemented, exported, tested, or runnable.
 - Work in small, testable phases. Do not advance beyond the authorized task or milestone without approval.
 
 ## Architecture and implementation

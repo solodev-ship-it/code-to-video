@@ -1,0 +1,8 @@
+---
+description: Look for the sibling development-control plane before choosing a milestone
+alwaysApply: true
+---
+
+Follow `AGENTS.md` in this repository. When `../development-control/RESUME.md` exists, read it before choosing work. That sibling is outside this public repository. If it is missing, use `docs/ROADMAP.md` and do not create the directory here.
+
+Do not start a milestone marked PROPOSED. Do not treat tests as human approval. Do not approve or replace visual baselines unless the user explicitly asks.

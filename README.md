@@ -236,3 +236,15 @@ Read the [blueprint](docs/CODE_TO_VIDEO_BLUEPRINT.md), [architecture](docs/ARCHI
 No framework license has been selected; “open” describes the intended direction, not a license grant. Review applicable [Remotion terms](https://www.remotion.dev/docs/license), dependency terms, and eventual asset/font rights before distribution or commercial use.
 
 Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](docs/CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.
+
+## Development Workflow
+
+Maintainers who keep this repository beside the private `development-control` directory use that directory for AI-assisted development. This framework stays usable without it. External contributors and framework users do not need that directory.
+
+A maintainer session opened inside this repository can start with:
+
+```text
+Read ../development-control/RESUME.md, follow its instructions, inspect the current project state, and continue the next authorized development task. Update progress documentation when finished.
+```
+
+If that sibling file is absent, use this README, [AGENTS.md](AGENTS.md), the [blueprint](docs/CODE_TO_VIDEO_BLUEPRINT.md), the [architecture](docs/ARCHITECTURE.md), and the [roadmap](docs/ROADMAP.md). Follow [AGENTS.md](AGENTS.md) for approvals. Do not approve visual baselines automatically.

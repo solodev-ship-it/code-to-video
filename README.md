@@ -6,6 +6,10 @@ A modular, AI-assisted video production framework being built with **TypeScript,
 
 The optional local CLI now creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. Start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). The package remains private and unpublished; visual review is pending.
 
+**End-to-end QA:** `npm run qa:e2e` installs the lockfile in an isolated source copy, edits/renders a standalone sample, verifies timing/full decode and exact frame repeats, checks four specific CLI rejections, then runs `qa:all`. It keeps a nonzero exit when visual references are unapproved; no baseline is approved automatically. See [reproduction and evidence](docs/END_TO_END_QA.md). Allow several GiB of free disk space and provision the browser first.
+
+Technical acceptance is complete; human review is pending. The aggregate continuation now reaches comparison and is blocked only by 14 unapproved visual baselines, not the earlier disk-space failure.
+
 Version 1 manifests, contained local assets, theme binding, literal Studio registrations and an external-project MP4 path are implemented. The fifteen existing showcases remain; selected project compositions are added through `CODE_TO_VIDEO_PROJECT`. See [Independent project guide](docs/PROJECT_INFRASTRUCTURE.md) for commands, source contracts and technical evidence. The sample and earlier visual candidates await human review.
 
 **Retained clay materials:** bounded, theme-aware clay appearance data; `VideoClaySurface`, `VideoClayCard`, and `VideoClayShape`; frame-driven reveal, float, press and depth motion; and one 9-second `ClaymorphismShowcase` (**fourteen compositions total**). See [Clay materials](docs/CLAY_MATERIALS.md) for APIs, 2.5D limits and candidate renders. Human visual approval remains pending.

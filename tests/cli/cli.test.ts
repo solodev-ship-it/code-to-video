@@ -97,7 +97,8 @@ test('render rejects symlink parents leading into tracked framework source or da
 }));
 test('unset host retains original entry and public directory configuration',async()=>{
   const launch=await prepareProjectCommand({frameworkRoot,mode:'compositions',args:[]});
-  assert.deepEqual(launch.args,['compositions',path.join(frameworkRoot,'apps/studio/src/index.ts')]);
+  const browser=process.env.REMOTION_BROWSER_EXECUTABLE;
+  assert.deepEqual(launch.args,['compositions',path.join(frameworkRoot,'apps/studio/src/index.ts'),...(browser ? [`--browser-executable=${path.resolve(browser)}`] : [])]);
   assert.equal(launch.cwd,path.join(frameworkRoot,'apps/studio'));
 });
 test('shared host checks composition and output before rendering',async()=>withTemp(async root=>{
@@ -108,4 +109,15 @@ test('shared host checks composition and output before rendering',async()=>withT
 }));
 test('CLI error path preserves structured cause through nonzero command outcome',async()=>{
   const {main}=await import('../../scripts/cli.ts');await assert.rejects(main(['render','missing','TitleCard'],frameworkRoot),/requires --output/);
+});
+test('shared host forwards an explicitly provisioned browser to the Remotion CLI',async()=>{
+  const previous=process.env.REMOTION_BROWSER_EXECUTABLE;
+  try {
+    process.env.REMOTION_BROWSER_EXECUTABLE=path.resolve('provisioned-browser');
+    const launch=await prepareProjectCommand({frameworkRoot,mode:'compositions',args:[]});
+    assert(launch.args.includes(`--browser-executable=${path.resolve('provisioned-browser')}`));
+  } finally {
+    if(previous===undefined) delete process.env.REMOTION_BROWSER_EXECUTABLE;
+    else process.env.REMOTION_BROWSER_EXECUTABLE=previous;
+  }
 });

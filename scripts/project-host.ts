@@ -94,7 +94,12 @@ export async function prepareProjectCommand(command: ProjectCommand) {
     await writeFile(config,`import {Config} from '@remotion/cli/config';\nConfig.setPublicDir(${JSON.stringify(publicDir)});\nConfig.overrideWebpackConfig(c => ({...c, resolve: {...c.resolve, modules: [${JSON.stringify(path.join(root,'node_modules'))}, ...(c.resolve?.modules ?? [])]}}));\n`,{flag:'wx'});
     console.log(`Validated project ${project.manifest.id}; generated entry ${entry}`);
   }
-  return {executable: path.join(root,'node_modules/.bin/remotion'), args:[mode,entry,...extra,...(config ? ['--config',config] : [])], cwd:path.join(root,'apps/studio')};
+  // The Remotion CLI does not read this QA/setup environment variable itself.
+  // Forward it explicitly so an isolated checkout can use a provisioned browser
+  // instead of silently acquiring another one during the render command.
+  const browser = process.env.REMOTION_BROWSER_EXECUTABLE;
+  return {executable: path.join(root,'node_modules/.bin/remotion'), args:[mode,entry,...extra,...(config ? ['--config',config] : []),
+    ...(browser ? [`--browser-executable=${path.resolve(browser)}`] : [])], cwd:path.join(root,'apps/studio')};
 }
 export async function runProjectCommand(command: ProjectCommand): Promise<number> {
   const launch = await prepareProjectCommand(command);

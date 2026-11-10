@@ -49,6 +49,7 @@
     "build:cli": "tsc -p scripts/cli/tsconfig.build.json",
     "cli": "node bin/code-to-video.mjs",
     "qa:templates": "npm run build:cli && node --experimental-strip-types scripts/qa/templates.ts",
+    "qa:e2e": "node --experimental-strip-types scripts/qa/e2e.ts",
     "prepack": "npm run build:cli"
   },
   "devDependencies": {

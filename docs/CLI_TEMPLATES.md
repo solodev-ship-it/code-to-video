@@ -2,6 +2,8 @@
 
 The optional local `code-to-video` CLI creates an independent schema version 1 project, opens it in Remotion Studio and renders an MP4. Two authored templates are included. The original fifteen showcases and npm Studio/render workflows remain available. This is local working software; registry publishing waits for the release milestone.
 
+The later [end-to-end gate](END_TO_END_QA.md) installs from the lockfile in a clean source copy and renders an edited external sample. Host commands now forward an explicit `REMOTION_BROWSER_EXECUTABLE` to Remotion CLI; upstream CLI does not read that variable itself. Configure it during setup to reuse a provisioned browser. Without it, normal CLI browser-cache/setup behavior is unchanged.
+
 ## Use the local checkout
 
 Use the existing Node 24.7+/npm 11 installation and framework dependencies/browser. Build the Node entry once, and rebuild it after editing CLI/host code:

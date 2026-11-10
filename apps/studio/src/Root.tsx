@@ -1,3 +1,4 @@
+import {AdvancedEffectsShowcase} from './AdvancedEffectsShowcase.tsx';
 import {Composition} from 'remotion';
 import {CodeToVideoIntro} from './CodeToVideoIntro';
 import {getDurationInFrames, introProject} from './project.ts';
@@ -10,6 +11,10 @@ import {GlassmorphismShowcase} from './GlassmorphismShowcase';
 import {validateGlassProps} from './glass-props.ts';
 import {DynamicIslandShowcase} from './DynamicIslandShowcase';
 import {validateIslandShowcaseProps} from './island-props.ts';
+import {DataVisualizationShowcase} from './DataVisualizationShowcase';
+import {validateComponentProps as validateDataVisualizationProps} from './component-props.ts';
+import {ClaymorphismShowcase} from './ClaymorphismShowcase';
+import {validateClayShowcaseProps} from './clay-props.ts';
 
 export function RemotionRoot() {
   return (
@@ -67,6 +72,18 @@ export function RemotionRoot() {
         width={1920} height={1080} fps={30} durationInFrames={330}
         defaultProps={{schemaVersion: 1, brandId: 'aurora-finance', styleId: 'cinematic', motionId: 'elegant', reducedMotion: false, fixture: 'showcase', diagnostics: false}}
         calculateMetadata={({props}) => ({props: validateIslandShowcaseProps(props)})} />
+      <Composition id="DataVisualizationShowcase" component={DataVisualizationShowcase}
+        width={1920} height={1080} fps={30} durationInFrames={450}
+        defaultProps={{schemaVersion: 1, brandId: 'aurora-finance', styleId: 'cinematic', motionId: 'elegant', reducedMotion: false}}
+        calculateMetadata={({props}) => ({props: validateDataVisualizationProps(props)})} />
+      <Composition id="ClaymorphismShowcase" component={ClaymorphismShowcase}
+        width={1920} height={1080} fps={30} durationInFrames={270}
+        defaultProps={{schemaVersion: 1, brandId: 'aurora-finance', styleId: 'cinematic', motionId: 'elegant', reducedMotion: false, fixture: 'showcase'}}
+        calculateMetadata={({props}) => ({props: validateClayShowcaseProps(props)})} />
+      <Composition id="AdvancedEffectsShowcase" component={AdvancedEffectsShowcase}
+        width={1920} height={1080} fps={30} durationInFrames={90}
+        defaultProps={{schemaVersion: 1, brandId: 'aurora-finance', styleId: 'cinematic', motionId: 'elegant', reducedMotion: false}}
+        calculateMetadata={({props}) => ({props: validateComponentProps(props)})} />
     </>
   );
 }

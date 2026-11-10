@@ -16,7 +16,7 @@ assert.equal(old.canUpdate, false);
 assert.match(old.reason, /Could not find or extract defaultProps/);
 
 for (const id of ['ThemeShowcase', 'ThemeAuroraCinematic', 'ThemeAuroraMinimal', 'ThemeEmberCinematic', 'ThemeEmberMinimal',
-  'ComponentShowcase', 'ComponentAuroraCinematic', 'ComponentEmberMinimal', 'ReliabilityFixture', 'GlassmorphismShowcase', 'DynamicIslandShowcase']) {
+  'ComponentShowcase', 'ComponentAuroraCinematic', 'ComponentEmberMinimal', 'ReliabilityFixture', 'GlassmorphismShowcase', 'DynamicIslandShowcase', 'DataVisualizationShowcase', 'ClaymorphismShowcase', 'AdvancedEffectsShowcase']) {
   const result = CodemodsInternals.computeCanUpdateDefaultPropsFromContent(source, id);
   assert.equal(result.canUpdate, true, `${id}: ${result.reason ?? 'cannot edit defaults'}`);
   const project = {rootDir, files: {[file]: source}};
@@ -29,4 +29,4 @@ for (const id of ['ThemeShowcase', 'ThemeAuroraCinematic', 'ThemeAuroraMinimal',
   assert.deepEqual(after.currentDefaultProps, props);
 }
 assert.equal(readFileSync(file, 'utf8'), source, 'Save-path checks must not modify real source.');
-console.log('PASS: reproduced old dynamic-registration warning; all eleven literal theme/component/QA/material registrations support extraction and in-memory default-props saving. No source files were written.');
+console.log('PASS: reproduced old dynamic-registration warning; all fourteen literal theme/component/QA/material/chart/clay registrations support extraction and in-memory default-props saving. No source files were written.');

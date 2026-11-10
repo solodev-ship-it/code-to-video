@@ -1,0 +1,5 @@
+Original procedural demonstration artwork authored for Code to Video.
+Dedicated to the public domain under CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+Reproduce: node scripts/qa/generate-cinematic-assets.mjs (requires absent output files).
+These are analytic 2.5D shaded rings, not renders from a 3D engine.

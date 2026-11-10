@@ -1,5 +1,9 @@
 # Component System — Phase 3B
 
+Phase 3D.4A adds a separate bounded clay appearance resolver and three video-native clay components without changing existing surface/glass APIs. Current props, motion and limits: [CLAY_MATERIALS.md](CLAY_MATERIALS.md).
+
+Phase 3D.3 adds independent, theme-aware data visualization components and pure chart math without changing the Phase 3B primitives. Current APIs and accuracy bounds: [DATA_VISUALIZATION.md](DATA_VISUALIZATION.md).
+
 Phase 3D.2 adds catalog-independent icons, optional static icon adapters, a deterministic Dynamic Island container and composable information presentations. Existing public defaults remain unchanged. Current APIs/evidence: [ICONS_AND_DYNAMIC_ISLAND.md](ICONS_AND_DYNAMIC_ISLAND.md); historical foundation scope below is preserved.
 
 Phase 3D.1 adds `VideoGlassSurface` and optional `appearance`, `filterMode`, `animationState` on `VideoSurface` (panel only) and `VideoCard`, preserving all existing default paths. Pure appearance/preset/animation data lives at `@code-to-video/ui/surfaces`. See [ADVANCED_SURFACES.md](ADVANCED_SURFACES.md) for the implemented API, renderer evidence, fallback and limitations. Historical foundation scope below is not a claim that these additions were present in Phase 3B.

@@ -2,9 +2,13 @@
 
 A modular, AI-assisted video production framework being built with **TypeScript, React, and Remotion** for documentaries, explainers, product showcases, corporate videos, and social content.
 
-## Current status — Phase 3D.2: icons and Dynamic Island
+## Current status — Phase 3D.4A: clay material and depth
 
-**New:** catalog-independent `VideoIcon`, optional Lucide/Phosphor adapters, custom paths, deterministic icon effects, `VideoDynamicIsland` and composable information presentations. `DynamicIslandShowcase` adds one 11-second composition; all earlier eleven remain (**twelve total**). See [Icons and Dynamic Island](docs/ICONS_AND_DYNAMIC_ISLAND.md) for APIs, licensing, targeted render evidence and unapproved screenshots.
+**New:** bounded, theme-aware clay appearance data; `VideoClaySurface`, `VideoClayCard`, and `VideoClayShape`; frame-driven reveal, float, press and depth motion; and one 9-second `ClaymorphismShowcase` (**fourteen compositions total**). See [Clay materials](docs/CLAY_MATERIALS.md) for APIs, 2.5D limits and candidate renders. Human visual approval remains pending.
+
+**Phase 3D.3 retained:** seven deterministic chart, timeline, progress and number components plus a 15-second `DataVisualizationShowcase`. The earlier twelve compositions remain (**thirteen total**). See [Data visualization](docs/DATA_VISUALIZATION.md) for data rules, APIs and targeted evidence. Showcase values are illustrative, not real-world statistics.
+
+**Phase 3D.2 retained:** catalog-independent `VideoIcon`, optional Lucide/Phosphor adapters, custom paths, deterministic icon effects, `VideoDynamicIsland` and composable information presentations. `DynamicIslandShowcase` adds one 11-second composition; all earlier eleven remain (**twelve total**). See [Icons and Dynamic Island](docs/ICONS_AND_DYNAMIC_ISLAND.md) for APIs, licensing, targeted render evidence and unapproved screenshots.
 
 Focused finalization has corrected the glass showcase's ordinary label contrast without changing global themes. The [human-review handoff](docs/PHASE_3D1_FINALIZATION.md) documents the original 14 preserved candidates, corrected glass screenshots, contact sheets, SHA-256 manifest and guarded approval commands. All images remain unapproved.
 
@@ -12,7 +16,7 @@ Focused finalization has corrected the glass showcase's ordinary label contrast 
 
 **Pending checkpoint:** visual baseline approval. Candidate capture and exact repeat pixels are **not** human approval; `qa:visual:compare` and `qa:all` intentionally fail while references are unapproved/missing. No real baselines have been approved automatically.
 
-**Still not implemented:** external video-project loading, complete scene templates, comprehensive UI, caption/audio production, AI workflows, Dynamic Island, dashboard or a published custom CLI. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
+**Still not implemented:** external video-project loading, complete scene templates, comprehensive UI, caption/audio production, AI workflows, dashboard or a published custom CLI. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
 
 ## Prerequisites (macOS)
 
@@ -230,3 +234,5 @@ Next: human review and explicit approval of candidate baselines, then a narrowly
 Read the [blueprint](docs/CODE_TO_VIDEO_BLUEPRINT.md), [architecture](docs/ARCHITECTURE.md), [roadmap](docs/ROADMAP.md), and [agent instructions](AGENTS.md). Git currently resolves to an enclosing repository; no project-local Git initialization or remote was created. Decide ownership explicitly before committing.
 
 No framework license has been selected; “open” describes the intended direction, not a license grant. Review applicable [Remotion terms](https://www.remotion.dev/docs/license), dependency terms, and eventual asset/font rights before distribution or commercial use.
+
+Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](docs/CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.

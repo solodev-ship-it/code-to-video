@@ -3,7 +3,7 @@
 ## Required context
 
 - Read `docs/CODE_TO_VIDEO_BLUEPRINT.md` and `docs/ARCHITECTURE.md` before implementing features. Read `docs/ROADMAP.md` for the current gate.
-- Phase 3D.2 explicitly authorizes icons and Dynamic Island on top of Phase 3D.1 surfaces/Phase 3C reliability. Read `docs/ICONS_AND_DYNAMIC_ISLAND.md` and `docs/ADVANCED_SURFACES.md` for bounded APIs/evidence. Human visual baseline approval remains pending. Complete templates, Phase 3D.3 data visualizations, clay materials, AI automation and external-project storage remain out of scope. Never claim a planned capability is implemented, exported, tested, or runnable.
+- Phase 3D.2 authorized icons/Dynamic Island, Phase 3D.3 authorized data visualizations, and the later Phase 3D.4A request authorized only bounded clay materials on top of Phase 3D.1 surfaces/Phase 3C reliability. Read `docs/ICONS_AND_DYNAMIC_ISLAND.md`, `docs/ADVANCED_SURFACES.md`, `docs/DATA_VISUALIZATION.md`, and `docs/CLAY_MATERIALS.md` for APIs/evidence. Human visual baseline approval remains pending. Phase 3D.4B authorizes bounded external media compositing and cinematic effects; read docs/CINEMATIC_EFFECTS.md. Complete templates, further Phase 3D work, general 3D, AI automation and external-project storage remain out of scope. Never claim a planned capability is implemented, exported, tested, or runnable.
 - Work in small, testable phases. Do not advance beyond the authorized task or milestone without approval.
 
 ## Architecture and implementation

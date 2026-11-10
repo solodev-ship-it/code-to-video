@@ -3,8 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/studio", "packages/themes", "packages/ui"],
-  "engines": {"node": ">=24.7.0 <25", "npm": ">=11 <12"},
+  "workspaces": [
+    "apps/studio",
+    "packages/themes",
+    "packages/ui"
+  ],
+  "engines": {
+    "node": ">=24.7.0 <25",
+    "npm": ">=11 <12"
+  },
   "packageManager": "npm@11.18.0",
   "scripts": {
     "studio": "npm run studio --workspace=@code-to-video/studio",
@@ -24,6 +31,8 @@
     "qa:all": "node --experimental-strip-types scripts/qa/cli.ts all",
     "qa:surfaces": "node --experimental-strip-types scripts/qa/surfaces.ts",
     "qa:island": "node --experimental-strip-types scripts/qa/island.ts",
+    "qa:charts": "node --experimental-strip-types scripts/qa/charts.ts",
+    "qa:clay": "node --experimental-strip-types scripts/qa/clay.ts",
     "check": "npm run typecheck && npm test && npm run test:studio-props",
     "test:frames": "node scripts/check-frames.mjs",
     "test:themes": "node scripts/check-themes.mjs",
@@ -32,7 +41,8 @@
     "render:components:aurora": "npm run render:components:aurora --workspace=@code-to-video/studio",
     "render:components:ember": "npm run render:components:ember --workspace=@code-to-video/studio",
     "render:aurora": "npm run render:aurora --workspace=@code-to-video/studio",
-    "render:ember": "npm run render:ember --workspace=@code-to-video/studio"
+    "render:ember": "npm run render:ember --workspace=@code-to-video/studio",
+    "qa:cinematic": "node --experimental-strip-types scripts/qa/cinematic.ts"
   },
   "devDependencies": {
     "@remotion/bundler": "4.0.541",

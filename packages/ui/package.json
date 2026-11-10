@@ -9,17 +9,25 @@
     "./icons": "./src/icons.ts",
     "./icons/adapters": "./src/icon-adapters.tsx",
     "./island": "./src/island.ts",
+    "./charts": "./src/charts.ts",
+    "./clay": "./src/clay.ts",
     "./surfaces": "./src/surfaces.ts",
     "./fonts": "./src/fonts.ts",
     "./diagnostics": "./src/diagnostics/index.ts",
-    "./diagnostics/react": "./src/diagnostics/LayoutProbe.tsx"
+    "./diagnostics/react": "./src/diagnostics/LayoutProbe.tsx",
+    "./cinematic": "./src/cinematic.ts"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --import ./test-register.mjs --test src/*.test.ts"
   },
-  "dependencies": {"@code-to-video/themes": "0.1.0"},
-  "peerDependencies": {"react": "^19.3.1", "remotion": "4.0.541"},
+  "dependencies": {
+    "@code-to-video/themes": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^19.3.1",
+    "remotion": "4.0.541"
+  },
   "devDependencies": {
     "@types/node": "24.19.2",
     "@types/react": "19.3.0",

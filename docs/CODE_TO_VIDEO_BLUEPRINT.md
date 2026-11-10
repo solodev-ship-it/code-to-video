@@ -2,6 +2,10 @@
 
 ## 1. Delivery status
 
+**Phase 3D.4A update:** explicit user authorization adds a bounded, theme-aware clay 2.5D material system, deterministic motion and one 9-second showcase. Existing APIs and thirteen earlier compositions remain. Public contracts and focused evidence: [CLAY_MATERIALS.md](CLAY_MATERIALS.md). This phase does not implement general 3D, external models, AI, external-project storage or baseline approval.
+
+**Phase 3D.3 update:** explicit user authorization adds deterministic video-native data visualizations and one illustrative showcase to the existing packages. Pure scale/validation utilities, bounded component APIs and focused render evidence are documented in [DATA_VISUALIZATION.md](DATA_VISUALIZATION.md). Thirteen compositions are registered. This work does not approve existing visual baselines or authorize Phase 3D.4/4.
+
 **Phase 3D.2 update:** explicit user authorization added icons, deterministic Dynamic Island and one showcase within the existing packages, preserving the prior eleven compositions (twelve total). Optional icon packages are host-owned, not core UI dependencies. APIs, notices and targeted validation: [ICONS_AND_DYNAMIC_ISLAND.md](ICONS_AND_DYNAMIC_ISLAND.md). Human baseline approval remains pending; Phase 3D.3/4/5 are not authorized by this delivery.
 
 **Phase 3D.1 finalization:** a scene-local informational-label contrast correction and rendered-background regression gate accompany a byte-preserving human-review package. No baseline was approved and no subsequent milestone began. Current handoff: [PHASE_3D1_FINALIZATION.md](PHASE_3D1_FINALIZATION.md).
@@ -102,7 +106,7 @@ Phase 3C extends that API with a versioned immutable manifest, exact required fa
 
 Visual-style presets may coordinate spacing, texture, contrast, borders, and composition rules. Motion presets specify frame-based timing and easing, independent of brand identity. Provide safe-area tokens for multiple aspect ratios and human review for readability and contrast.
 
-Icons should use deterministic SVG paths where possible. Lucide and Phosphor are optional adapters, not simultaneous mandatory dependencies. Web interaction patterns inspired by shadcn must be adapted deliberately for video; focus state, portals, CSS transitions, and event-driven layout are not video animation primitives. Charts must use explicit data and frame-derived animation. A Remotion-native Dynamic Island is a later optional feature, not implemented or required by any starter milestone.
+Icons use deterministic SVG paths where possible. Lucide and Phosphor remain optional adapters rather than mandatory UI dependencies. Web interaction patterns inspired by shadcn must be adapted deliberately for video; focus state, portals, CSS transitions, and event-driven layout are not video animation primitives. Phase 3D.3 charts use explicit data and frame-derived animation. The Phase 3D.2 Dynamic Island is video-native and optional for a minimal starter.
 
 ## 10. Deterministic animation requirements
 
@@ -173,9 +177,11 @@ Use a tiny self-contained sample without external services, keys, or large downl
 | 5 — Assisted production | Manual-first workflow state, approval records, optional agent integration | Missing approvals block progression; edits invalidate approval; no provider needed to render; mock-provider tests cover failure/privacy boundaries |
 | 6 — Release hardening | Profiling, reproducibility evidence, license and security checks, beginner release guide | Measured baseline and budget met; clean onboarding and repeat renders pass; dependency/license review complete; known limitations documented |
 
-Detailed deliverables, dependencies, acceptance tests, and the exact Phase 2 sequence are in [ROADMAP.md](ROADMAP.md). Later features are not implicitly delivered when an earlier phase ends. Optional third-party adapters and Dynamic Island remain separately scoped follow-up work unless explicitly added to a milestone.
+Detailed deliverables, dependencies, acceptance tests, and the exact Phase 2 sequence are in [ROADMAP.md](ROADMAP.md). Later features are not implicitly delivered when an earlier phase ends. Phase 3D.2 explicitly added optional icon adapters and Dynamic Island; Phase 3D.3 explicitly added data visualizations.
 
 Phase 3 is split: **3A** delivers the theme contracts/registry/resolver and showcase. Phase 3A alone does not imply completion of the full Phase 3 gate.
 Phase 3B now implements the focused component/motion foundation and minimal opt-in font loading, without complete templates or bundled-font fixtures. **3C** is recommended for human-approved font fixtures, text/safe-area QA, and reviewed visual regression. The broader Phase 3 gate is not implicitly complete.
 
 Phase 3C now implements the technical reliability mechanisms and supplies candidate images. This does not retroactively approve them or complete human visual review. Explicit user authorization subsequently permitted independent Phase 3D.1 advanced-surface work while retaining the pending baseline checkpoint; no Phase 4 project-storage work is implied.
+
+Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.

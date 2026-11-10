@@ -2,6 +2,10 @@
 
 ## Status and scope
 
+Phase 3D.4A adds pure immutable clay appearance/motion data at `@code-to-video/ui/clay`, three independent React components in the existing UI workspace, one authored Studio showcase, and a focused Node-only render suite. It does not change theme registration, glass, icon, island or chart contracts, and adds no dependency or 3D runtime. Fourteen compositions are registered. See [CLAY_MATERIALS.md](CLAY_MATERIALS.md); visual approval remains pending.
+
+Phase 3D.3 adds pure validated chart math under `@code-to-video/ui/charts`, independent video-native chart/timeline/number components, one authored showcase, and a focused Node-only render check. Theme, surface, island and existing scene contracts remain intact. See [DATA_VISUALIZATION.md](DATA_VISUALIZATION.md). There are thirteen registered compositions; human visual approval remains pending.
+
 Phase 3D.2 adds an app-owned icon registry, optional SVG adapter protocols, pure sequential island timing, and composable island components to the existing UI workspace. Only Studio depends on Lucide/Phosphor and imports selected icon modules directly. The new showcase brings composition count to twelve; no renderer/QA, font or theme contract is replaced. See [ICONS_AND_DYNAMIC_ISLAND.md](ICONS_AND_DYNAMIC_ISLAND.md).
 
 Phase 3D.1 adds advanced surfaces to the existing UI/studio workspaces, following Phase 3C's opt-in rendering reliability and separate Node QA tooling. No workspace is added. `packages/core`, shared project schemas, and production workflows remain placeholders. Interfaces below are **proposed responsibilities or contracts** unless explicitly marked implemented. The [blueprint](CODE_TO_VIDEO_BLUEPRINT.md) defines requirements; the [roadmap](ROADMAP.md) defines delivery gates.
@@ -83,7 +87,7 @@ Shared schema contracts sit below consumers. Rendering must not import agent pro
 - Maintain explicit sub-boundaries for video components, optional web controls, and optional third-party adapters. Create physical subdirectories only when implementation needs them.
 - Implemented boundary: typed visual data, provider-supplied semantic theme tokens, and explicit timing in; deterministic React elements out. Trusted static styles and arbitrary authored React slots preserve custom scene creativity.
 - Phase 3C adds versioned local-font manifests/requirements and an owned loader, plus opt-in text/safe-area diagnostics. Browser measurement code is separate from pure evaluation, and Node capture/comparison code is not part of the UI package.
-- Lucide and Phosphor SVG adapters are candidates; shadcn-inspired styling is not permission to import interactive DOM behavior into video. Future Dynamic Island work is a video-native feature, not a starter requirement.
+- Lucide and Phosphor SVG adapters are now optional Studio-owned imports; shadcn-inspired styling is not permission to import interactive DOM behavior into video. Dynamic Island is video-native and remains optional for a minimal starter.
 
 ### `packages/themes`
 
@@ -136,3 +140,5 @@ JSON is data, not executable code. Custom scenes are trusted TypeScript/React co
 ## Decisions deliberately deferred
 
 npm workspaces, Node 24, pinned dependencies, current developer commands, and the theme package's current source exports are selected and documented. A shared schema library, published-package build/versioning policy, custom CLI syntax, template API, and optional adapters remain deferred. No placeholder package manifests, plugin loaders, distributed queues, cloud requirement, or speculative service layer are introduced.
+
+Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.

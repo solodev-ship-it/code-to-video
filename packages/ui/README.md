@@ -64,3 +64,5 @@ Phase 3D.1 adds `/surfaces` pure immutable appearance/preset resolution and mate
 Phase 3D.2 adds pure `/icons` and `/island` state helpers, optional `/icons/adapters`, `VideoIcon`, `VideoDynamicIsland` and five small information presentations. Generic UI imports no Lucide/Phosphor catalog; only the Studio host installs those optional packages. See [ICONS_AND_DYNAMIC_ISLAND.md](../../docs/ICONS_AND_DYNAMIC_ISLAND.md).
 
 Full foundation APIs, motion behavior, font provenance requirements, extension patterns, Studio default-props investigation, and limitations are in [COMPONENT_SYSTEM.md](../../docs/COMPONENT_SYSTEM.md). Advanced charts, clay materials and complete scene templates are not included.
+
+Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](../../docs/CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.

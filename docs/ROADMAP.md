@@ -2,7 +2,7 @@
 
 ## Status
 
-Phases 1–3B provide the working starter, themes and video-native primitives. Phase 3C's technical rendering-reliability and visual-QA system is implemented and locally validated; **human visual baseline approval remains pending**. Explicit authorization permitted independent Phase 3D.1 surfaces and Phase 3D.2 icons/Dynamic Island without approving those baselines. Phase 3D.3 and Phases 4–6 remain planned. Each phase requires authorization; [the blueprint](CODE_TO_VIDEO_BLUEPRINT.md) is the requirements reference.
+Phases 1–3B provide the working starter, themes and video-native primitives. Phase 3C's technical rendering-reliability and visual-QA system is implemented and locally validated; **human visual baseline approval remains pending**. Explicit authorization permitted independent Phase 3D.1 surfaces, Phase 3D.2 icons/Dynamic Island, Phase 3D.3 data visualizations and Phase 3D.4A clay materials without approving those baselines. Any further Phase 3D work and Phases 4–6 remain planned. Each phase requires authorization; [the blueprint](CODE_TO_VIDEO_BLUEPRINT.md) is the requirements reference.
 
 ## Phase 1 — Foundation
 
@@ -155,6 +155,19 @@ Validation: baseline 167 → **185 passing fast tests**, strict TypeScript, **12
 
 Next: human inspection of the new candidates, then separately authorize Phase 3D.3 data visualizations. No chart framework is delivered here.
 
+### Phase 3D.3 — Data visualizations (implemented; visual review pending)
+
+Explicitly authorized scope: pure validated chart math, semantic theme-aware SVG bar/line/area/donut charts, progress, timeline and numeric display, and one 15-second illustrative showcase. The prior twelve compositions remain; `DataVisualizationShowcase` is the thirteenth. Focused tests and rendering evidence are described in [DATA_VISUALIZATION.md](DATA_VISUALIZATION.md). No AI pipeline, external project loader, or new dependency is added. Existing human visual baseline and new showcase inspection remain pending. Phase 3D.4 is not authorized.
+The later Phase 3D.4A request separately authorizes only clay materials; this historical Phase 3D.3 delivery did not include them.
+
+**Validation — November 10, 2026:** `npm run check` passed strict TypeScript, 200 fast tests and twelve Studio-editable literal registrations. `npm run compositions` found thirteen compositions; Studio served HTTP 200 on localhost:3001. Focused `npm run qa:charts` passed eight stills, four exact repeats, independent out-of-order rendering, progressing bars/line and a fully decoded 450-frame 1080p H.264 MP4. Candidate output and JSON report: ignored `renders/chart-checks/charts-1794300010282-a189ce/`. Automated evidence does not approve the visual baselines or new showcase.
+
+### Phase 3D.4A — Clay material and depth (implemented; visual review pending)
+
+Explicitly authorized scope: bounded immutable clay appearance data, semantic theme lighting, matte highlights/inset/contact shadows, `VideoClaySurface`, `VideoClayCard`, `VideoClayShape`, frame-native reveal/float/press/depth motion, and one 9-second 1080p/30 FPS showcase. The thirteen earlier compositions remain; `ClaymorphismShowcase` is the fourteenth. No new dependency, general 3D engine, model loader, physics, shader engine, AI or external-project storage is introduced. APIs and focused evidence are in [CLAY_MATERIALS.md](CLAY_MATERIALS.md). Human review of new candidates and existing baselines remains pending; further Phase 3D work needs separate authorization.
+
+**Validation — November 10, 2026:** `npm run check` passed strict TypeScript, 206 fast tests and thirteen Studio-editable literal registrations. `npm run compositions` found fourteen compositions; Studio served HTTP 200 on localhost:3002. `npm run qa:clay` passed eight full-HD stills, five exact independent repeats, material/motion/theme differences and a fully decoded 270-frame/9-second H.264 MP4. Candidate/report directory: ignored `renders/clay-checks/clay-1794307625663-436e1c/`. Human visual approval and the aggregate baseline gate remain pending.
+
 ### Baseline review and delivery QA policy (still pending)
 
 **Dependencies:** human review/approval of Phase 3C visual baselines.
@@ -187,4 +200,6 @@ Next: human inspection of the new candidates, then separately authorize Phase 3D
 
 ## Deferred extensions
 
-Optional Lucide/Phosphor/chart adapters, shadcn-inspired web controls, a video-native Dynamic Island, expanded templates, additional AI providers, and cloud rendering require separate scope and acceptance tests. They are not hidden dependencies of the local starter. No dashboard is part of this roadmap's required delivery.
+Lucide/Phosphor adapters and video-native Dynamic Island were added in Phase 3D.2; first-party charts were added in Phase 3D.3. Optional third-party chart adapters, shadcn-inspired web controls, expanded templates, additional AI providers, and cloud rendering require separate scope and acceptance tests. They are not hidden dependencies of the local starter. No dashboard is part of this roadmap's required delivery.
+
+Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.

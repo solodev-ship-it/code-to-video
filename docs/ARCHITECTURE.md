@@ -1,5 +1,9 @@
 # Architecture
 
+**CLI_TEMPLATES update:** an optional compiled local CLI provides safe create, preview and explicit-output MP4 rendering via the shared project host. Two authored theme-aware templates (title-card and three-point explainer) scaffold schema version 1 projects outside the framework. Existing showcases and browser exports remain unchanged; no dependency, AI workflow, upload or publishing was added. Source and compiled package files use an explicit allowlist. Public installation/release and human visual acceptance remain pending. See [CLI_TEMPLATES.md](CLI_TEMPLATES.md).
+
+**PROJECT_INFRASTRUCTURE update:** version 1 external manifests, explicit theme initialization, Node-only realpath containment, bounded asset copying into ignored session caches, separate literal Studio registration and one standalone MP4 path are implemented. Existing fifteen showcases remain unchanged. Browser-safe contracts live in `packages/projects/src`; Node loading stays in `load.ts` and host scripts. This implements the bounded independent-project milestone, not the broader production-media/AI/template proposals described below. See [PROJECT_INFRASTRUCTURE.md](PROJECT_INFRASTRUCTURE.md). Sample and earlier visual review remain pending. Historical boundaries below describe their original phases.
+
 ## Status and scope
 
 Phase 3D.4A adds pure immutable clay appearance/motion data at `@code-to-video/ui/clay`, three independent React components in the existing UI workspace, one authored Studio showcase, and a focused Node-only render suite. It does not change theme registration, glass, icon, island or chart contracts, and adds no dependency or 3D runtime. Fourteen compositions are registered. See [CLAY_MATERIALS.md](CLAY_MATERIALS.md); visual approval remains pending.

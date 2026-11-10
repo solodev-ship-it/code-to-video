@@ -203,3 +203,17 @@ Explicitly authorized scope: bounded immutable clay appearance data, semantic th
 Lucide/Phosphor adapters and video-native Dynamic Island were added in Phase 3D.2; first-party charts were added in Phase 3D.3. Optional third-party chart adapters, shadcn-inspired web controls, expanded templates, additional AI providers, and cloud rendering require separate scope and acceptance tests. They are not hidden dependencies of the local starter. No dashboard is part of this roadmap's required delivery.
 
 Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.
+
+
+## PROJECT_INFRASTRUCTURE — bounded independent projects (technically complete; review pending)
+
+Authorized separately from the broader historical Phase 4 scope. Version 1 manifests, frozen validation, theme binding, asset references/realpath containment, separate literal Studio registrations selected by `CODE_TO_VIDEO_PROJECT`, and one external example MP4 are implemented. Existing fifteen compositions remain; the selected example adds one. Evidence and limits: [PROJECT_INFRASTRUCTURE.md](PROJECT_INFRASTRUCTURE.md). No dependencies, CLI binary, AI workflow or baseline approvals were added. Broader Phase 4 production media and future CLI/AI/release milestones remain unimplemented and require separate authorization.
+
+November 10, 2026: `npm run check` passed 252 tests, strict TypeScript and existing Studio extraction/save checks. Composition discovery passed unset/selected; the external 1280×720/30 FPS/60-frame H.264 MP4 fully decoded. Studio HTTP readiness passed; interactive browser preview was unavailable. Human review of the sample and previous visual candidates remains pending.
+
+
+## CLI_TEMPLATES — local CLI and two templates (technically complete; visual review pending)
+
+Authorized explicitly on November 10, 2026. Local create/preview/render commands reuse the project host. Title-card and three-point explainer scaffolds use the existing theme/motion/component APIs and explicit sample copy. No dependencies or browser-bundle requirements were added. Package bin/build/files metadata prepares a private local artifact; publishing and standalone installed-package certification remain release work. Existing project/sample/baseline reviews stay pending. See [CLI_TEMPLATES.md](CLI_TEMPLATES.md) for actual commands and scoped evidence. AI_PRODUCTION, END_TO_END_QA and RELEASE_V1 remain proposed.
+
+November 10, 2026 validation: strict TypeScript and 290 tests pass; original fifteen compositions remain; both generated temporary templates render/decode at 1080p/30 FPS (180 and 240 frames) with exact independent still repeats. CLI preview HTTP readiness and package-content audit pass; interactive browser playback/Save was unavailable. Publishing, installed-consumer certification and pending human visual approval remain open. No further implementation milestone is authorized.

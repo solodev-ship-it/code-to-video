@@ -14,12 +14,12 @@
   },
   "packageManager": "npm@11.18.0",
   "scripts": {
-    "studio": "npm run studio --workspace=@code-to-video/studio",
+    "studio": "node --experimental-strip-types scripts/project-runner.ts studio",
     "render": "npm run render --workspace=@code-to-video/studio",
-    "compositions": "npm run compositions --workspace=@code-to-video/studio",
+    "compositions": "node --experimental-strip-types scripts/project-runner.ts compositions",
     "browser:ensure": "npm run browser:ensure --workspace=@code-to-video/studio",
-    "typecheck": "npm run typecheck --workspaces && tsc -p scripts/qa/tsconfig.json",
-    "test": "npm run test --workspaces && npm run test:qa",
+    "typecheck": "npm run typecheck --workspaces && tsc -p scripts/qa/tsconfig.json && tsc -p packages/projects/tsconfig.json && tsc -p scripts/cli/tsconfig.json && tsc -p templates/tsconfig.json",
+    "test": "npm run test --workspaces && npm run test:qa && npm run test:projects && npm run test:cli",
     "test:qa": "node --experimental-strip-types --test tests/reliability/*.test.ts",
     "qa:fonts": "node --experimental-strip-types scripts/qa/cli.ts fonts",
     "qa:layout": "node --experimental-strip-types scripts/qa/cli.ts layout",
@@ -42,7 +42,14 @@
     "render:components:ember": "npm run render:components:ember --workspace=@code-to-video/studio",
     "render:aurora": "npm run render:aurora --workspace=@code-to-video/studio",
     "render:ember": "npm run render:ember --workspace=@code-to-video/studio",
-    "qa:cinematic": "node --experimental-strip-types scripts/qa/cinematic.ts"
+    "qa:cinematic": "node --experimental-strip-types scripts/qa/cinematic.ts",
+    "render:project": "node --experimental-strip-types scripts/project-runner.ts render",
+    "test:projects": "node --experimental-strip-types --test tests/projects/*.test.ts",
+    "test:cli": "node --experimental-strip-types --test tests/cli/*.test.ts",
+    "build:cli": "tsc -p scripts/cli/tsconfig.build.json",
+    "cli": "node bin/code-to-video.mjs",
+    "qa:templates": "npm run build:cli && node --experimental-strip-types scripts/qa/templates.ts",
+    "prepack": "npm run build:cli"
   },
   "devDependencies": {
     "@remotion/bundler": "4.0.541",
@@ -50,5 +57,27 @@
     "@types/pngjs": "6.0.5",
     "pixelmatch": "8.0.0",
     "pngjs": "7.0.0"
-  }
+  },
+  "bin": {
+    "code-to-video": "bin/code-to-video.mjs"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "templates/",
+    "scripts/project-runner.ts",
+    "scripts/project-host.ts",
+    "scripts/project-entry.ts",
+    "packages/projects/src/",
+    "packages/themes/src/",
+    "packages/themes/package.json",
+    "packages/ui/src/",
+    "packages/ui/package.json",
+    "apps/studio/src/",
+    "apps/studio/public/",
+    "apps/studio/package.json",
+    "apps/studio/tsconfig.json",
+    "docs/CLI_TEMPLATES.md",
+    "docs/PROJECT_INFRASTRUCTURE.md"
+  ]
 }

@@ -1,5 +1,9 @@
 # Code to Video — Technical Blueprint
 
+**CLI_TEMPLATES update:** an optional compiled local CLI provides safe create, preview and explicit-output MP4 rendering via the shared project host. Two authored theme-aware templates (title-card and three-point explainer) scaffold schema version 1 projects outside the framework. Existing showcases and browser exports remain unchanged; no dependency, AI workflow, upload or publishing was added. Source and compiled package files use an explicit allowlist. Public installation/release and human visual acceptance remain pending. See [CLI_TEMPLATES.md](CLI_TEMPLATES.md).
+
+**PROJECT_INFRASTRUCTURE update:** version 1 external manifests, explicit theme initialization, Node-only realpath containment, bounded asset copying into ignored session caches, separate literal Studio registration and one standalone MP4 path are implemented. Existing fifteen showcases remain unchanged. Browser-safe contracts live in `packages/projects/src`; Node loading stays in `load.ts` and host scripts. This implements the bounded independent-project milestone, not the broader production-media/AI/template proposals described below. See [PROJECT_INFRASTRUCTURE.md](PROJECT_INFRASTRUCTURE.md). Sample and earlier visual review remain pending. Historical boundaries below describe their original phases.
+
 ## 1. Delivery status
 
 **Phase 3D.4A update:** explicit user authorization adds a bounded, theme-aware clay 2.5D material system, deterministic motion and one 9-second showcase. Existing APIs and thirteen earlier compositions remain. Public contracts and focused evidence: [CLAY_MATERIALS.md](CLAY_MATERIALS.md). This phase does not implement general 3D, external models, AI, external-project storage or baseline approval.

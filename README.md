@@ -2,9 +2,13 @@
 
 A modular, AI-assisted video production framework being built with **TypeScript, React, and Remotion** for documentaries, explainers, product showcases, corporate videos, and social content.
 
-## Current status — Phase 3D.4A: clay material and depth
+## Current status — CLI and two production templates
 
-**New:** bounded, theme-aware clay appearance data; `VideoClaySurface`, `VideoClayCard`, and `VideoClayShape`; frame-driven reveal, float, press and depth motion; and one 9-second `ClaymorphismShowcase` (**fourteen compositions total**). See [Clay materials](docs/CLAY_MATERIALS.md) for APIs, 2.5D limits and candidate renders. Human visual approval remains pending.
+The optional local CLI now creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. Start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). The package remains private and unpublished; visual review is pending.
+
+Version 1 manifests, contained local assets, theme binding, literal Studio registrations and an external-project MP4 path are implemented. The fifteen existing showcases remain; selected project compositions are added through `CODE_TO_VIDEO_PROJECT`. See [Independent project guide](docs/PROJECT_INFRASTRUCTURE.md) for commands, source contracts and technical evidence. The sample and earlier visual candidates await human review.
+
+**Retained clay materials:** bounded, theme-aware clay appearance data; `VideoClaySurface`, `VideoClayCard`, and `VideoClayShape`; frame-driven reveal, float, press and depth motion; and one 9-second `ClaymorphismShowcase` (**fourteen compositions total**). See [Clay materials](docs/CLAY_MATERIALS.md) for APIs, 2.5D limits and candidate renders. Human visual approval remains pending.
 
 **Phase 3D.3 retained:** seven deterministic chart, timeline, progress and number components plus a 15-second `DataVisualizationShowcase`. The earlier twelve compositions remain (**thirteen total**). See [Data visualization](docs/DATA_VISUALIZATION.md) for data rules, APIs and targeted evidence. Showcase values are illustrative, not real-world statistics.
 
@@ -16,7 +20,7 @@ Focused finalization has corrected the glass showcase's ordinary label contrast 
 
 **Pending checkpoint:** visual baseline approval. Candidate capture and exact repeat pixels are **not** human approval; `qa:visual:compare` and `qa:all` intentionally fail while references are unapproved/missing. No real baselines have been approved automatically.
 
-**Still not implemented:** external video-project loading, complete scene templates, comprehensive UI, caption/audio production, AI workflows, dashboard or a published custom CLI. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
+**Still not implemented:** a larger template gallery, comprehensive UI, caption/audio production, AI workflows, dashboard or a published custom CLI. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
 
 ## Prerequisites (macOS)
 

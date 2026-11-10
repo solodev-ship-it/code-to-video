@@ -9,6 +9,7 @@
   },
   "include": [
     "../cli.ts",
+    "../project-runner.ts",
     "./args.ts",
     "./create.ts",
     "./templates.ts"

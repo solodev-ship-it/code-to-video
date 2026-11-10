@@ -4,6 +4,7 @@ import {validateProjectManifest} from '../../packages/projects/src/manifest.ts';
 import {createProjectRegistry} from '../../packages/projects/src/registry.ts';
 import {getTemplate} from './templates.ts';
 import type {CreateOptions} from './args.ts';
+import {projectTooling} from '../project-tooling.ts';
 
 export async function createProject(options: CreateOptions, frameworkRoot: string) {
   const root = await realpath(frameworkRoot);
@@ -25,14 +26,17 @@ export async function createProject(options: CreateOptions, frameworkRoot: strin
   try {await lstat(destination);throw new Error('Destination already exists; choose a new directory');}
   catch (error) {if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;}
   const engineRelative = path.relative(destination,root).split(path.sep).join('/') || '.';
+  const tooling=await projectTooling(root);
+  const dependenciesRelative=path.relative(root,tooling.modulesRoot).split(path.sep).join('/') || '.';
+  const typesRelative=path.relative(destination,path.join(tooling.modulesRoot,'@types')).split(path.sep).join('/');
   const tsconfig = {
     extends:`${engineRelative}/apps/studio/tsconfig.json`,
-    compilerOptions:{baseUrl:engineRelative,typeRoots:[`${engineRelative}/node_modules/@types`],paths:{
+    compilerOptions:{baseUrl:engineRelative,typeRoots:[typesRelative],paths:{
       '@code-to-video/themes':['packages/themes/src/index.ts'],'@code-to-video/themes/*':['packages/themes/src/*'],
       '@code-to-video/ui':['packages/ui/src/index.ts'],'@code-to-video/ui/*':['packages/ui/src/*'],
-      react:['node_modules/@types/react/index.d.ts'],'react/*':['node_modules/@types/react/*'],
-      'react-dom':['node_modules/@types/react-dom/index.d.ts'],'react-dom/*':['node_modules/@types/react-dom/*'],
-      '*':['node_modules/*'],
+      react:[`${dependenciesRelative}/@types/react/index.d.ts`],'react/*':[`${dependenciesRelative}/@types/react/*`],
+      'react-dom':[`${dependenciesRelative}/@types/react-dom/index.d.ts`],'react-dom/*':[`${dependenciesRelative}/@types/react-dom/*`],
+      '*':[`${dependenciesRelative}/*`],
     }},include:['compositions'],
   };
   const bin = path.join(root,'bin/code-to-video.mjs');

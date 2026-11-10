@@ -1,6 +1,8 @@
 {
   "name": "code-to-video",
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "Rorn Bunthong",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -50,6 +52,9 @@
     "cli": "node bin/code-to-video.mjs",
     "qa:templates": "npm run build:cli && node --experimental-strip-types scripts/qa/templates.ts",
     "qa:e2e": "node --experimental-strip-types scripts/qa/e2e.ts",
+    "release:pack": "npm run build:cli && node --experimental-strip-types scripts/release/package.ts",
+    "release:inventory": "node --experimental-strip-types scripts/release/inventory.ts",
+    "qa:package": "node --experimental-strip-types scripts/qa/release-install.ts",
     "prepack": "npm run build:cli"
   },
   "devDependencies": {
@@ -68,6 +73,7 @@
     "templates/",
     "scripts/project-runner.ts",
     "scripts/project-host.ts",
+    "scripts/project-tooling.ts",
     "scripts/project-entry.ts",
     "packages/projects/src/",
     "packages/themes/src/",
@@ -79,6 +85,7 @@
     "apps/studio/package.json",
     "apps/studio/tsconfig.json",
     "docs/CLI_TEMPLATES.md",
-    "docs/PROJECT_INFRASTRUCTURE.md"
+    "docs/PROJECT_INFRASTRUCTURE.md",
+    "docs/licenses/"
   ]
 }

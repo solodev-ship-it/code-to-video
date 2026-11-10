@@ -2,7 +2,11 @@
 
 A modular, AI-assisted video production framework being built with **TypeScript, React, and Remotion** for documentaries, explainers, product showcases, corporate videos, and social content.
 
+Developed by **Rorn Bunthong — KrungTech**. First-party framework code is [MIT licensed](LICENSE), copyright (c) 2026 Rorn Bunthong. KrungTech is a separate project credit, not an assignment of copyright. Remotion and other dependencies/assets retain their [own terms and notices](THIRD_PARTY_NOTICES.md).
+
 ## Current status — CLI and two production templates
+
+**Release preparation:** a private local-install candidate and clean-consumer render check now work; browser-free CI, license inventory and draft release/version/onboarding docs are prepared. This is **not v1 or a registry release**: root remains `0.1.0`/private; first-party MIT is selected, but third-party review, final package/version policy, visual approvals and real CI results remain open. Start with [onboarding](docs/ONBOARDING.md) and [release preparation/evidence](docs/RELEASE_V1.md).
 
 The optional local CLI now creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. Start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). The package remains private and unpublished; visual review is pending.
 

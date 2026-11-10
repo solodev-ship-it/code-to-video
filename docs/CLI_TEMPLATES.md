@@ -2,6 +2,8 @@
 
 The optional local `code-to-video` CLI creates an independent schema version 1 project, opens it in Remotion Studio and renders an MP4. Two authored templates are included. The original fifteen showcases and npm Studio/render workflows remain available. This is local working software; registry publishing waits for the release milestone.
 
+Later [release preparation](RELEASE_V1.md) adds a separate private flattened candidate and a passing clean external-consumer install/render check. This does not make the ordinary workspace `npm pack` artifact a certified registry distribution. Use `npm run release:pack` for the private candidate; the source root remains private/unpublished. Host/tool/type resolution now supports hoisted candidate dependencies without fetching first-party workspace packages.
+
 The later [end-to-end gate](END_TO_END_QA.md) installs from the lockfile in a clean source copy and renders an edited external sample. Host commands now forward an explicit `REMOTION_BROWSER_EXECUTABLE` to Remotion CLI; upstream CLI does not read that variable itself. Configure it during setup to reuse a provisioned browser. Without it, normal CLI browser-cache/setup behavior is unchanged.
 
 ## Use the local checkout

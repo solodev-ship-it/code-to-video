@@ -6,6 +6,7 @@ import {spawn} from 'node:child_process';
 import {containedFile, loadProject} from '../packages/projects/src/load.ts';
 import {createProjectRegistry} from '../packages/projects/src/registry.ts';
 import {projectEntry} from './project-entry.ts';
+import {projectTooling} from './project-tooling.ts';
 
 export type ProjectMode = 'studio' | 'compositions' | 'render';
 export type ProjectCommand = {
@@ -75,11 +76,14 @@ export async function prepareProjectCommand(command: ProjectCommand) {
     extra[1] = await validateRenderOutput(root, extra[1], command.allowExternalOutput);
     extra.push('--codec=h264','--pixel-format=yuv420p','--concurrency=1','--disallow-parallel-encoding','--overwrite=false');
   }
+  const tooling=await projectTooling(root);
+  let publicDir=path.join(root,'apps/studio/public');
+  let cache:string|undefined;
   if (project) {
     // All preflight checks precede session staging and output creation.
     await mkdir(path.join(root,'.cache/projects'), {recursive:true});
-    const cache = await mkdtemp(path.join(root,'.cache/projects/session-'));
-    const publicDir = path.join(cache,'public');
+    cache = await mkdtemp(path.join(root,'.cache/projects/session-'));
+    publicDir = path.join(cache,'public');
     await cp(path.join(root,'apps/studio/public'), publicDir, {recursive:true,errorOnExist:true,force:false});
     const paths = new Set<string>();
     for (const a of project.manifest.assets) {
@@ -90,15 +94,20 @@ export async function prepareProjectCommand(command: ProjectCommand) {
     }
     entry = path.join(cache,'ProjectRoot.tsx');
     await writeFile(entry,projectEntry(project,root,themeModule),{flag:'wx'});
-    config = path.join(cache,'remotion.config.ts');
-    await writeFile(config,`import {Config} from '@remotion/cli/config';\nConfig.setPublicDir(${JSON.stringify(publicDir)});\nConfig.overrideWebpackConfig(c => ({...c, resolve: {...c.resolve, modules: [${JSON.stringify(path.join(root,'node_modules'))}, ...(c.resolve?.modules ?? [])]}}));\n`,{flag:'wx'});
     console.log(`Validated project ${project.manifest.id}; generated entry ${entry}`);
+  }
+  if(project || !tooling.sourceWorkspace) {
+    if(!cache){await mkdir(path.join(root,'.cache/projects'),{recursive:true});cache=await mkdtemp(path.join(root,'.cache/projects/session-'));}
+    config=path.join(cache,'remotion.config.ts');
+    // Keep the package import: upstream externalizes it to share CLI config state.
+    // An absolute file import can be bundled into a separate, ineffective instance.
+    await writeFile(config,`import {Config} from '@remotion/cli/config';\nConfig.setPublicDir(${JSON.stringify(publicDir)});\nConfig.overrideWebpackConfig(c => ({...c, resolve: {...c.resolve, alias: {...c.resolve?.alias, ...${JSON.stringify(tooling.aliases)}}, modules: [${JSON.stringify(tooling.modulesRoot)}, ...(c.resolve?.modules ?? [])]}}));\n`,{flag:'wx'});
   }
   // The Remotion CLI does not read this QA/setup environment variable itself.
   // Forward it explicitly so an isolated checkout can use a provisioned browser
   // instead of silently acquiring another one during the render command.
   const browser = process.env.REMOTION_BROWSER_EXECUTABLE;
-  return {executable: path.join(root,'node_modules/.bin/remotion'), args:[mode,entry,...extra,...(config ? ['--config',config] : []),
+  return {executable: tooling.remotionExecutable, args:[mode,entry,...extra,...(config ? ['--config',config] : []),
     ...(browser ? [`--browser-executable=${path.resolve(browser)}`] : [])], cwd:path.join(root,'apps/studio')};
 }
 export async function runProjectCommand(command: ProjectCommand): Promise<number> {

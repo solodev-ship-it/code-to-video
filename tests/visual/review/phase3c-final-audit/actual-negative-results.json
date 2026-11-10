@@ -1,0 +1,17 @@
+[
+  {
+    "case": "missing-composition",
+    "correct_error_seen_in_this_run": true,
+    "message": "Error: Error: Could not find composition with ID NotRegistered. Available compositions: CodeToVideoIntro, ThemeShowcase, ThemeAuroraCinematic, ThemeAuroraMinimal, ThemeEmberCinematic, ThemeEmberMinimal, ComponentShowcase, ComponentAuroraCinematic, ComponentEmberMinimal, ReliabilityFixture"
+  },
+  {
+    "case": "invalid-props",
+    "correct_error_seen_in_this_run": true,
+    "message": "Error: Error: Unknown reliability fixture."
+  },
+  {
+    "case": "critical-layout",
+    "correct_error_seen_in_this_run": true,
+    "message": "Error: Critical browser layout/font diagnostic."
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-11-09T17:32:25.552Z",
+  "run": "phase3c-audit-20261110-all-negative-missing-composition",
+  "status": "failed",
+  "cases": [
+    {
+      "key": "missing-composition-5303145be884",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "NotRegistered",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "missing-composition",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-negative-missing-composition/missing-composition-5303145be884.png"
+      },
+      "error": {
+        "code": "CAPTURE_FAILED",
+        "message": "Error: Error: Could not find composition with ID NotRegistered. Available compositions: CodeToVideoIntro, ThemeShowcase, ThemeAuroraCinematic, ThemeAuroraMinimal, ThemeEmberCinematic, ThemeEmberMinimal, ComponentShowcase, ComponentAuroraCinematic, ComponentEmberMinimal, ReliabilityFixture"
+      }
+    }
+  ],
+  "error": {
+    "code": "QA_CAPTURE_FAILED",
+    "message": "Error: Error: Could not find composition with ID NotRegistered. Available compositions: CodeToVideoIntro, ThemeShowcase, ThemeAuroraCinematic, ThemeAuroraMinimal, ThemeEmberCinematic, ThemeEmberMinimal, ComponentShowcase, ComponentAuroraCinematic, ComponentEmberMinimal, ReliabilityFixture"
+  }
+}

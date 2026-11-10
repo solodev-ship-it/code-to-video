@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-10",
+  "capture_run": "phase3c-audit-20261110-all-visual",
+  "capture_report": "tests/visual/reports/phase3c-audit-20261110-all-visual-capture.json",
+  "approval_status": "PENDING \u2014 no baseline images were approved",
+  "count": 14,
+  "contact_sheet": "contact-sheet.png",
+  "candidates": [
+    {
+      "number": 1,
+      "case_id": "aurora-finance-cinematic-f15",
+      "case_key": "aurora-finance-cinematic-f15-655881f294b5",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f15-655881f294b5.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f15-655881f294b5.png",
+      "review_png": "images/aurora-finance-cinematic-f15.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1337826,
+      "sha256": "2fd80a50d26ed9847f45a22e07bc6e0f5da6bc89ef80ddc2f8827e6986168858",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "aurora-finance",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 15,
+      "fps": 30,
+      "stage": "entering",
+      "approved_baseline_path": "tests/visual/baselines/aurora-finance-cinematic-f15-655881f294b5.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Navy gradient/grid and rounded filled cards match cinematic styling. Title is very faint and slightly lower during the elegant entrance; subtitle and card text are already legible. No visible persistent clipping, missing assets or unexpected wrap. Human should review whether this deliberately weak early title contrast suits the intended pacing."
+    },
+    {
+      "number": 2,
+      "case_id": "aurora-finance-cinematic-f90",
+      "case_key": "aurora-finance-cinematic-f90-9ecec3f42f85",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f90-9ecec3f42f85.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f90-9ecec3f42f85.png",
+      "review_png": "images/aurora-finance-cinematic-f90.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1329263,
+      "sha256": "51a7e7bd9c30cf72dbf63625cbc958abf982dfce8fd14af41eee885b558bc5bd",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "aurora-finance",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 90,
+      "fps": 30,
+      "stage": "settled",
+      "approved_baseline_path": "tests/visual/baselines/aurora-finance-cinematic-f90-9ecec3f42f85.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Settled white single-line title, intentional two-line subtitle and two aligned cards are readable within the safe area. No obvious glyph breakage, clipping or missing asset. Cyan accent and navy surface treatment match Aurora cinematic."
+    },
+    {
+      "number": 3,
+      "case_id": "aurora-finance-cinematic-f260",
+      "case_key": "aurora-finance-cinematic-f260-97c14d4a2133",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f260-97c14d4a2133.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f260-97c14d4a2133.png",
+      "review_png": "images/aurora-finance-cinematic-f260.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1442266,
+      "sha256": "cf3b956364abbad5396b4a41820e77752ef0b8ac56396a5df55bba71b39d6279",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "aurora-finance",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 260,
+      "fps": 30,
+      "stage": "exiting/fading",
+      "approved_baseline_path": "tests/visual/baselines/aurora-finance-cinematic-f260-97c14d4a2133.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Whole content stack is visibly faded while the grid/gradient remains. This matches the coded 60% outro opacity; no displaced or clipped text. Reduced caption contrast is intentional during exit, not a settled-state result."
+    },
+    {
+      "number": 4,
+      "case_id": "aurora-finance-minimal-f15",
+      "case_key": "aurora-finance-minimal-f15-bf9c1f2ce701",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f15-bf9c1f2ce701.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f15-bf9c1f2ce701.png",
+      "review_png": "images/aurora-finance-minimal-f15.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 110730,
+      "sha256": "a6e3ea87f99e3f1d464e2749ed7b17d35bda555498e267d3b007c5c230edbb3c",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "aurora-finance",
+      "style_id": "minimal",
+      "motion_id": "energetic",
+      "frame": 15,
+      "fps": 30,
+      "stage": "entering",
+      "approved_baseline_path": "tests/visual/baselines/aurora-finance-minimal-f15-bf9c1f2ce701.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Flat dark navy, near-square outlined cards and no grid/glow distinguish minimal. Title is partially faded and slightly lower; it is more visible than cinematic because energetic easing differs. Card edges and two-line subtitle are intact."
+    },
+    {
+      "number": 5,
+      "case_id": "aurora-finance-minimal-f90",
+      "case_key": "aurora-finance-minimal-f90-0eaf14010580",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f90-0eaf14010580.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f90-0eaf14010580.png",
+      "review_png": "images/aurora-finance-minimal-f90.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 110967,
+      "sha256": "e21a19307b6d1d92ad75d243a6bce106498b8e666af4e11b17e561546192c68f",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "aurora-finance",
+      "style_id": "minimal",
+      "motion_id": "energetic",
+      "frame": 90,
+      "fps": 30,
+      "stage": "settled",
+      "approved_baseline_path": "tests/visual/baselines/aurora-finance-minimal-f90-0eaf14010580.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Settled title and intentional two-line subtitle fit. Two equal outlined panels align; cyan accents and white/muted blue text remain coherent. No obvious overflow, unexpected wrap, missing glyphs or assets."
+    },
+    {
+      "number": 6,
+      "case_id": "aurora-finance-minimal-f260",
+      "case_key": "aurora-finance-minimal-f260-35de5faf66d1",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f260-35de5faf66d1.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f260-35de5faf66d1.png",
+      "review_png": "images/aurora-finance-minimal-f260.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 111524,
+      "sha256": "91dc86a525caa9834c33d6cb7adafd63ac7b737a3e27ee99ebf2ae383b8585a4",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "aurora-finance",
+      "style_id": "minimal",
+      "motion_id": "energetic",
+      "frame": 260,
+      "fps": 30,
+      "stage": "exiting/fading",
+      "approved_baseline_path": "tests/visual/baselines/aurora-finance-minimal-f260-35de5faf66d1.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Content fades uniformly over the flat navy canvas; title remains contained and the outlines/captions soften as expected. No unexpected blank or lost panel; this is an exit sample."
+    },
+    {
+      "number": 7,
+      "case_id": "ember-studio-cinematic-f15",
+      "case_key": "ember-studio-cinematic-f15-8321c5aafe2b",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f15-8321c5aafe2b.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f15-8321c5aafe2b.png",
+      "review_png": "images/ember-studio-cinematic-f15.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1295681,
+      "sha256": "8e00238f09b5954665306aa88584895ad9d5edc1172850fa3531b19eee94109a",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "ember-studio",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 15,
+      "fps": 30,
+      "stage": "entering",
+      "approved_baseline_path": "tests/visual/baselines/ember-studio-cinematic-f15-8321c5aafe2b.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Warm peach/off-white gradient, grid, rounded cards and coral labels match Ember cinematic. Title is deliberately very faint at the early elegant entrance, while subtitle/cards are present. No visible clipping or tofu; early title readability remains a creative-review choice."
+    },
+    {
+      "number": 8,
+      "case_id": "ember-studio-cinematic-f90",
+      "case_key": "ember-studio-cinematic-f90-885b73996ee4",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f90-885b73996ee4.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f90-885b73996ee4.png",
+      "review_png": "images/ember-studio-cinematic-f90.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1288257,
+      "sha256": "6c5cdc6bc68d518ee3347595e2098519b9d96a84addae0329967daee1dd8f0ee",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "ember-studio",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 90,
+      "fps": 30,
+      "stage": "settled",
+      "approved_baseline_path": "tests/visual/baselines/ember-studio-cinematic-f90-885b73996ee4.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Dark settled heading and two-line subtitle are clear over the warm cinematic canvas. Rounded panel padding/edges align; text appears intact. Coral labels/borders are subtler than Aurora accents and should receive human contrast review, without a formal contrast-certification claim."
+    },
+    {
+      "number": 9,
+      "case_id": "ember-studio-cinematic-f260",
+      "case_key": "ember-studio-cinematic-f260-96a1adc45e01",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f260-96a1adc45e01.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f260-96a1adc45e01.png",
+      "review_png": "images/ember-studio-cinematic-f260.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1408198,
+      "sha256": "13f15a9fc74280eb3cbd9e7f260028d5420a417988547087c12080a5c106da2a",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "ember-studio",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 260,
+      "fps": 30,
+      "stage": "exiting/fading",
+      "approved_baseline_path": "tests/visual/baselines/ember-studio-cinematic-f260-96a1adc45e01.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Expected fade-out over the warm gradient; text and panel fills become pale while geometry remains stable. No obvious crop or missing asset. Lower label contrast is exit-related."
+    },
+    {
+      "number": 10,
+      "case_id": "ember-studio-minimal-f15",
+      "case_key": "ember-studio-minimal-f15-a7a5e3c5bb06",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f15-a7a5e3c5bb06.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f15-a7a5e3c5bb06.png",
+      "review_png": "images/ember-studio-minimal-f15.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 109906,
+      "sha256": "7d82f7eb1b7887753e6d44566597f0e2d1094d965da21fd60ced3aedc05c38a9",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "ember-studio",
+      "style_id": "minimal",
+      "motion_id": "energetic",
+      "frame": 15,
+      "fps": 30,
+      "stage": "entering",
+      "approved_baseline_path": "tests/visual/baselines/ember-studio-minimal-f15-a7a5e3c5bb06.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Flat warm off-white canvas, charcoal typography, coral labels and squared outlined cards are visibly distinct from cinematic. Partially faded title is readable and offset slightly downward during entrance. No unexpected wrapping or clipping."
+    },
+    {
+      "number": 11,
+      "case_id": "ember-studio-minimal-f90",
+      "case_key": "ember-studio-minimal-f90-12873488c449",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f90-12873488c449.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f90-12873488c449.png",
+      "review_png": "images/ember-studio-minimal-f90.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 110225,
+      "sha256": "a5576d540834c80916accb47154d71709e8bd169e239d855455d80514777c5a1",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "ember-studio",
+      "style_id": "minimal",
+      "motion_id": "energetic",
+      "frame": 90,
+      "fps": 30,
+      "stage": "settled",
+      "approved_baseline_path": "tests/visual/baselines/ember-studio-minimal-f90-12873488c449.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "Settled charcoal title, deliberate two-line subtitle and clean two-card grid fit safely. Flat surfaces and thin borders match minimal. No obvious broken glyphs, missing assets or misalignment."
+    },
+    {
+      "number": 12,
+      "case_id": "ember-studio-minimal-f260",
+      "case_key": "ember-studio-minimal-f260-c116502b5c9c",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f260-c116502b5c9c.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f260-c116502b5c9c.png",
+      "review_png": "images/ember-studio-minimal-f260.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 109061,
+      "sha256": "8729dbf6ba2d17c6077eb5eaba296f8d18bb07e46c88addf90249c86711896c4",
+      "capture_report_hash_matches": true,
+      "composition_id": "ReliabilityFixture",
+      "brand_id": "ember-studio",
+      "style_id": "minimal",
+      "motion_id": "energetic",
+      "frame": 260,
+      "fps": 30,
+      "stage": "exiting/fading",
+      "approved_baseline_path": "tests/visual/baselines/ember-studio-minimal-f260-c116502b5c9c.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "required-local",
+      "font_diagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": true,
+      "visual_findings": "A uniform exit fade lightens title, copy and outlines over the flat off-white background. No geometric jump or clipped content is apparent; small coral labels are faint as expected for this sampled exit."
+    },
+    {
+      "number": 13,
+      "case_id": "intro-settled",
+      "case_key": "intro-settled-893f3fb0b8da",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/intro-settled-893f3fb0b8da.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/intro-settled-893f3fb0b8da.png",
+      "review_png": "images/intro-settled.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1043839,
+      "sha256": "a8a30dd31ad53da51bb57e6aa68937971b1a2c856739af02d010ec760b1932e1",
+      "capture_report_hash_matches": true,
+      "composition_id": "CodeToVideoIntro",
+      "brand_id": null,
+      "style_id": null,
+      "motion_id": null,
+      "frame": 90,
+      "fps": 30,
+      "stage": "settled",
+      "approved_baseline_path": "tests/visual/baselines/intro-settled-893f3fb0b8da.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "system-compatible",
+      "font_diagnostics": [
+        {
+          "code": "SYSTEM_FONT_COMPATIBILITY",
+          "severity": "warning",
+          "message": "Original system-font tokens preserved; glyph coverage/portable font identity is not asserted."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": false,
+      "visual_findings": "Centered CODE TO VIDEO title/subtitle, mint accent line and dots are clean and balanced on the dark background. No obvious clipping, wrap, missing glyphs or assets. This uses the original intro art direction/system-font stack, not an Aurora/Ember selection."
+    },
+    {
+      "number": 14,
+      "case_id": "component-settled",
+      "case_key": "component-settled-9170e52ad8da",
+      "source_png": "tests/visual/current/phase3c-audit-20261110-all-visual/component-settled-9170e52ad8da.png",
+      "absolute_source_png": "/Users/HaruMalik/Desktop/video-production-workspace/code-to-video/tests/visual/current/phase3c-audit-20261110-all-visual/component-settled-9170e52ad8da.png",
+      "review_png": "images/component-settled.png",
+      "exists": true,
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 1248989,
+      "sha256": "cf996f9e4a9a6aeab592014cf053546392f93179fe68b8fc627a4dbe23f647e4",
+      "capture_report_hash_matches": true,
+      "composition_id": "ComponentShowcase",
+      "brand_id": "aurora-finance",
+      "style_id": "cinematic",
+      "motion_id": "elegant",
+      "frame": 180,
+      "fps": 30,
+      "stage": "settled",
+      "approved_baseline_path": "tests/visual/baselines/component-settled-9170e52ad8da.png",
+      "approved_baseline_exists": false,
+      "approval_metadata_exists": false,
+      "font_policy": "system-compatible",
+      "font_diagnostics": [
+        {
+          "code": "SYSTEM_FONT_COMPATIBILITY",
+          "severity": "warning",
+          "message": "Original system-font tokens preserved; glyph coverage/portable font identity is not asserted."
+        }
+      ],
+      "layout_diagnostics": [],
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "source_hash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "matches_prior_latest_at_start_sha256": true,
+      "pixel_inspection": {
+        "performed": true,
+        "method": "Direct image-viewer inspection of this full-resolution PNG, plus labeled contact sheet",
+        "human_approved": false
+      },
+      "automated_layout_measured": false,
+      "visual_findings": "Title/subtitle, three aligned cards, four labeled motion examples and footer are all visible and contained. Aurora cinematic colors/rounded panels/grid are coherent. No obvious cropping or missing assets. This is one settled frame; motion smoothness cannot be concluded from it alone."
+    }
+  ],
+  "visual_inspection": {
+    "performed": true,
+    "images_inspected": 14,
+    "approval_status": "NOT APPROVED",
+    "scope": "Direct inspection of each PNG and contact sheet, supported by source/diagnostic review. No formal contrast audit, complete glyph-coverage certification, or full moving-video aesthetic approval."
+  }
+}

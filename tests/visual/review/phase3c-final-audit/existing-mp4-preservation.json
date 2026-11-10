@@ -1,0 +1,35 @@
+{
+  "comparison_source": ".cache/phase3c-before.json (historical preservation inventory, not a Git commit)",
+  "files": [
+    {
+      "path": "renders/ThemeAuroraCinematic.mp4",
+      "sha256": "3660714346db1d25e20fee461db2eb66422462455cf1e476eefb5fcbba629214",
+      "size_bytes": 599712,
+      "matches_historical_preservation_inventory": true
+    },
+    {
+      "path": "renders/ThemeEmberMinimal.mp4",
+      "sha256": "f6caf1ba22044186c2a9a05da7751f79715ef4785ce3824d5083babb14acf846",
+      "size_bytes": 308400,
+      "matches_historical_preservation_inventory": true
+    },
+    {
+      "path": "renders/CodeToVideoIntro.mp4",
+      "sha256": "b06e5f8cd9b33de84b3ca97951ff5781b780805a35a4bab3e33b224d3c5fcb12",
+      "size_bytes": 234525,
+      "matches_historical_preservation_inventory": true
+    },
+    {
+      "path": "renders/ComponentEmberMinimal.mp4",
+      "sha256": "3147fce68b05d9b2353b4fa0ea02d33bb8ef5cf1ebc7d7997ed0b606b4bc79b5",
+      "size_bytes": 597032,
+      "matches_historical_preservation_inventory": true
+    },
+    {
+      "path": "renders/ComponentAuroraCinematic.mp4",
+      "sha256": "f15c022a34263fa614aa291075044b51076501ed418cbd05b7c49a5579eeeb24",
+      "size_bytes": 788550,
+      "matches_historical_preservation_inventory": true
+    }
+  ]
+}

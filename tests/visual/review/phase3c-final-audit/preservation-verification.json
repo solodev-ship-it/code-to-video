@@ -1,0 +1,15 @@
+{
+  "protected_file_count": 113,
+  "all_protected_hashes_unchanged": true,
+  "changed_protected_files": [],
+  "missing_protected_files": [],
+  "approved_baseline_directory_unchanged": true,
+  "baseline_entries": [
+    "tests/visual/baselines/.gitkeep"
+  ],
+  "git_status_before": "?? ./\n",
+  "git_status_after": "?? ./\n",
+  "scope": "Only authorized QA-generated outputs/caches and this review package were written; source, lockfile, docs, existing MP4s and approved references were not changed.",
+  "existing_mp4s_match_historical_inventory": true,
+  "existing_mp4_count": 5
+}

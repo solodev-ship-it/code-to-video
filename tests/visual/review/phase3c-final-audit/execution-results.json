@@ -1,0 +1,95 @@
+[
+  {
+    "command": "npm run check",
+    "argv": [
+      "npm",
+      "run",
+      "check"
+    ],
+    "exit_code": 0,
+    "started_at": "2026-11-09T17:28:40.912384+00:00",
+    "finished_at": "2026-11-09T17:28:47.001927+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/01-check.log"
+  },
+  {
+    "command": "npm run compositions",
+    "argv": [
+      "npm",
+      "run",
+      "compositions"
+    ],
+    "exit_code": 0,
+    "started_at": "2026-11-09T17:28:47.002450+00:00",
+    "finished_at": "2026-11-09T17:28:49.813255+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/02-compositions.log"
+  },
+  {
+    "command": "npm run qa:fonts",
+    "argv": [
+      "npm",
+      "run",
+      "qa:fonts"
+    ],
+    "exit_code": 0,
+    "started_at": "2026-11-09T17:28:49.813715+00:00",
+    "finished_at": "2026-11-09T17:28:54.823774+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/03-qa-fonts.log"
+  },
+  {
+    "command": "npm run qa:layout",
+    "argv": [
+      "npm",
+      "run",
+      "qa:layout"
+    ],
+    "exit_code": 0,
+    "started_at": "2026-11-09T17:28:54.824512+00:00",
+    "finished_at": "2026-11-09T17:29:06.509400+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/04-qa-layout.log"
+  },
+  {
+    "command": "npm run qa:themes -- --run phase3c-audit-20261110-themes",
+    "argv": [
+      "npm",
+      "run",
+      "qa:themes",
+      "--",
+      "--run",
+      "phase3c-audit-20261110-themes"
+    ],
+    "exit_code": 0,
+    "started_at": "2026-11-09T17:29:06.509834+00:00",
+    "finished_at": "2026-11-09T17:29:41.185652+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/05-qa-themes.log"
+  },
+  {
+    "command": "npm run qa:render -- --run phase3c-audit-20261110-render",
+    "argv": [
+      "npm",
+      "run",
+      "qa:render",
+      "--",
+      "--run",
+      "phase3c-audit-20261110-render"
+    ],
+    "exit_code": 0,
+    "started_at": "2026-11-09T17:29:41.186135+00:00",
+    "finished_at": "2026-11-09T17:30:41.070380+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/06-qa-render.log"
+  },
+  {
+    "command": "npm run qa:all -- --run phase3c-audit-20261110-all",
+    "argv": [
+      "npm",
+      "run",
+      "qa:all",
+      "--",
+      "--run",
+      "phase3c-audit-20261110-all"
+    ],
+    "exit_code": 1,
+    "started_at": "2026-11-09T17:30:41.070856+00:00",
+    "finished_at": "2026-11-09T17:32:44.546341+00:00",
+    "log": "tests/visual/review/phase3c-final-audit/logs/07-qa-all.log"
+  }
+]

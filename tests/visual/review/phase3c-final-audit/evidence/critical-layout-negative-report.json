@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-11-09T17:32:27.854Z",
+  "run": "phase3c-audit-20261110-all-negative-critical-layout",
+  "status": "failed",
+  "cases": [
+    {
+      "key": "critical-layout-11490e8f9735",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "critical-layout",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "overflow",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [
+        {
+          "compositionId": "ReliabilityFixture",
+          "frame": 90,
+          "code": "TEXT_OVERFLOW",
+          "severity": "error",
+          "elementId": "qa-title",
+          "message": "Text content exceeds its layout container.",
+          "suggestedAction": "Review copy, explicit container dimensions and typography; do not auto-shrink blindly.",
+          "measuredBounds": {
+            "x": 153.59375,
+            "y": 369.78125,
+            "width": 160,
+            "height": 32
+          }
+        },
+        {
+          "compositionId": "ReliabilityFixture",
+          "frame": 90,
+          "code": "TEXT_CLIPPED",
+          "severity": "error",
+          "elementId": "qa-title",
+          "message": "Text layout exceeds a clipping region; exact visible ink is not measured.",
+          "suggestedAction": "Inspect clipping ancestors, line height and intended cropping.",
+          "measuredBounds": {
+            "x": 153.59375,
+            "y": 369.78125,
+            "width": 160,
+            "height": 32
+          },
+          "expectedBounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        {
+          "compositionId": "ReliabilityFixture",
+          "frame": 90,
+          "code": "TEXT_OVERFLOW",
+          "severity": "error",
+          "elementId": "qa-subtitle",
+          "message": "Text content exceeds its layout container.",
+          "suggestedAction": "Review copy, explicit container dimensions and typography; do not auto-shrink blindly.",
+          "measuredBounds": {
+            "x": 153.59375,
+            "y": 437.78125,
+            "width": 180,
+            "height": 25
+          }
+        },
+        {
+          "compositionId": "ReliabilityFixture",
+          "frame": 90,
+          "code": "TEXT_CLIPPED",
+          "severity": "error",
+          "elementId": "qa-subtitle",
+          "message": "Text layout exceeds a clipping region; exact visible ink is not measured.",
+          "suggestedAction": "Inspect clipping ancestors, line height and intended cropping.",
+          "measuredBounds": {
+            "x": 153.59375,
+            "y": 437.78125,
+            "width": 180,
+            "height": 25
+          },
+          "expectedBounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        {
+          "compositionId": "ReliabilityFixture",
+          "frame": 90,
+          "code": "TEXT_UNEXPECTED_WRAP",
+          "severity": "error",
+          "elementId": "qa-subtitle",
+          "message": "Measured 9 lines; expected at most 2.",
+          "suggestedAction": "Review explicit width, line breaks and loaded font.",
+          "measuredBounds": {
+            "x": 153.59375,
+            "y": 437.78125,
+            "width": 180,
+            "height": 25
+          }
+        }
+      ],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-negative-critical-layout/critical-layout-11490e8f9735.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-negative-critical-layout/critical-layout-11490e8f9735.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "8237b321dd290e383cfd116e7d5e948eb8e670272c5f4495508b0fb48a0ed4e4"
+      },
+      "error": {
+        "code": "CAPTURE_FAILED",
+        "message": "Error: Critical browser layout/font diagnostic."
+      }
+    }
+  ],
+  "error": {
+    "code": "QA_CAPTURE_FAILED",
+    "message": "Error: Critical browser layout/font diagnostic."
+  }
+}

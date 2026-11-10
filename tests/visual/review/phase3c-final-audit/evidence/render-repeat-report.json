@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-11-09T17:31:30.785Z",
+  "run": "phase3c-audit-20261110-all-render",
+  "status": "passed",
+  "cases": [
+    {
+      "key": "intro-settled-893f3fb0b8da",
+      "case": {
+        "brandId": null,
+        "compositionId": "CodeToVideoIntro",
+        "fontPolicy": "system-compatible",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "intro-settled",
+        "props": {},
+        "schemaVersion": 1,
+        "styleId": null,
+        "width": 1920
+      },
+      "status": "passed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "SYSTEM_FONT_COMPATIBILITY",
+          "severity": "warning",
+          "message": "Original system-font tokens preserved; glyph coverage/portable font identity is not asserted."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-render/intro-settled-893f3fb0b8da.png",
+        "repeat": "tests/visual/current/phase3c-audit-20261110-all-render/intro-settled-893f3fb0b8da.repeat.png"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "a8a30dd31ad53da51bb57e6aa68937971b1a2c856739af02d010ec760b1932e1",
+        "repeatPng": "a8a30dd31ad53da51bb57e6aa68937971b1a2c856739af02d010ec760b1932e1"
+      },
+      "comparison": {
+        "status": "passed",
+        "differingPixels": 0,
+        "differencePercent": 0,
+        "totalPixels": 2073600
+      }
+    },
+    {
+      "key": "component-settled-9170e52ad8da",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ComponentShowcase",
+        "fontPolicy": "system-compatible",
+        "fps": 30,
+        "frame": 180,
+        "height": 1080,
+        "id": "component-settled",
+        "props": {
+          "brandId": "aurora-finance",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "passed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "SYSTEM_FONT_COMPATIBILITY",
+          "severity": "warning",
+          "message": "Original system-font tokens preserved; glyph coverage/portable font identity is not asserted."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-render/component-settled-9170e52ad8da.png",
+        "repeat": "tests/visual/current/phase3c-audit-20261110-all-render/component-settled-9170e52ad8da.repeat.png"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "cf996f9e4a9a6aeab592014cf053546392f93179fe68b8fc627a4dbe23f647e4",
+        "repeatPng": "cf996f9e4a9a6aeab592014cf053546392f93179fe68b8fc627a4dbe23f647e4"
+      },
+      "comparison": {
+        "status": "passed",
+        "differingPixels": 0,
+        "differencePercent": 0,
+        "totalPixels": 2073600
+      }
+    }
+  ],
+  "comparisonOptions": {
+    "mode": "exact",
+    "pixelThreshold": 0,
+    "maxDiffPercent": 0
+  }
+}

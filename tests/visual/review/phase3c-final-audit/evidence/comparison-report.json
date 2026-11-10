@@ -1,0 +1,1053 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-11-09T17:32:44.504Z",
+  "run": "phase3c-audit-20261110-all-visual",
+  "status": "failed",
+  "cases": [
+    {
+      "key": "aurora-finance-cinematic-f15-655881f294b5",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 15,
+        "height": 1080,
+        "id": "aurora-finance-cinematic-f15",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f15-655881f294b5.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f15-655881f294b5.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "2fd80a50d26ed9847f45a22e07bc6e0f5da6bc89ef80ddc2f8827e6986168858"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "aurora-finance-cinematic-f90-9ecec3f42f85",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "aurora-finance-cinematic-f90",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f90-9ecec3f42f85.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f90-9ecec3f42f85.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "51a7e7bd9c30cf72dbf63625cbc958abf982dfce8fd14af41eee885b558bc5bd"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "aurora-finance-cinematic-f260-97c14d4a2133",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 260,
+        "height": 1080,
+        "id": "aurora-finance-cinematic-f260",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f260-97c14d4a2133.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-cinematic-f260-97c14d4a2133.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "cf3b956364abbad5396b4a41820e77752ef0b8ac56396a5df55bba71b39d6279"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "aurora-finance-minimal-f15-bf9c1f2ce701",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 15,
+        "height": 1080,
+        "id": "aurora-finance-minimal-f15",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "energetic",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "minimal"
+        },
+        "schemaVersion": 1,
+        "styleId": "minimal",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f15-bf9c1f2ce701.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f15-bf9c1f2ce701.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "a6e3ea87f99e3f1d464e2749ed7b17d35bda555498e267d3b007c5c230edbb3c"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "aurora-finance-minimal-f90-0eaf14010580",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "aurora-finance-minimal-f90",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "energetic",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "minimal"
+        },
+        "schemaVersion": 1,
+        "styleId": "minimal",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f90-0eaf14010580.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f90-0eaf14010580.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "e21a19307b6d1d92ad75d243a6bce106498b8e666af4e11b17e561546192c68f"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "aurora-finance-minimal-f260-35de5faf66d1",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 260,
+        "height": 1080,
+        "id": "aurora-finance-minimal-f260",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "normal",
+          "motionId": "energetic",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "minimal"
+        },
+        "schemaVersion": 1,
+        "styleId": "minimal",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f260-35de5faf66d1.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/aurora-finance-minimal-f260-35de5faf66d1.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "91dc86a525caa9834c33d6cb7adafd63ac7b737a3e27ee99ebf2ae383b8585a4"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "ember-studio-cinematic-f15-8321c5aafe2b",
+      "case": {
+        "brandId": "ember-studio",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 15,
+        "height": 1080,
+        "id": "ember-studio-cinematic-f15",
+        "props": {
+          "brandId": "ember-studio",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f15-8321c5aafe2b.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f15-8321c5aafe2b.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "8e00238f09b5954665306aa88584895ad9d5edc1172850fa3531b19eee94109a"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "ember-studio-cinematic-f90-885b73996ee4",
+      "case": {
+        "brandId": "ember-studio",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "ember-studio-cinematic-f90",
+        "props": {
+          "brandId": "ember-studio",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f90-885b73996ee4.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f90-885b73996ee4.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "6c5cdc6bc68d518ee3347595e2098519b9d96a84addae0329967daee1dd8f0ee"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "ember-studio-cinematic-f260-96a1adc45e01",
+      "case": {
+        "brandId": "ember-studio",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 260,
+        "height": 1080,
+        "id": "ember-studio-cinematic-f260",
+        "props": {
+          "brandId": "ember-studio",
+          "fixture": "normal",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f260-96a1adc45e01.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-cinematic-f260-96a1adc45e01.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "13f15a9fc74280eb3cbd9e7f260028d5420a417988547087c12080a5c106da2a"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "ember-studio-minimal-f15-a7a5e3c5bb06",
+      "case": {
+        "brandId": "ember-studio",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 15,
+        "height": 1080,
+        "id": "ember-studio-minimal-f15",
+        "props": {
+          "brandId": "ember-studio",
+          "fixture": "normal",
+          "motionId": "energetic",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "minimal"
+        },
+        "schemaVersion": 1,
+        "styleId": "minimal",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f15-a7a5e3c5bb06.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f15-a7a5e3c5bb06.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "7d82f7eb1b7887753e6d44566597f0e2d1094d965da21fd60ced3aedc05c38a9"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "ember-studio-minimal-f90-12873488c449",
+      "case": {
+        "brandId": "ember-studio",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "ember-studio-minimal-f90",
+        "props": {
+          "brandId": "ember-studio",
+          "fixture": "normal",
+          "motionId": "energetic",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "minimal"
+        },
+        "schemaVersion": 1,
+        "styleId": "minimal",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f90-12873488c449.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f90-12873488c449.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "a5576d540834c80916accb47154d71709e8bd169e239d855455d80514777c5a1"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "ember-studio-minimal-f260-c116502b5c9c",
+      "case": {
+        "brandId": "ember-studio",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 260,
+        "height": 1080,
+        "id": "ember-studio-minimal-f260",
+        "props": {
+          "brandId": "ember-studio",
+          "fixture": "normal",
+          "motionId": "energetic",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "minimal"
+        },
+        "schemaVersion": 1,
+        "styleId": "minimal",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "LOCAL_FONTS_READY",
+          "severity": "info",
+          "message": "Explicit required local family/weight/style loaded and verified."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f260-c116502b5c9c.png",
+        "layout": "tests/visual/current/phase3c-audit-20261110-all-visual/ember-studio-minimal-f260-c116502b5c9c.layout.json"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "8729dbf6ba2d17c6077eb5eaba296f8d18bb07e46c88addf90249c86711896c4"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "intro-settled-893f3fb0b8da",
+      "case": {
+        "brandId": null,
+        "compositionId": "CodeToVideoIntro",
+        "fontPolicy": "system-compatible",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "intro-settled",
+        "props": {},
+        "schemaVersion": 1,
+        "styleId": null,
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "SYSTEM_FONT_COMPATIBILITY",
+          "severity": "warning",
+          "message": "Original system-font tokens preserved; glyph coverage/portable font identity is not asserted."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/intro-settled-893f3fb0b8da.png"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "a8a30dd31ad53da51bb57e6aa68937971b1a2c856739af02d010ec760b1932e1"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    },
+    {
+      "key": "component-settled-9170e52ad8da",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ComponentShowcase",
+        "fontPolicy": "system-compatible",
+        "fps": 30,
+        "frame": 180,
+        "height": 1080,
+        "id": "component-settled",
+        "props": {
+          "brandId": "aurora-finance",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [
+        {
+          "code": "SYSTEM_FONT_COMPATIBILITY",
+          "severity": "warning",
+          "message": "Original system-font tokens preserved; glyph coverage/portable font identity is not asserted."
+        }
+      ],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-visual/component-settled-9170e52ad8da.png"
+      },
+      "environment": {
+        "os": {
+          "platform": "darwin",
+          "release": "25.6.0"
+        },
+        "arch": "arm64",
+        "node": "v24.7.0",
+        "remotion": "4.0.541",
+        "browser": {
+          "product": "HeadlessChrome/158.0.8127.2",
+          "revision": "@0000000000000000000000000000000000000000",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+        },
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "deviceScaleFactor": 1,
+        "render": {
+          "gl": "swangle",
+          "scale": 1,
+          "imageFormat": "png",
+          "fps": 30
+        }
+      },
+      "hashes": {
+        "png": "cf996f9e4a9a6aeab592014cf053546392f93179fe68b8fc627a4dbe23f647e4"
+      },
+      "comparison": {
+        "status": "missing-baseline",
+        "differingPixels": null,
+        "differencePercent": null,
+        "totalPixels": null
+      },
+      "error": {
+        "code": "MISSING_BASELINE",
+        "message": "Unapproved case: explicitly review and approve a candidate first."
+      }
+    }
+  ],
+  "comparisonOptions": {
+    "mode": "exact",
+    "pixelThreshold": 0,
+    "maxDiffPercent": 0
+  }
+}

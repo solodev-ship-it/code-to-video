@@ -1,0 +1,35 @@
+{
+  "description": "Read-only pure-function audit fixture; expected 700 face is available, but computed typography is 400. This is not a real candidate failure.",
+  "measurement": {
+    "policy": {
+      "id": "title",
+      "expectedFont": {
+        "family": "Atkinson Hyperlegible",
+        "weight": 700,
+        "style": "normal"
+      }
+    },
+    "bounds": {
+      "x": 100,
+      "y": 100,
+      "width": 400,
+      "height": 80
+    },
+    "scrollWidth": 400,
+    "clientWidth": 400,
+    "scrollHeight": 80,
+    "clientHeight": 80,
+    "lineCount": 1,
+    "clipsContent": false,
+    "fontReady": true,
+    "declaredFamily": "Atkinson Hyperlegible",
+    "typography": {
+      "family": "Atkinson Hyperlegible",
+      "weight": "400",
+      "style": "normal",
+      "lineHeight": "96px"
+    }
+  },
+  "diagnostics": [],
+  "finding": "Evaluator checks face availability and declared family but not computed weight/style against the expectation."
+}

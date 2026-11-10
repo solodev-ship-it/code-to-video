@@ -1,0 +1,34 @@
+{
+  "name": "@code-to-video/studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts CodeToVideoIntro ../../renders/CodeToVideoIntro.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --disallow-parallel-encoding --overwrite=false",
+    "compositions": "remotion compositions src/index.ts",
+    "render:components:aurora": "remotion render src/index.ts ComponentAuroraCinematic ../../renders/ComponentAuroraCinematic.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --disallow-parallel-encoding --overwrite=false",
+    "render:components:ember": "remotion render src/index.ts ComponentEmberMinimal ../../renders/ComponentEmberMinimal.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --disallow-parallel-encoding --overwrite=false",
+    "render:aurora": "remotion render src/index.ts ThemeAuroraCinematic ../../renders/ThemeAuroraCinematic.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --disallow-parallel-encoding --overwrite=false",
+    "render:ember": "remotion render src/index.ts ThemeEmberMinimal ../../renders/ThemeEmberMinimal.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --disallow-parallel-encoding --overwrite=false",
+    "browser:ensure": "remotion browser ensure",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test src/*.test.ts"
+  },
+  "dependencies": {
+    "@code-to-video/themes": "0.1.0",
+    "@code-to-video/ui": "0.1.0",
+    "@phosphor-icons/react": "2.1.10",
+    "lucide-react": "1.71.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.541"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.541",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,91 @@
+# Node dependencies and package-manager caches (keep the selected lockfile)
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+.pnp.*
+
+# Build outputs, test reports, and tool caches
+dist/
+build/
+out/
+coverage/
+.cache/
+.turbo/
+.parcel-cache/
+.next/
+.remotion/
+*.tsbuildinfo
+
+# Generated production data; use these directories, not source folders
+renders/
+outputs/
+staging/
+.staging/
+proxies/
+artifacts/
+tmp/
+temp/
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Production media should live outside this engine repository.
+# Other large formats still require review; this is not a size enforcement rule.
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.m4v
+*.wav
+*.mp3
+*.aac
+*.m4a
+*.flac
+*.aiff
+*.aif
+*.psd
+*.psb
+*.exr
+*.blend
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Deliberately scoped escape hatch for reviewed, tiny, licensed samples.
+# Generated output/cache directories above remain ignored, including in examples.
+!examples/**/assets/
+!examples/**/assets/*.mp4
+!examples/**/assets/*.mov
+!examples/**/assets/*.webm
+!examples/**/assets/*.wav
+!examples/**/assets/*.mp3
+
+# Local environment and credentials (templates may be committed)
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+*.pem
+*.key
+
+# Operating-system metadata
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Desktop.ini
+
+# Visual QA: only reviewed limited-size baselines and case definitions belong in Git.
+/tests/visual/current/
+/tests/visual/diffs/
+/tests/visual/reports/

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "F1",
+    "severity": "high",
+    "classification": "release-gate defect",
+    "blocking": true,
+    "title": "Negative-path oracle accepts any per-case failure",
+    "references": [
+      "scripts/qa/failure-check.ts:13-16"
+    ],
+    "evidence": "Read-only in-memory module-hook injection supplied an unrelated GPU_LOST failure. All three negative tests returned successfully and printed EXPECTED REJECTION. See logs/negative-oracle-check.log.",
+    "required_action": "Require distinct expected error identity/code for missing composition and invalid props; require an actual error-severity layout diagnostic for the critical-layout fixture. Add tests proving unrelated renderer failures are rejected.",
+    "source_modified": false
+  },
+  {
+    "id": "F2",
+    "severity": "medium",
+    "classification": "baseline-write robustness limitation",
+    "blocking": false,
+    "title": "PNG and approval metadata are written sequentially, not transactionally",
+    "references": [
+      "scripts/qa/baselines.ts:43-45"
+    ],
+    "evidence": "Default wx guards prevent silent overwrites. Under explicit replacement, a metadata-write failure after PNG write can leave the pair inconsistent. No baseline writes were attempted in this audit.",
+    "required_action": "Before high-assurance release, stage/validate the pair and provide atomic/rollback behavior for replacement. Current hash validation should fail closed on an inconsistent pair."
+  },
+  {
+    "id": "F3",
+    "severity": "medium",
+    "classification": "diagnostic scope limitation",
+    "blocking": false,
+    "title": "Expected font policy does not assert computed weight/style",
+    "references": [
+      "packages/ui/src/diagnostics/browser.ts:40-48",
+      "packages/ui/src/diagnostics/evaluate.ts:28-32"
+    ],
+    "evidence": "A pure-function audit measurement with required 700 face available but computed weight 400 returned no finding. See computed-font-policy-check.json. This does not mean the actual candidates use incorrect weights.",
+    "required_action": "Document this boundary and consider checking computed weight/style against the policy; availability is not proof of the specific rendered face or glyph coverage."
+  },
+  {
+    "id": "F4",
+    "severity": "medium",
+    "classification": "repository governance limitation",
+    "blocking": false,
+    "title": "Project is untracked within a home-directory Git repository",
+    "references": [
+      "git-before.txt"
+    ],
+    "evidence": "git rev-parse --show-toplevel returns /Users/HaruMalik and scoped status is ?? ./. A clean project commit baseline cannot be established from Git.",
+    "required_action": "Resolve project-local repository ownership explicitly before release; do not reset, stage or modify the enclosing repository automatically."
+  },
+  {
+    "id": "F5",
+    "severity": "info",
+    "classification": "human checkpoint",
+    "blocking": false,
+    "title": "No approved baselines exist",
+    "references": [
+      "tests/visual/baselines/.gitkeep"
+    ],
+    "evidence": "Missing baselines must fail the visual/full gate. Candidate capture and repeat-render equality are not approval.",
+    "required_action": "After fixing F1, rerun and explicitly human-review/approve the named candidates. Never auto-approve to turn the gate green."
+  }
+]

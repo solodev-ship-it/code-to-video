@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-11-09T17:32:26.751Z",
+  "run": "phase3c-audit-20261110-all-negative-invalid-props",
+  "status": "failed",
+  "cases": [
+    {
+      "key": "invalid-props-e173f9d5ebfa",
+      "case": {
+        "brandId": "aurora-finance",
+        "compositionId": "ReliabilityFixture",
+        "fontPolicy": "required-local",
+        "fps": 30,
+        "frame": 90,
+        "height": 1080,
+        "id": "invalid-props",
+        "props": {
+          "brandId": "aurora-finance",
+          "fixture": "not-a-fixture",
+          "motionId": "elegant",
+          "reducedMotion": false,
+          "schemaVersion": 1,
+          "styleId": "cinematic"
+        },
+        "schemaVersion": 1,
+        "styleId": "cinematic",
+        "width": 1920
+      },
+      "status": "failed",
+      "sourceHash": "16cb73a714c4e7466dea5bffd7db903fa4d38cefcd850eaae40e967d5a6333c6",
+      "fontDiagnostics": [],
+      "layoutDiagnostics": [],
+      "artifacts": {
+        "image": "tests/visual/current/phase3c-audit-20261110-all-negative-invalid-props/invalid-props-e173f9d5ebfa.png"
+      },
+      "error": {
+        "code": "CAPTURE_FAILED",
+        "message": "Error: Error: Unknown reliability fixture."
+      }
+    }
+  ],
+  "error": {
+    "code": "QA_CAPTURE_FAILED",
+    "message": "Error: Error: Unknown reliability fixture."
+  }
+}

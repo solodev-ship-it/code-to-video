@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "inspected_all_14": true,
+  "human_approved": false,
+  "findings": [
+    {
+      "case_id": "aurora-finance-cinematic-f15",
+      "finding": "Navy gradient/grid and rounded filled cards match cinematic styling. Title is very faint and slightly lower during the elegant entrance; subtitle and card text are already legible. No visible persistent clipping, missing assets or unexpected wrap. Human should review whether this deliberately weak early title contrast suits the intended pacing."
+    },
+    {
+      "case_id": "aurora-finance-cinematic-f90",
+      "finding": "Settled white single-line title, intentional two-line subtitle and two aligned cards are readable within the safe area. No obvious glyph breakage, clipping or missing asset. Cyan accent and navy surface treatment match Aurora cinematic."
+    },
+    {
+      "case_id": "aurora-finance-cinematic-f260",
+      "finding": "Whole content stack is visibly faded while the grid/gradient remains. This matches the coded 60% outro opacity; no displaced or clipped text. Reduced caption contrast is intentional during exit, not a settled-state result."
+    },
+    {
+      "case_id": "aurora-finance-minimal-f15",
+      "finding": "Flat dark navy, near-square outlined cards and no grid/glow distinguish minimal. Title is partially faded and slightly lower; it is more visible than cinematic because energetic easing differs. Card edges and two-line subtitle are intact."
+    },
+    {
+      "case_id": "aurora-finance-minimal-f90",
+      "finding": "Settled title and intentional two-line subtitle fit. Two equal outlined panels align; cyan accents and white/muted blue text remain coherent. No obvious overflow, unexpected wrap, missing glyphs or assets."
+    },
+    {
+      "case_id": "aurora-finance-minimal-f260",
+      "finding": "Content fades uniformly over the flat navy canvas; title remains contained and the outlines/captions soften as expected. No unexpected blank or lost panel; this is an exit sample."
+    },
+    {
+      "case_id": "ember-studio-cinematic-f15",
+      "finding": "Warm peach/off-white gradient, grid, rounded cards and coral labels match Ember cinematic. Title is deliberately very faint at the early elegant entrance, while subtitle/cards are present. No visible clipping or tofu; early title readability remains a creative-review choice."
+    },
+    {
+      "case_id": "ember-studio-cinematic-f90",
+      "finding": "Dark settled heading and two-line subtitle are clear over the warm cinematic canvas. Rounded panel padding/edges align; text appears intact. Coral labels/borders are subtler than Aurora accents and should receive human contrast review, without a formal contrast-certification claim."
+    },
+    {
+      "case_id": "ember-studio-cinematic-f260",
+      "finding": "Expected fade-out over the warm gradient; text and panel fills become pale while geometry remains stable. No obvious crop or missing asset. Lower label contrast is exit-related."
+    },
+    {
+      "case_id": "ember-studio-minimal-f15",
+      "finding": "Flat warm off-white canvas, charcoal typography, coral labels and squared outlined cards are visibly distinct from cinematic. Partially faded title is readable and offset slightly downward during entrance. No unexpected wrapping or clipping."
+    },
+    {
+      "case_id": "ember-studio-minimal-f90",
+      "finding": "Settled charcoal title, deliberate two-line subtitle and clean two-card grid fit safely. Flat surfaces and thin borders match minimal. No obvious broken glyphs, missing assets or misalignment."
+    },
+    {
+      "case_id": "ember-studio-minimal-f260",
+      "finding": "A uniform exit fade lightens title, copy and outlines over the flat off-white background. No geometric jump or clipped content is apparent; small coral labels are faint as expected for this sampled exit."
+    },
+    {
+      "case_id": "intro-settled",
+      "finding": "Centered CODE TO VIDEO title/subtitle, mint accent line and dots are clean and balanced on the dark background. No obvious clipping, wrap, missing glyphs or assets. This uses the original intro art direction/system-font stack, not an Aurora/Ember selection."
+    },
+    {
+      "case_id": "component-settled",
+      "finding": "Title/subtitle, three aligned cards, four labeled motion examples and footer are all visible and contained. Aurora cinematic colors/rounded panels/grid are coherent. No obvious cropping or missing assets. This is one settled frame; motion smoothness cannot be concluded from it alone."
+    }
+  ]
+}

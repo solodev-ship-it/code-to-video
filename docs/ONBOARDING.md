@@ -1,12 +1,12 @@
 # Local authoring without an AI account
 
-This is a private **0.1.0 preparation build**, not a published v1. Node **>=24.7.0 <25**, npm **>=11 <12** (tested 24.7.0/11.18.0) are required. Tested rendering platform: macOS/Darwin 25.6.0 arm64; other platforms need their own checks. Allow several GiB of free space. Review [third-party terms](../THIRD_PARTY_NOTICES.md) before production use.
+**0.1.0 is a published public preview, not stable v1.** Node **>=24.7.0 <25**, npm **>=11 <12** (tested 24.7.0/11.18.0) are required. Tested rendering platform: macOS/Apple Silicon; other platforms need their own checks. Allow several GiB of free space. Review [third-party terms](../THIRD_PARTY_NOTICES.md) before production use.
 
-## Scoped 0.1.0 preview — prepared, not yet published
+## Install the published 0.1.0 preview
 
-`npm run release:pack:preview` prepares `@krungtech/code-to-video@0.1.0` with public access metadata; it never publishes. The source workspace stays private and the logical manifest `framework.name` stays `code-to-video`. Use the exact scoped `.tgz` path printed by that command for local installation, following the archive workflow below. `npm run qa:package -- /absolute/path/to/report.json` validates either the private or scoped archive in an isolated consumer; retain its logs/consumer lockfile before release.
+[npm 0.1.0](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) and [GitHub pre-release](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0) are available. Registry `latest`, archive integrity, actual unversioned npx create, installed-project typecheck, Studio HTTP readiness, MP4/full decode and exact settled-frame comparison were verified November 14, 2026. The source workspace stays private and logical manifest `framework.name` stays `code-to-video`.
 
-**Only after registry publication**, the intended quick-start commands are:
+From a chosen workspace, using a new project destination:
 
 ```sh
 npx @krungtech/code-to-video@0.1.0 create my-first-video
@@ -14,15 +14,18 @@ npx @krungtech/code-to-video@0.1.0 preview my-first-video --port 3014
 npx @krungtech/code-to-video@0.1.0 render my-first-video TitleCard --output my-first-video/outputs/title-v1.mp4
 ```
 
-Do not use those commands as evidence that the package is already on npm. Node/npm and renderer-browser setup are still prerequisites; `create` itself does not install packages or copy the engine into the project.
+Node/npm and renderer-browser setup are prerequisites; `create` itself does not install packages or copy the engine into the project. The verifier reused an existing browser via `REMOTION_BROWSER_EXECUTABLE`; it did not test a fresh browser download. For your own existing browser, export that variable to its absolute executable path before preview/render. Otherwise upstream Remotion first-use setup/cache behavior may acquire a browser and needs internet access. Stop preview with Ctrl+C before rendering if desired.
+
+Automated Studio HTTP readiness is not a separate installed-package manual play/scrub/Save test; that manual walkthrough remains unverified. Release approval accepts this documented preview limit, not a fabricated test result.
 
 For repeated work, prefer a **persistent shared tools installation** rather than relying on the lifetime of npm's `npx` cache:
 
 ```sh
-# After publication, from your chosen production workspace:
+# From your chosen production workspace:
 npm install --prefix ./video-tools @krungtech/code-to-video@0.1.0
 ./video-tools/node_modules/.bin/code-to-video create ./my-first-video
 ./video-tools/node_modules/.bin/code-to-video preview ./my-first-video --port 3014
+./video-tools/node_modules/.bin/code-to-video render ./my-first-video TitleCard --output ./my-first-video/outputs/title-v1.mp4
 ```
 
 The generated TypeScript configuration and README point to the selected engine installation. Moving/removing that installation (including clearing an npx cache) can break those tooling paths; update them explicitly if it moves. No portability/automatic relocation or project-editor Save persistence is promised in this preview.
@@ -54,7 +57,7 @@ Studio is upstream Remotion tooling and may advertise LAN access; use a trusted 
 
 Edit `code-to-video.project.json` for copy/theme/timing and `compositions/TitleCard.tsx` for authored structure. Sample copy is labeled; replace it and review rights/facts before publishing a video. Studio Save updates a disposable cache entry, **not** the source manifest. Explicitly persist intended props in JSON before restarting. No automatic text fitting, narration, audio or captions are supplied.
 
-## Private archive consumer path
+## Maintainer local-archive consumer path
 
 After `npm run release:pack`, use the exact archive path printed in its report, in a separate empty directory:
 

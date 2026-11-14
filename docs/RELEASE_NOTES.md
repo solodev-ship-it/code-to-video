@@ -1,6 +1,6 @@
-# Draft 0.1.0 public-preview release notes — NOT RELEASED
+# 0.1.0 public-preview release notes
 
-Target: **`@krungtech/code-to-video@0.1.0`**, Git tag **`v0.1.0`**, GitHub **pre-release**. No tag, release or npm publication is claimed by this draft. The source workspace remains private at0.1.0; a separately allowlisted scoped artifact is the distribution. This preview is not stable v1. AI automation is not included.
+Released November 14, 2026: [**`@krungtech/code-to-video@0.1.0`**](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0), Git tag **`v0.1.0`**, [GitHub **pre-release**](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0). Registry `latest` is0.1.0. The source workspace remains private at0.1.0; a separately allowlisted scoped artifact is the distribution. This preview is not stable v1. AI automation is not included.
 
 ## Implemented and reviewable
 
@@ -12,15 +12,15 @@ Target: **`@krungtech/code-to-video@0.1.0`**, Git tag **`v0.1.0`**, GitHub **pre
 
 ## Validation and size
 
-- 310 local fast tests/strict TypeScript and fourteen Studio extraction/save checks pass. Framework9294994 has successful hosted CI43608109589; any newer release revision/tag needs its own applicable CI acceptance.
-- Clean scoped tarball install, npx resolution against that installed archive, create/typecheck/discovery, real1080p30/six-second MP4/full decode and exact source-installed/repeat frames passed. Not a registry-install claim.
+- Recorded310 local fast tests/strict TypeScript and fourteen Studio extraction/save checks pass. Tagv0.1.0 atc7cb071 has [successful tag-specific CI43612975576](https://github.com/solodev-ship-it/code-to-video/actions/runs/43612975576).
+- Actual registry archive integrity and approved SHA-256 match; unversioned npm npx create, installed-source hash checks, project typecheck, Studio HTTP200, real1080p30/six-second MP4/full decode and exact settled-frame comparison pass. Earlier local archive source-installed/repeat evidence remains retained.
 - Fourteen explicitly human-reviewed baseline references installed; exact stored-capture comparison passes. Earlier aggregate failure reports remain historical; no newly passing full `qa:all` execution is claimed.
 - Measured macOS arm64 consumer: ~293MB dependency tree including the ~1.1MB package, ~471MB shared browser, ~6KB initial project before assets. Generated caches brought that dependency tree to ~522MB after checks. Node/npm cache, outputs and media are extra; this is not a RAM/cross-platform guarantee.
 - Render evidence: macOS arm64, Node24.7/npm11.18, Chromium158. Ubuntu CI checks source/packages, not cross-platform browser pixels. Other render platforms remain unverified.
 
-See [exact evidence](RELEASE_V1.md) and [onboarding](ONBOARDING.md). After publication, the intended command is `npx @krungtech/code-to-video@0.1.0 create my-first-video`; until then use the reviewed local archive/source workflow.
+See [exact evidence](RELEASE_V1.md) and [onboarding](ONBOARDING.md). Start with `npx @krungtech/code-to-video@0.1.0 create my-first-video`. The immutable package contains earlier preparation-status documents; live docs report current availability without replacing its bytes.
 
-## Licensing and final owner gate
+## Licensing and owner release decision
 
 First-party code:MIT, copyright(c)2026 Rorn Bunthong; KrungTech is the solo author's project credit, not separate company ownership. Remotion is unmodified and has its own conditional terms. Our tarball does not embed its implementation, compositor binaries, Chromium or `node_modules`. Other dependencies/assets retain their own notices and obligations.
 
@@ -32,4 +32,4 @@ System-font portability and complex-script shaping are not certified. External v
 
 Generated TypeScript/README paths point to the selected engine installation; moving/removing it or clearing an npx cache can break tooling paths. Prefer a persistent shared tools installation for real work. Output overwrite is refused. Caches/assets/output storage grow with use.
 
-A separate installed-consumer interactive Studio play/scrub/Save walkthrough is not demonstrated by automated render/discovery; the source/local Studio checklist was human accepted. The owner must explicitly review or defer that separate installed-package interactive claim for this preview, without implying it was tested.
+A separate installed-consumer interactive Studio play/scrub/Save walkthrough remains unverified; the source/local Studio checklist was human accepted. Final owner release approval accepts the documented bounded preview, not a claim that this separate manual walkthrough was tested.

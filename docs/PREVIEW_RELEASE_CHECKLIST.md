@@ -1,6 +1,14 @@
 # 0.1.0 preview — final owner decision
 
-This is a **review checklist, not a release declaration**. No tag/npm publication is performed by accepting engineering checks alone.
+## Completed bounded release — November 14, 2026
+
+Final owner approval was explicitly granted for the named0.1.0 preview with disclosed warnings and manual-Studio limits; no repeat approval is required. [npm0.1.0](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) is independently verified (latest/integrity/exact archive and actual installed create/typecheck/Studio HTTP/render/decode/frame comparison). The existing [GitHub pre-release](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0) is published; tagc7cb071 and tag-specific CI43612975576 passed. See [current evidence](RELEASE_V1.md).
+
+This records owner acceptance, **not** resolution of the Remotion/svg-parser notice/component-scope questions or upstream legal permission. Separate installed-package manual play/scrub/Save remains unverified. No stable-v1/AI/white-label claim.
+
+## Historical pre-publication checklist
+
+The unchecked decision rows below preserve the original review questions, not a new request for already-granted release approval. Outstanding rights questions stay visible; owner approval does not supply missing upstream rights.
 
 ## Technical preparation completed
 

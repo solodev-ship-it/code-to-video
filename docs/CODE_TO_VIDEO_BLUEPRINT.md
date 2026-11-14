@@ -1,5 +1,13 @@
 # Code to Video — Technical Blueprint
 
+## Current release checkpoint — November 14, 2026
+
+**@krungtech/code-to-video@0.1.0 public preview is released**, not stable v1. Registry version/latest and exact approved archive integrity were independently verified; actual registry-installed create/typecheck/Studio HTTP/render/full decode and exact settled-frame comparison passed. Existing v0.1.0 tag CI passed and the existing GitHub draft is now a public pre-release. Source workspace remains private/unscoped; immutable package/tag contents are unchanged. See [release evidence and links](RELEASE_V1.md) and [current installation commands](ONBOARDING.md). Licensing warnings and unverified installed-Studio manual play/scrub/Save remain disclosed; AI/new feature work is not included or authorized.
+
+## Historical implementation checkpoints
+
+The following phase/preparation statements retain their original scope and dates; they do not override the current release status above.
+
 **November 14 scoped-preview follow-up:** owner selected @krungtech/code-to-video@0.1.0 free/open-source CLI/templates using unmodified Remotion. A guarded scoped-public artifact mode now complements the private packer without changing source workspace/private metadata or schema-1 logical identity. Named baselines were explicitly reviewed/installed. Isolated supported runtime is available for project checks. Consumer validation passes as recorded below; third-party/final-revision CI/release acceptance remain gates. No registry release is claimed. Historical phase statements below retain their original boundaries; current evidence is in [RELEASE_V1.md](RELEASE_V1.md).
 
 Scoped-consumer follow-up: 310 fast tests pass; an isolated scoped tarball installs, resolves npx, creates/typechecks and renders/fully decodes a sample with exact source-installed/repeat pixels. Actual dependency/browser/project footprints are recorded. Third-party/final-revision CI/release acceptance still prevents a public-release claim.

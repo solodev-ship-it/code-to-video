@@ -1,6 +1,19 @@
-# v1 release preparation — not a release
+# Release status — 0.1.0 public preview
 
-## Current direction — November 14, 2026
+## Published and independently verified — November 14, 2026
+
+- [npm `@krungtech/code-to-video@0.1.0`](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) is available; registry `latest` is **0.1.0**. No second publication was attempted.
+- The existing [GitHub v0.1.0 pre-release](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0) was promoted from draft, preserving its release identity, archive and checksum assets. The annotated tag still points to **c7cb0715fe7a19ed9d3f5763c0bbf502e6ab58e3**; [tag CI43612975576 passed](https://github.com/solodev-ship-it/code-to-video/actions/runs/43612975576).
+- Actual registry archive SHA-256: **`46da782d28ac5fef420961784e9244f1ca600c8573991d8ff674c61da14e1903`**, exactly the approved archive. npm integrity: `sha512-kuSmzqKBI32kakT6RmnSwFL9E06nVGl9Rm6iJ5DuxNSwkOy59CopKVZVckxSeel4BM+F2ONVBF457DrbIKM/GQ==`. Archive: **165 files / 572542 compressed / 1116870 unpacked bytes**, excluding dependencies/browser/caches.
+- Inspected one-off verifier `node --experimental-strip-types renders/maintenance/verify-registry-release.mjs` exited **0** under isolated Node24.7/npm11.18. Evidence retained locally at `renders/registry-checks/registry-HOjwaR/report.json` with logs, project source, video and settled frame.
+- Actual **unversioned registry npx** created an external synthetic project; installed package version/dependencies/source hashes matched the approved candidate with no framework-source fallback. Generated TypeScript passed, Studio returned **HTTP200**, and registry-installed npx rendered **H.264 1920×1080 / 30 FPS / 180 frames / six seconds**. Full FFmpeg decode passed; settled frame90 had **zero differing pixels** against retained passing consumer evidence. Existing renderer browser was reused, not downloaded.
+- Latest recorded source checks remain **310 tests**, strict TypeScript and fourteen Studio checks. Unchanged full/material suites were not rerun; historical aggregate failures are not relabeled as fresh passes.
+
+This completes the owner-approved **bounded 0.1.0 public preview**, not stable v1. First-party MIT does not clear dependency rights: [notice/component-scope warnings](LICENSE_GAP_TRACE.md) remain disclosed. Installed-package manual Studio play/scrub/Save remains **unverified**; automated HTTP/render evidence is not that walkthrough. System-font/complex-script portability, other render platforms, opaque-only external video, disposable Studio Save, trusted executable scenes and npx-cache tooling paths retain their [documented limits](RELEASE_NOTES.md#known-preview-limits). AI/new features are not included.
+
+The immutable npm archive/tag retain pre-publication preparation documents. Live main-branch docs now describe verified availability; **no package bytes, tag, baseline or runtime code were changed**. Use [onboarding](ONBOARDING.md) for current commands. The sections below are historical preparation evidence and original gates, not current publication blockers or a requirement to republish 0.1.0.
+
+## Historical preparation direction — November 14, 2026
 
 Final review follow-up: [LICENSE_GAP_TRACE.md](LICENSE_GAP_TRACE.md) traces all twenty installed missing-root-text cases and preserves four verified notices without changing the raw inventory. Remaining package/component-scope questions are explicit, not silently approved. The [final owner checklist](PREVIEW_RELEASE_CHECKLIST.md) and [0.1.0 draft notes](RELEASE_NOTES.md) replace the old stable-v1 draft as the next review artifact. Framework9294994 main-branch CI43608109589 has passed; no tag/publication is implied.
 

@@ -1,5 +1,13 @@
 # Architecture
 
+## Current release boundary — November 14, 2026
+
+**@krungtech/code-to-video@0.1.0 public preview is released** as a separately staged scoped package; the source workspace remains private/unscoped. Actual registry integrity/latest/install/create/typecheck/Studio HTTP/render/full decode and exact-frame verification passed. The existing v0.1.0 tag/CI and GitHub pre-release preserve the approved archive. No runtime, API, dependencies, tag or baseline changed during final verification/publication. See [release evidence](RELEASE_V1.md). This is not stable v1, third-party legal clearance, a manual installed-Studio walkthrough or AI feature delivery.
+
+## Historical architecture checkpoints
+
+Earlier preparation/phase statements below describe their original boundaries, not current publication or CI status.
+
 **Scoped preview follow-up (November 14):** `release:pack:preview` explicitly stages @krungtech/code-to-video@0.1.0 public-access metadata through the existing allowlisted packer; default private packing and source workspace identity remain unchanged. Consumer QA resolves either scoped/unscoped package paths, checks the logical manifest identity, records the actual consumer lockfile and logical dependency/browser/project sizes, and preserves source/installed/repeat comparison. No registry-writing job or scene/theme/schema API change. Named baselines are now installed with explicit human approval. Existing committed-revision CI success is verified; new changes still need their own acceptance. See [release status](RELEASE_V1.md).
 
 The scoped artifact also constrains the already-tested Babel helper-module-transforms7.29.13 to avoid an observed upstream ETARGET on a newer transitive release. The source lock/default private dependency list is unchanged. Clean scoped-consumer install/render/decode/exact-frame checks pass; this is not registry publication or a global freeze of transitive dependencies.

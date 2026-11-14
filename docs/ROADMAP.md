@@ -2,6 +2,10 @@
 
 ## Status
 
+**Public preview released — November 14, 2026:** [@krungtech/code-to-video@0.1.0](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) and [GitHub v0.1.0 pre-release](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0) are available. Registry latest/integrity/approved archive and actual installed create/typecheck/Studio HTTP/render/full decode/exact settled frame passed. Existing tagc7cb071/tag-specific CI passed; existing draft/assets were preserved. This completes only the approved bounded0.1.0 preview, **not stable v1 or new feature authorization**. Licensing warnings and unverified installed-Studio manual interaction remain. [Current evidence](RELEASE_V1.md) and [onboarding](ONBOARDING.md) supersede historical availability statements below.
+
+## Historical checkpoints and phase roadmap
+
 **Latest checkpoint — November 14, 2026:** fourteen specifically reviewed end-to-end baseline PNG/JSON pairs are installed with human approval; exact comparison of the stored reviewed capture passes. Named review videos were accepted. No fresh full-gate/render run or blanket historical milestone approval. Owner selected @krungtech/code-to-video@0.1.0 public preview using unmodified Remotion; third-party review, supported Node24 setup, scoped package implementation and real hosted CI/release acceptance remain. See [baseline checkpoint](BASELINE_APPROVAL.md) and [release direction](RELEASE_V1.md). The phase-by-phase record below retains its original dates/statuses; earlier pending-baseline statements are historical for the now-approved set.
 
 **Preview preparation follow-up:** isolated Node24.7/npm11.18 is installed for this checkout without global changes. Explicit scoped-public packaging is implemented beside default private packing, with focused metadata/version/pin guards; consumer QA supports the scoped path and records install/project/browser footprint. Existing CI run 42841492482 at 77c8fc8 succeeded, not evidence for new uncommitted code. No publish/tag/AI/Studio rebranding.

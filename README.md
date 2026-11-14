@@ -1,16 +1,25 @@
 # Code to Video
 
-A modular, AI-assisted video production framework being built with **TypeScript, React, and Remotion** for documentaries, explainers, product showcases, corporate videos, and social content.
+A modular local video production framework built with **TypeScript, React, and Remotion**. AI-assisted workflows remain planned, not shipped.
 
 Developed by **Rorn Bunthong — KrungTech**. First-party framework code is [MIT licensed](LICENSE), copyright (c) 2026 Rorn Bunthong. KrungTech is a separate project credit, not an assignment of copyright. Remotion and other dependencies/assets retain their [own terms and notices](THIRD_PARTY_NOTICES.md).
 
 ## Current status — CLI and two production templates
 
-**November 14 preview checkpoint:** the selected npm target is **`@krungtech/code-to-video@0.1.0`**. A guarded `npm run release:pack:preview` prepares a scoped/public-metadata archive without publishing or changing the private source workspace. Named videos and fourteen QA images were human-approved; the fourteen references are installed and stored-capture comparison passes. Third-party release review and validation of the final changed revision remain gates. **No registry publication is claimed.** See [preview onboarding](docs/ONBOARDING.md) and [release evidence](docs/RELEASE_V1.md). Older phase-specific pending-review statements below are historical for this reviewed set only.
+**Public preview released November 14, 2026:** [**`@krungtech/code-to-video@0.1.0` on npm**](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) and [**GitHub pre-release v0.1.0**](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0). Registry `latest` is `0.1.0`; downloaded archive integrity and actual registry-installed create/typecheck/Studio HTTP/render/full-decode/exact-frame checks pass. This is **not stable v1**. The source workspace intentionally remains private/unscoped; the separately staged scoped package is public. See [onboarding](docs/ONBOARDING.md), [release evidence](docs/RELEASE_V1.md), and [licensing warnings](docs/PREVIEW_LICENSE_REVIEW.md).
 
-**Release preparation:** private and scoped-public-metadata archives work; the scoped 0.1.0 candidate passes clean-consumer install, npx resolution, project creation/typecheck, render/full decode and exact source/installed/repeat frames. Latest strict check: **310 tests** plus fourteen Studio checks. This is **not stable v1 or a registry release**: source remains `0.1.0`/private. Third-party review and actual CI/release acceptance for the changed revision remain open. Start with [onboarding](docs/ONBOARDING.md) and [release evidence](docs/RELEASE_V1.md).
+Requires **Node >=24.7 <25 and npm 11**; rendering tested on macOS Apple Silicon. With a provisioned renderer browser (or upstream first-use setup):
 
-The optional local CLI now creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. Start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). The npm distribution remains unpublished; named sample videos were human-approved.
+```sh
+npx @krungtech/code-to-video@0.1.0 create my-first-video
+npx @krungtech/code-to-video@0.1.0 preview my-first-video --port 3014
+# Stop preview with Ctrl+C, then:
+npx @krungtech/code-to-video@0.1.0 render my-first-video TitleCard --output my-first-video/outputs/title-v1.mp4
+```
+
+The sample renders six seconds at 1920×1080/30 FPS. Prefer a persistent shared tools installation for ongoing work; clearing the npx cache can break generated tooling paths. Studio HTTP readiness was tested, **not** a separate installed-package manual play/scrub/Save walkthrough. Studio Save edits a disposable entry, not the manifest. See [setup and limitations](docs/ONBOARDING.md). Latest recorded strict check: **310 tests** plus fourteen Studio checks; [tag-specific CI passed](https://github.com/solodev-ship-it/code-to-video/actions/runs/43612975576).
+
+The CLI creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. For source-checkout use, start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). Named sample videos were human-approved.
 
 **End-to-end QA:** `npm run qa:e2e` installs the lockfile in an isolated source copy, edits/renders a standalone sample, verifies timing/full decode and exact frame repeats, checks four specific CLI rejections, then runs `qa:all`. It keeps a nonzero exit when visual references are unapproved; no baseline is approved automatically. See [reproduction and evidence](docs/END_TO_END_QA.md). Allow several GiB of free disk space and provision the browser first.
 
@@ -28,9 +37,9 @@ Focused finalization has corrected the glass showcase's ordinary label contrast 
 
 **Earlier capabilities retained:** engine/themes/components, Phase 3C reliability tooling, immutable advanced surfaces, four glass presets, explicit fallback and `GlassmorphismShowcase`. Original theme/font defaults remain unchanged. See [Advanced Surfaces](docs/ADVANCED_SURFACES.md) for material APIs and candidate artifacts.
 
-**Remaining release checkpoint:** third-party review and final revision CI/release acceptance. Baselines were installed only after explicit human review and authorization. Future comparisons still fail on missing approval, environment drift or unexpected differences; no gate or threshold is weakened.
+**Preview boundaries:** owner release approval does not resolve the documented third-party notice/component-scope questions or grant upstream rights. Baselines were installed only after explicit human review and authorization. Future comparisons still fail on missing approval, environment drift or unexpected differences; no gate or threshold is weakened. Older phase-specific review statements below are historical, not blanket approval of every artifact.
 
-**Still not implemented:** a larger template gallery, comprehensive UI, caption/audio production, AI workflows, dashboard or a published custom CLI. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
+**Still not implemented:** a larger template gallery, comprehensive UI, caption/audio production, AI workflows or dashboard. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
 
 ## Prerequisites (macOS)
 
@@ -198,7 +207,7 @@ renders/                     Ignored generated output (created on render)
 package.json, package-lock.json, .nvmrc
 ```
 
-Studio, themes, and UI are the only package workspaces. Do not add empty manifests elsewhere. Project/scene timing validation stays local to the starter; theme contracts live in the theme package. UI consumes those contracts and remains independent of individual projects. No external project loader or dynamic scene-code registration exists.
+Studio, themes, and UI are the package workspaces. Do not add empty manifests elsewhere. Theme contracts live in the theme package; UI remains independent of individual projects. Bounded external-project loading and trusted scene registration are documented in [the project guide](docs/PROJECT_INFRASTRUCTURE.md).
 
 ## Phase 2 validation (historical)
 
@@ -245,11 +254,11 @@ The final audit's status-only negative-test defect is fixed in the Node QA layer
 
 ## Planned direction and documentation
 
-Next: human review and explicit approval of candidate baselines, then a narrowly scoped Phase 3D delivery-QA policy (language/glyph coverage and a small aspect-ratio/text matrix). External media projects and AI workflows remain later work; no sibling video-projects folder or original documentary has been modified. Large production media stays outside engine Git.
+The bounded 0.1.0 public preview is released. New features, AI workflows and production projects require separate authorization; no sibling production project was modified for this release. Large production media stays outside engine Git.
 
-Read the [blueprint](docs/CODE_TO_VIDEO_BLUEPRINT.md), [architecture](docs/ARCHITECTURE.md), [roadmap](docs/ROADMAP.md), and [agent instructions](AGENTS.md). Git currently resolves to an enclosing repository; no project-local Git initialization or remote was created. Decide ownership explicitly before committing.
+Read the [blueprint](docs/CODE_TO_VIDEO_BLUEPRINT.md), [architecture](docs/ARCHITECTURE.md), [roadmap](docs/ROADMAP.md), and [agent instructions](AGENTS.md). This framework has its own Git repository; private management and independent productions are not part of it.
 
-No framework license has been selected; “open” describes the intended direction, not a license grant. Review applicable [Remotion terms](https://www.remotion.dev/docs/license), dependency terms, and eventual asset/font rights before distribution or commercial use.
+First-party code is [MIT licensed](LICENSE). Review applicable [Remotion terms](https://www.remotion.dev/docs/license), [dependency notices and unresolved questions](THIRD_PARTY_NOTICES.md), and asset/font rights before distribution or commercial use. Our license does not relicense dependencies.
 
 Phase 3D.4B adds external PNG/sequence/opaque video compositing and depth, sweep and glow components, plus AdvancedEffectsShowcase (15 total compositions). See [cinematic APIs and limits](docs/CINEMATIC_EFFECTS.md). Technical validation is recorded separately; human visual approval remains pending. No real-time 3D engine, Phase 4 staging/storage or Phase 5 automation is included.
 

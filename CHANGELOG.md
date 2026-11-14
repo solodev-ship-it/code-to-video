@@ -1,6 +1,13 @@
 # Changelog
 
-## Unreleased — release preparation
+## 0.1.0 — 2026-11-14 (public preview)
+
+- Published as [@krungtech/code-to-video@0.1.0](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0), with [GitHub pre-release v0.1.0](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0). Existing tag CI passed; existing draft/assets preserved.
+- Independently verified registry latest/integrity/exact approved archive, actual npm-installed create/typecheck, Studio HTTP200, six-second1080p render/full decode and zero-difference settled frame.
+- Local create/preview/render CLI, title-card/explainer templates and bounded framework components are included; AI and stable-v1 compatibility are not.
+- Live installation docs reflect availability; immutable package preparation history stays unchanged. Third-party license/notice warnings and unverified installed-Studio manual interaction remain explicit.
+
+### Preparation history
 
 - Trace the twenty missing-root-license-text warnings, preserving verified esbuild/esrecurse/glob-to-regexp/Kiwi notices. Keep Remotion/svg-parser gaps and non-MIT transitive terms explicit; no legal clearance inferred.
 - Prepare accurate0.1.0 preview release notes and a final owner rights/installed-Studio/tag/publication checklist. No release/tag/registry upload performed.
@@ -17,4 +24,4 @@
 - Add browser-free CI definition, dependency/license inventory, beginner onboarding, proposed version/manifest policy and draft release notes.
 - Preserve private-package safeguards, existing themes/scenes/composition IDs and human baseline approval requirements.
 
-No v1 tag or registry publish has occurred. See [release preparation](docs/RELEASE_V1.md) for actual checks and unresolved decisions. Earlier implemented capabilities/evidence remain in [the roadmap](docs/ROADMAP.md).
+The bullets above record preparation before publication. See [current release evidence](docs/RELEASE_V1.md) for verified availability and unresolved licensing/preview limits. Earlier implemented capabilities/evidence remain in [the roadmap](docs/ROADMAP.md).

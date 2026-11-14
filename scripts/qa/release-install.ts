@@ -14,14 +14,20 @@ import {verifyPngOutput} from './artifacts.ts';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const args=process.argv.slice(2);assert.equal(args.length,1,'Usage: npm run qa:package -- /absolute/path/to/candidate/report.json');
 const candidate=JSON.parse(await readFile(path.resolve(args[0]!),'utf8'));
-assert.equal(candidate.status,'prepared');assert.equal(candidate.private,true);
+assert.equal(candidate.status,'prepared');
+const packageName=candidate.manifest?.name;
+assert(packageName==='code-to-video' || packageName==='@krungtech/code-to-video','Unexpected package identity');
+const publicPreview=packageName==='@krungtech/code-to-video';
+assert.equal(candidate.private,!publicPreview);
+assert.equal(candidate.manifest.private,!publicPreview);
+if(publicPreview){assert.equal(candidate.manifest.version,'0.1.0');assert.equal(candidate.manifest.publishConfig?.access,'public');}
 const hash=async(file:string)=>createHash('sha256').update(await readFile(file)).digest('hex');
 assert.equal(await hash(candidate.archive),candidate.sha256,'Archive changed after preparation');
 const directory=await mkdtemp(path.join(path.dirname(path.resolve(args[0]!)),'consumer-check-'));
 // Outside the framework so a broken package cannot fall back to workspace deps.
 const consumer=await mkdtemp(path.join(os.tmpdir(),'ctv-installed-consumer-'));
 const report:Record<string,unknown>={schemaVersion:1,status:'failed',releaseReady:false,humanReview:'PENDING',candidateSha256:candidate.sha256,
-  node:process.version,platform:os.platform(),arch:os.arch(),commands:[]};
+   node:process.version,platform:os.platform(),arch:os.arch(),packageName,distribution:publicPreview?'public-preview':'private-candidate',commands:[]};
 const commands:Record<string,unknown>[]=[];report.commands=commands;
 const env:NodeJS.ProcessEnv={...process.env,NODE_PATH:'',CODE_TO_VIDEO_PROJECT:'',BROWSER:'none'};
 function run(executable:string,arguments_:string[],name:string,cwd=consumer):string {
@@ -45,6 +51,16 @@ async function browserPath():Promise<string>{
   for(const folder of ['apps/studio/node_modules/.remotion','node_modules/.remotion']){const found=await search(path.join(root,folder),5);if(found)return found;}
   throw new Error('Provision a browser before qa:package; it does not download one.');
 }
+// Measure logical file bytes without following symlinks or counting shared deps twice.
+async function footprint(folder:string):Promise<{files:number;logicalBytes:number}>{
+  let files=0;let logicalBytes=0;
+  for(const entry of await readdir(folder,{withFileTypes:true})){
+    const file=path.join(folder,entry.name);
+    if(entry.isDirectory()){const child=await footprint(file);files+=child.files;logicalBytes+=child.logicalBytes;}
+    else if(entry.isFile()){files++;logicalBytes+=(await lstat(file)).size;}
+  }
+  return {files,logicalBytes};
+}
 try {
   const browser=await browserPath();assert((await lstat(browser)).isFile());env.REMOTION_BROWSER_EXECUTABLE=browser;process.env.REMOTION_BROWSER_EXECUTABLE=browser;
   report.browserSha256=await hash(browser);report.browserVersion=run(browser,['--version'],'browser-version');
@@ -52,13 +68,28 @@ try {
   await writeFile(path.join(consumer,'package.json'),JSON.stringify({name:'ctv-local-consumer',private:true,type:'module'}),{flag:'wx'});
   assert(!existsSync(path.join(consumer,'node_modules')));
   run('npm',['install','--omit=dev','--prefer-offline','--no-audit','--no-fund',candidate.archive],'clean-consumer-install');
-  const installed=path.join(consumer,'node_modules/code-to-video');
-  const metadata=JSON.parse(await readFile(path.join(installed,'package.json'),'utf8'));assert.equal(metadata.private,true);assert(!metadata.workspaces);
+  const installed=path.join(consumer,'node_modules',...packageName.split('/'));
+  const metadata=JSON.parse(await readFile(path.join(installed,'package.json'),'utf8'));assert.equal(metadata.private,!publicPreview);assert(!metadata.workspaces);
+  assert.equal(metadata.name,packageName);assert.equal(metadata.version,candidate.manifest.version);
+  if(publicPreview)assert.equal(metadata.publishConfig?.access,'public');
+  if(publicPreview){
+    const babel=JSON.parse(await readFile(path.join(consumer,'node_modules/@babel/helper-module-transforms/package.json'),'utf8'));
+    assert.equal(babel.version,'7.29.13','Consumer must retain the tested Babel constraint');
+  }
+  await cp(path.join(consumer,'package-lock.json'),path.join(directory,'consumer-package-lock.json'),{errorOnExist:true,force:false});
+  report.installFootprint={dependencies:await footprint(path.join(consumer,'node_modules')),package:await footprint(installed),
+    browserReusedOutsideInstall:true,browserDistribution:await footprint(path.dirname(browser)),
+    note:'Logical bytes, not compressed downloads, filesystem allocation or RAM; the browser was already provisioned, not installed by this consumer check.'};
   assert(!existsSync(path.join(consumer,'node_modules/@code-to-video')),'Unpublished first-party package fetched');
   await writeFile(path.join(directory,'installed-package.json'),JSON.stringify(metadata,null,2)+'\n',{flag:'wx'});
   const bin=path.join(consumer,'node_modules/.bin/code-to-video');
   run(bin,['--help'],'installed-help');
+  if(publicPreview)run('npx',['--offline','--no-install',`${packageName}@${metadata.version}`,'--help'],'installed-scoped-npx-help');
   const project=path.join(consumer,'sample');run(bin,['create',project,'--template','title-card','--id','InstalledSample'],'installed-create');
+  const manifest=JSON.parse(await readFile(path.join(project,'code-to-video.project.json'),'utf8'));
+  assert.equal(manifest.framework.name,'code-to-video','Scoped npm name must not change the logical project contract');
+  assert.equal(manifest.framework.version,'0.1.0');
+  report.projectFootprint=await footprint(project);
   await cp(project,path.join(directory,'sample-source'),{recursive:true,errorOnExist:true,force:false});
   run(path.join(consumer,'node_modules/.bin/tsc'),['-p',path.join(project,'tsconfig.json')],'installed-project-typecheck');
   const video=path.join(directory,'InstalledSample.mp4');run(bin,['render',project,'TitleCard','--output',video],'installed-render');
@@ -78,7 +109,8 @@ try {
   const repeated=comparePng(await readFile(frames.installed!),await readFile(frames.repeat!),strictComparison).metrics;
   assert.equal(sourceToInstalled.differingPixels,0);assert.equal(repeated.differingPixels,0);
   report.frames={files:frames,sourceToInstalled,repeated};
-  report.status='passed';console.log('PASS: private tarball installs without workspaces, renders/decodes, matches source pixels and repeats exactly. Human/license/release approvals still pending.');
+  report.afterChecksFootprint=await footprint(path.join(consumer,'node_modules'));
+  report.status='passed';console.log(`PASS: ${publicPreview?'scoped public-preview':'private'} tarball installs without workspaces, renders/decodes, matches source pixels and repeats exactly. Publication/license/release acceptance still pending.`);
 }catch(error){report.error={message:String(error),stack:error instanceof Error?error.stack:undefined};console.error(error);process.exitCode=1;}
 finally {
   for(const command of commands)await writeFile(path.join(directory,`${command.name}.log`),String(command.output??''),{flag:'wx'});

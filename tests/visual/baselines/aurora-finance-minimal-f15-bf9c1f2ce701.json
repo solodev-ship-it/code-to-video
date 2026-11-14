@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "brandId": "aurora-finance",
+    "compositionId": "ReliabilityFixture",
+    "fontPolicy": "required-local",
+    "fps": 30,
+    "frame": 15,
+    "height": 1080,
+    "id": "aurora-finance-minimal-f15",
+    "props": {
+      "brandId": "aurora-finance",
+      "fixture": "normal",
+      "motionId": "energetic",
+      "reducedMotion": false,
+      "schemaVersion": 1,
+      "styleId": "minimal"
+    },
+    "schemaVersion": 1,
+    "styleId": "minimal",
+    "width": 1920
+  },
+  "key": "aurora-finance-minimal-f15-bf9c1f2ce701",
+  "environment": {
+    "os": {
+      "platform": "darwin",
+      "release": "25.6.0"
+    },
+    "arch": "arm64",
+    "node": "v24.7.0",
+    "remotion": "4.0.541",
+    "browser": {
+      "product": "HeadlessChrome/158.0.8127.2",
+      "revision": "@0000000000000000000000000000000000000000",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1,
+    "render": {
+      "gl": "swangle",
+      "scale": 1,
+      "imageFormat": "png",
+      "fps": 30
+    }
+  },
+  "sourceHash": "224cc5905596403378287ae54e933b1924182d3a8440ed940392ef2ebdf052f3",
+  "sha256": "a6e3ea87f99e3f1d464e2749ed7b17d35bda555498e267d3b007c5c230edbb3c",
+  "approval": {
+    "reviewer": "solodev-npm (project owner)",
+    "reason": "Owner reviewed aurora-finance-minimal-f15 in the named e2e-resume-1794318265833-visual PNG set and responded \"All, look good\" on 2026-11-14; explicitly accepted installing the reviewed candidates as official baselines.",
+    "timestamp": "2026-11-14T14:04:32.818Z"
+  }
+}

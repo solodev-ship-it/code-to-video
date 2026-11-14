@@ -23,10 +23,27 @@ export function candidateManifest(root:Metadata,studio:Metadata,ui:Metadata,them
     files:['bin','dist','templates','scripts','packages','apps','docs','README.md','LICENSE','CHANGELOG.md','THIRD_PARTY_NOTICES.md']};
 }
 
+// Explicit owner-selected preview artifact; the source workspace stays private.
+// Preparing public metadata never grants legal clearance or publishes anything.
+export function previewManifest(root:Metadata,studio:Metadata,ui:Metadata,themes:Metadata) {
+  const candidate=candidateManifest(root,studio,ui,themes);
+  assert.equal(candidate.version,'0.1.0','Only the selected 0.1.0 public preview is authorized');
+  return {...candidate,name:'@krungtech/code-to-video',private:false,
+    // A newer helper release requests unavailable @babel/traverse ^7.29.14.
+    // Reuse the existing tested source-lock version; no workspace dependency bump.
+    dependencies:Object.fromEntries(Object.entries({...candidate.dependencies,'@babel/helper-module-transforms':'7.29.13'}).sort(([a],[b])=>a.localeCompare(b))),
+    description:'Local React/Remotion video authoring CLI and templates — 0.1.0 public preview',
+    repository:{type:'git',url:'git+https://github.com/solodev-ship-it/code-to-video.git'},
+    homepage:'https://github.com/solodev-ship-it/code-to-video#readme',
+    bugs:{url:'https://github.com/solodev-ship-it/code-to-video/issues'},
+    publishConfig:{access:'public' as const}};
+}
+
 export function assertArchivePaths(paths:readonly string[]):void {
   assert(paths.length>0,'Empty package archive');
   for(const name of paths){
     assert(!name.startsWith('/') && !name.split('/').some(part=>part==='..'),'Unsafe archive path');
+    assert(!name.split('/').some(part=>part==='.DS_Store' || part.startsWith('._')),`Finder metadata archive entry: ${name}`);
     assert(!/(^|\/)(?:node_modules|development-control|video-projects|renders|outputs|staging|\.cache|\.git)(\/|$)/.test(name),`Private/generated archive entry: ${name}`);
     assert(!/(^|\/)\.env(?:\.|$)|\.(?:pem|key|mp4|mov|wav|mp3|tgz)$/i.test(name),`Secret/production-media archive entry: ${name}`);
     assert(/^(?:package\.json$|README\.md$|LICENSE$|CHANGELOG\.md$|THIRD_PARTY_NOTICES\.md$|bin\/|dist\/|templates\/|scripts\/|packages\/|apps\/studio\/|docs\/)/.test(name),`Not allowlisted: ${name}`);

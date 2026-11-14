@@ -2,6 +2,35 @@
 
 This is a private **0.1.0 preparation build**, not a published v1. Node **>=24.7.0 <25**, npm **>=11 <12** (tested 24.7.0/11.18.0) are required. Tested rendering platform: macOS/Darwin 25.6.0 arm64; other platforms need their own checks. Allow several GiB of free space. Review [third-party terms](../THIRD_PARTY_NOTICES.md) before production use.
 
+## Scoped 0.1.0 preview — prepared, not yet published
+
+`npm run release:pack:preview` prepares `@krungtech/code-to-video@0.1.0` with public access metadata; it never publishes. The source workspace stays private and the logical manifest `framework.name` stays `code-to-video`. Use the exact scoped `.tgz` path printed by that command for local installation, following the archive workflow below. `npm run qa:package -- /absolute/path/to/report.json` validates either the private or scoped archive in an isolated consumer; retain its logs/consumer lockfile before release.
+
+**Only after registry publication**, the intended quick-start commands are:
+
+```sh
+npx @krungtech/code-to-video@0.1.0 create my-first-video
+npx @krungtech/code-to-video@0.1.0 preview my-first-video --port 3014
+npx @krungtech/code-to-video@0.1.0 render my-first-video TitleCard --output my-first-video/outputs/title-v1.mp4
+```
+
+Do not use those commands as evidence that the package is already on npm. Node/npm and renderer-browser setup are still prerequisites; `create` itself does not install packages or copy the engine into the project.
+
+For repeated work, prefer a **persistent shared tools installation** rather than relying on the lifetime of npm's `npx` cache:
+
+```sh
+# After publication, from your chosen production workspace:
+npm install --prefix ./video-tools @krungtech/code-to-video@0.1.0
+./video-tools/node_modules/.bin/code-to-video create ./my-first-video
+./video-tools/node_modules/.bin/code-to-video preview ./my-first-video --port 3014
+```
+
+The generated TypeScript configuration and README point to the selected engine installation. Moving/removing that installation (including clearing an npx cache) can break those tooling paths; update them explicitly if it moves. No portability/automatic relocation or project-editor Save persistence is promised in this preview.
+
+The package tarball is not total installed size. Dependencies, Chromium, staged assets, bundles and outputs take additional disk space. Reuse one engine/browser across projects; keep production assets and outputs in their projects. File size is not a RAM/performance guarantee; the renderer uses concurrency 1.
+
+Measured macOS arm64 preview-consumer example: ~293 MB dependencies including the ~1.1 MB package, ~471 MB preprovisioned shared browser, and ~6 KB for the initial six-file project before media. Generated caches brought the dependency tree to ~522 MB after the sample checks. Node/npm cache and outputs are extra; this is a local measurement, not a cross-platform storage or RAM guarantee. See [exact evidence](RELEASE_V1.md).
+
 ## Supported source checkout path
 
 ```sh

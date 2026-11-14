@@ -1,5 +1,28 @@
 # v1 release preparation — not a release
 
+## Current direction — November 14, 2026
+
+The owner selected **`@krungtech/code-to-video@0.1.0` public preview**, not stable v1, and a free/open-source CLI/templates distribution using unmodified Remotion. Source metadata stays private/unscoped 0.1.0. `release:pack:preview` now prepares a separate scoped artifact (`private: false`, `publishConfig.access: public`) without publishing; the default `release:pack` still creates the private candidate. Both retain the same exact external dependency pins and archive exclusions. First-party MIT does not clear Remotion/dependency rights.
+
+Clean-consumer testing exposed upstream transitive drift: `@babel/helper-module-transforms@7.29.14` requests unavailable `@babel/traverse@^7.29.14`, causing ETARGET before installation completes. The scoped preview adds an explicit dependency constraint on `@babel/helper-module-transforms@7.29.13`, the version already present in the tested source lock; private packing/source lock/direct runtime versions stay unchanged. This is an evidenced installation fix, not a claim that every transitive dependency is frozen. Final clean-consumer lockfile/evidence must be retained and reviewed.
+
+Fourteen human-reviewed baselines are now installed; exact stored-capture comparison passes. No fresh `qa:all` run or publication is claimed. Isolated Node24.7/npm11.18 is provisioned under ignored `.cache/toolchains/`, activated only for project commands without modifying the global Node26 installation or shell profiles. Official Node archive SHA-256 matched the HTTPS checksum list; no GPG verification was performed. Existing GitHub CI run **42841492482** at committed revision **77c8fc8** completed successfully; new uncommitted scoped changes require a new run before release acceptance. Historical evidence and initial authorization boundaries below are retained; name/version selection and named-baseline approval are no longer pending.
+
+The earlier MIT private candidate was 548,379 compressed bytes / 1,073,138 unpacked bytes (157 files), **excluding installed dependencies, browser and runtime caches**. Local cleanup recovered about 6.59 GB of generated bundle/cache data, not package content. Users do not install private workspace siblings or the full development checkout. Scoped-consumer measurements are recorded below.
+
+## Executed scoped-preview evidence — November 14, 2026
+
+- Fresh supported-runtime `npm run check`: strict TypeScript, **310 tests**, fourteen Studio extraction/save checks; no browser render in that command.
+- Scoped candidate `candidate-Fyts61/krungtech-code-to-video-0.1.0.tgz`: **158 files**, **562978 compressed / 1092097 unpacked bytes**, SHA-256 **c75c19e66835f1cfc50a1821a48f8f84fde9dce3ad45f0d9d034a60f10063daa**. Source-root/private/version/lockfile unchanged.
+- `qa:package` consumer `candidate-Fyts61/consumer-check-1TWmus/` exits **0**: isolated tarball install without inherited workspace deps, scoped npx help (offline/no-install against the already installed archive), create/typecheck/discovery, real H.264 1920×1080/30 FPS/180-frame/six-second MP4 and full decode. Source-installed frame90 and installed repeat each have **zero differing pixels**. MP4 SHA-256 **27e7dacfbf3f6589bb27021c425185e2949a9f152093630f9532b1a511977ceb**. This tests local archive/scoped command resolution, not an already-published registry install.
+- **Logical disk footprint:** installed dependency tree including our package **293445690 bytes**; package itself **1092097 bytes**; shared preprovisioned browser distribution **471144289 bytes**; generated project **5814 bytes / six files** before assets. After checks, the dependency tree plus its generated caches is **521516597 bytes**. Browser was reused outside that tree, not freshly downloaded. Node/npm cache, outputs and production assets are additional; these are not RAM or compressed-download figures.
+- Initial consumer `candidate-1hPLKn/consumer-check-BZRFg5` failed ETARGET on upstream Babel drift; retained as failure. The constrained retry above is separate passing evidence. Initial `candidate-Dg0YsP` safely rejected Finder metadata before packing; exclusions now cover `.DS_Store`/AppleDouble without deleting local files.
+- Existing hosted CI success covers **77c8fc8 only**. The changed workflow parses locally and includes both private/scoped pack gates, but a new hosted run is still required. No registry publication, tag, full `qa:all`, changed-scene/material rerender or manual installed-Studio walkthrough is claimed.
+
+Evidence-only documentation updates after that successful candidate require a newly audited archive before distribution. They do not justify rerendering unchanged runtime code; verify byte-identical runtime entries and retain the exact consumer-tested archive/report as provenance.
+
+Version-specific licensing evidence and the remaining owner/reviewer questions are in [PREVIEW_LICENSE_REVIEW.md](PREVIEW_LICENSE_REVIEW.md). Fresh source inventory still reports 299/250/8/20 package/installed/missing-metadata/missing-root-text counts. No approval was inferred from permissive labels, free distribution or npm organization ownership.
+
 User-authorized scope: private local candidate/install validation, fast-test CI, license inventory, version/manifest policy, release notes and onboarding. The owner subsequently selected **MIT, copyright (c) 2026 Rorn Bunthong**, with separate KrungTech credit; [LICENSE](../LICENSE) and package metadata now record it. Root and new candidates remain **0.1.0, private**. No tag, registry publish, final name/version change, baseline approval, Studio rebranding or AI integration is authorized. See [copyright/branding scope](BRANDING_AND_LICENSING.md).
 
 ## Local preparation commands
@@ -8,10 +31,13 @@ User-authorized scope: private local candidate/install validation, fast-test CI,
 npm run check
 npm run release:inventory
 npm run release:pack
+npm run release:pack:preview
 npm run qa:package -- /absolute/path/to/candidate/report.json
 ```
 
 `release:pack` builds the CLI and creates an allowlisted **private** archive under unique ignored `renders/release-checks/candidate-*`. It stages existing source/compiled tooling and flattens already-pinned external dependencies; it does not publish internal workspaces or fetch them from npm. Unit tests, credentials, private management, production media, outputs, dependencies and caches are excluded. The resulting report includes source/archive hashes and exact staged metadata. A successful pack is not a successful consumer installation or a legally approved release.
+
+`release:pack:preview` uses that same staging/audit path but only the owner-selected scoped 0.1.0 public metadata, repository links and public-access configuration. Unknown mode flags/unselected preview versions fail. There is no automatic registry write, Git tag or release job. Do not run `npm publish` from the private workspace root; only a reviewed final staged artifact can become a distribution.
 
 Installed tooling resolves Remotion and React from the package's actual dependency graph, including hoisted installs. Explicit webpack aliases map the included first-party source exports without unpublished `@code-to-video/*` registry packages. Node host logic uses compiled JavaScript. The source workspace architecture and browser UI contracts remain intact.
 

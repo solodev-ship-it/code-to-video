@@ -53,6 +53,7 @@
     "qa:templates": "npm run build:cli && node --experimental-strip-types scripts/qa/templates.ts",
     "qa:e2e": "node --experimental-strip-types scripts/qa/e2e.ts",
     "release:pack": "npm run build:cli && node --experimental-strip-types scripts/release/package.ts",
+    "release:pack:preview": "npm run build:cli && node --experimental-strip-types scripts/release/package.ts --public-preview",
     "release:inventory": "node --experimental-strip-types scripts/release/inventory.ts",
     "qa:package": "node --experimental-strip-types scripts/qa/release-install.ts",
     "prepack": "npm run build:cli"

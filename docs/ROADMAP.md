@@ -2,6 +2,12 @@
 
 ## Status
 
+**Latest checkpoint — November 14, 2026:** fourteen specifically reviewed end-to-end baseline PNG/JSON pairs are installed with human approval; exact comparison of the stored reviewed capture passes. Named review videos were accepted. No fresh full-gate/render run or blanket historical milestone approval. Owner selected @krungtech/code-to-video@0.1.0 public preview using unmodified Remotion; third-party review, supported Node24 setup, scoped package implementation and real hosted CI/release acceptance remain. See [baseline checkpoint](BASELINE_APPROVAL.md) and [release direction](RELEASE_V1.md). The phase-by-phase record below retains its original dates/statuses; earlier pending-baseline statements are historical for the now-approved set.
+
+**Preview preparation follow-up:** isolated Node24.7/npm11.18 is installed for this checkout without global changes. Explicit scoped-public packaging is implemented beside default private packing, with focused metadata/version/pin guards; consumer QA supports the scoped path and records install/project/browser footprint. Existing CI run 42841492482 at 77c8fc8 succeeded, not evidence for new uncommitted code. No publish/tag/AI/Studio rebranding.
+
+**Scoped consumer acceptance:** 310 fast tests and fourteen Studio checks pass. After an evidenced Babel transitive constraint, scoped archive install/npx/create/typecheck/discovery/render/full-decode/exact-source-repeat checks pass. New project is ~6 KB before assets; dependencies/browser/caches are shared-tool costs, not a 10 GB project copy. Third-party review and actual changed-revision CI/release acceptance remain open; no stable-v1 or registry availability claim.
+
 Phases 1–3B provide the working starter, themes and video-native primitives. Phase 3C's technical rendering-reliability and visual-QA system is implemented and locally validated; **human visual baseline approval remains pending**. Explicit authorization permitted independent Phase 3D.1 surfaces, Phase 3D.2 icons/Dynamic Island, Phase 3D.3 data visualizations and Phase 3D.4A clay materials without approving those baselines. Any further Phase 3D work and Phases 4–6 remain planned. Each phase requires authorization; [the blueprint](CODE_TO_VIDEO_BLUEPRINT.md) is the requirements reference.
 
 ## Phase 1 — Foundation

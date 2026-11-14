@@ -6,15 +6,17 @@ Developed by **Rorn Bunthong — KrungTech**. First-party framework code is [MIT
 
 ## Current status — CLI and two production templates
 
-**Release preparation:** a private local-install candidate and clean-consumer render check now work; browser-free CI, license inventory and draft release/version/onboarding docs are prepared. This is **not v1 or a registry release**: root remains `0.1.0`/private; first-party MIT is selected, but third-party review, final package/version policy, visual approvals and real CI results remain open. Start with [onboarding](docs/ONBOARDING.md) and [release preparation/evidence](docs/RELEASE_V1.md).
+**November 14 preview checkpoint:** the selected npm target is **`@krungtech/code-to-video@0.1.0`**. A guarded `npm run release:pack:preview` prepares a scoped/public-metadata archive without publishing or changing the private source workspace. Named videos and fourteen QA images were human-approved; the fourteen references are installed and stored-capture comparison passes. Third-party release review and validation of the final changed revision remain gates. **No registry publication is claimed.** See [preview onboarding](docs/ONBOARDING.md) and [release evidence](docs/RELEASE_V1.md). Older phase-specific pending-review statements below are historical for this reviewed set only.
 
-The optional local CLI now creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. Start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). The package remains private and unpublished; visual review is pending.
+**Release preparation:** private and scoped-public-metadata archives work; the scoped 0.1.0 candidate passes clean-consumer install, npx resolution, project creation/typecheck, render/full decode and exact source/installed/repeat frames. Latest strict check: **310 tests** plus fourteen Studio checks. This is **not stable v1 or a registry release**: source remains `0.1.0`/private. Third-party review and actual CI/release acceptance for the changed revision remain open. Start with [onboarding](docs/ONBOARDING.md) and [release evidence](docs/RELEASE_V1.md).
+
+The optional local CLI now creates projects, opens Studio and renders MP4s. Two theme-aware templates are included: a six-second title card and an eight-second three-point explainer, with copy explicitly marked as sample. Start with `npm run build:cli`, then `npm run cli -- --help`. See [CLI and templates](docs/CLI_TEMPLATES.md). The npm distribution remains unpublished; named sample videos were human-approved.
 
 **End-to-end QA:** `npm run qa:e2e` installs the lockfile in an isolated source copy, edits/renders a standalone sample, verifies timing/full decode and exact frame repeats, checks four specific CLI rejections, then runs `qa:all`. It keeps a nonzero exit when visual references are unapproved; no baseline is approved automatically. See [reproduction and evidence](docs/END_TO_END_QA.md). Allow several GiB of free disk space and provision the browser first.
 
-Technical acceptance is complete; human review is pending. The aggregate continuation now reaches comparison and is blocked only by 14 unapproved visual baselines, not the earlier disk-space failure.
+Technical end-to-end acceptance is complete. Fourteen human-reviewed baseline PNG/JSON pairs are now installed and stored-capture comparison passes. The earlier aggregate report retains its original missing-baseline failure as history; no freshly passing full `qa:all` run is claimed.
 
-Version 1 manifests, contained local assets, theme binding, literal Studio registrations and an external-project MP4 path are implemented. The fifteen existing showcases remain; selected project compositions are added through `CODE_TO_VIDEO_PROJECT`. See [Independent project guide](docs/PROJECT_INFRASTRUCTURE.md) for commands, source contracts and technical evidence. The sample and earlier visual candidates await human review.
+Version 1 manifests, contained local assets, theme binding, literal Studio registrations and an external-project MP4 path are implemented. The fifteen existing showcases remain; selected project compositions are added through `CODE_TO_VIDEO_PROJECT`. See [Independent project guide](docs/PROJECT_INFRASTRUCTURE.md) for commands, source contracts and technical evidence. The named external sample was accepted; that does not approve every historical candidate.
 
 **Retained clay materials:** bounded, theme-aware clay appearance data; `VideoClaySurface`, `VideoClayCard`, and `VideoClayShape`; frame-driven reveal, float, press and depth motion; and one 9-second `ClaymorphismShowcase` (**fourteen compositions total**). See [Clay materials](docs/CLAY_MATERIALS.md) for APIs, 2.5D limits and candidate renders. Human visual approval remains pending.
 
@@ -22,11 +24,11 @@ Version 1 manifests, contained local assets, theme binding, literal Studio regis
 
 **Phase 3D.2 retained:** catalog-independent `VideoIcon`, optional Lucide/Phosphor adapters, custom paths, deterministic icon effects, `VideoDynamicIsland` and composable information presentations. `DynamicIslandShowcase` adds one 11-second composition; all earlier eleven remain (**twelve total**). See [Icons and Dynamic Island](docs/ICONS_AND_DYNAMIC_ISLAND.md) for APIs, licensing, targeted render evidence and unapproved screenshots.
 
-Focused finalization has corrected the glass showcase's ordinary label contrast without changing global themes. The [human-review handoff](docs/PHASE_3D1_FINALIZATION.md) documents the original 14 preserved candidates, corrected glass screenshots, contact sheets, SHA-256 manifest and guarded approval commands. All images remain unapproved.
+Focused finalization has corrected the glass showcase's ordinary label contrast without changing global themes. The [historical human-review handoff](docs/PHASE_3D1_FINALIZATION.md) documents the original candidates and glass screenshots. The later fourteen named end-to-end reference images are now approved/installed; see the [current baseline checkpoint](docs/BASELINE_APPROVAL.md). Other historical images are not automatically approved.
 
 **Earlier capabilities retained:** engine/themes/components, Phase 3C reliability tooling, immutable advanced surfaces, four glass presets, explicit fallback and `GlassmorphismShowcase`. Original theme/font defaults remain unchanged. See [Advanced Surfaces](docs/ADVANCED_SURFACES.md) for material APIs and candidate artifacts.
 
-**Pending checkpoint:** visual baseline approval. Candidate capture and exact repeat pixels are **not** human approval; `qa:visual:compare` and `qa:all` intentionally fail while references are unapproved/missing. No real baselines have been approved automatically.
+**Remaining release checkpoint:** third-party review and final revision CI/release acceptance. Baselines were installed only after explicit human review and authorization. Future comparisons still fail on missing approval, environment drift or unexpected differences; no gate or threshold is weakened.
 
 **Still not implemented:** a larger template gallery, comprehensive UI, caption/audio production, AI workflows, dashboard or a published custom CLI. See the [reliability guide](docs/RENDERING_RELIABILITY.md), [component guide](docs/COMPONENT_SYSTEM.md) and [theme guide](docs/THEME_SYSTEM.md). Original system-font token portability and complex-script shaping remain limitations, not silently fixed claims.
 
@@ -38,6 +40,8 @@ Focused finalization has corrected the glass showcase's ordinary label contrast 
 - Internet access for npm dependencies and the initial Chrome Headless Shell download (~140 MB on the tested platform). Once cached, the sample requires no online content services.
 
 Tested on macOS 26.6.2 / Apple Silicon with Node 24.7.0, npm 11.18.0, Git 2.54.0, and Chrome Headless Shell 158.0.8127.2. Other platforms and fonts have not been validated. Use supported, security-maintained Node 24 patches; `.nvmrc` records the exact tested baseline, not a promise that it is the latest security release.
+
+For this development checkout, an optional **ignored, machine-local** runtime was provisioned under `.cache/toolchains/`. If it exists, `source .cache/toolchains/activate` selects the tested Node24.7/npm11.18 only in the current terminal. It does not change system Node, shell profiles or other projects. This local activation file is not shipped and is not part of public installation.
 
 ## Install on macOS
 

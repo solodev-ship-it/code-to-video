@@ -2,6 +2,11 @@
 
 ## Unreleased — release preparation
 
+- Prepare owner-selected @krungtech/code-to-video@0.1.0 public-preview metadata via explicit `release:pack:preview`; retain private source workspaces/default candidate mode and exact existing dependency pins.
+- Constrain the scoped preview's Babel helper-module-transforms to existing source-lock version 7.29.13 after a clean install exposed an upstream 7.29.14 requirement on unavailable traverse ^7.29.14. Source lock/private candidate remain unchanged.
+- Extend isolated consumer QA for scoped installation/npx binary resolution, preserved logical project identity, consumer lockfile and logical installation/project/browser footprint. No automatic publishing.
+- Install fourteen explicitly human-reviewed visual references; stored-capture comparison passes. Scoped cache cleanup preserves review/source/evidence artifacts; global Node is unchanged by the checkout-local Node24/npm11 setup.
+
 - Owner selected MIT for first-party code: copyright (c) 2026 Rorn Bunthong; separate KrungTech credit. License metadata/text are preserved in new private candidates; third-party terms and Studio branding remain unchanged.
 
 - Prepare a private 0.1.0 local-install candidate with flattened existing runtime/tool dependencies and archive content checks.

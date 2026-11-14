@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "brandId": "ember-studio",
+    "compositionId": "ReliabilityFixture",
+    "fontPolicy": "required-local",
+    "fps": 30,
+    "frame": 90,
+    "height": 1080,
+    "id": "ember-studio-cinematic-f90",
+    "props": {
+      "brandId": "ember-studio",
+      "fixture": "normal",
+      "motionId": "elegant",
+      "reducedMotion": false,
+      "schemaVersion": 1,
+      "styleId": "cinematic"
+    },
+    "schemaVersion": 1,
+    "styleId": "cinematic",
+    "width": 1920
+  },
+  "key": "ember-studio-cinematic-f90-885b73996ee4",
+  "environment": {
+    "os": {
+      "platform": "darwin",
+      "release": "25.6.0"
+    },
+    "arch": "arm64",
+    "node": "v24.7.0",
+    "remotion": "4.0.541",
+    "browser": {
+      "product": "HeadlessChrome/158.0.8127.2",
+      "revision": "@0000000000000000000000000000000000000000",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1,
+    "render": {
+      "gl": "swangle",
+      "scale": 1,
+      "imageFormat": "png",
+      "fps": 30
+    }
+  },
+  "sourceHash": "224cc5905596403378287ae54e933b1924182d3a8440ed940392ef2ebdf052f3",
+  "sha256": "6c5cdc6bc68d518ee3347595e2098519b9d96a84addae0329967daee1dd8f0ee",
+  "approval": {
+    "reviewer": "solodev-npm (project owner)",
+    "reason": "Owner reviewed ember-studio-cinematic-f90 in the named e2e-resume-1794318265833-visual PNG set and responded \"All, look good\" on 2026-11-14; explicitly accepted installing the reviewed candidates as official baselines.",
+    "timestamp": "2026-11-14T14:04:33.027Z"
+  }
+}

@@ -4,6 +4,8 @@ Phase 3D.1 adds a separate `npm run qa:surfaces -- UNIQUE` suite using this unch
 
 ## Status and boundaries
 
+November 14, 2026 checkpoint: the owner approved and authorized installation of the fourteen named end-to-end baseline images. References are installed; exact comparison of the stored reviewed capture passes. No fresh render/full aggregate run is claimed. Earlier missing-approval results below are historical; see [current baseline checkpoint](BASELINE_APPROVAL.md). Conservative cleanup removed only generated QA `bundle/` directories and Studio webpack cache, preserving source/review/evidence files and the renderer browser/dependencies. Caches will regrow with use.
+
 Phase 3C implements local-font verification, opt-in browser layout diagnostics, versioned visual cases, exact/perceptual PNG comparison, explicit baseline approval, cross-theme checks, reproducibility checks, and MP4 smoke verification. **Technical checks are separate from visual approval. No real visual baseline has been approved by the coding agent.** Missing baselines intentionally fail comparison and the complete release gate.
 
 The original nine compositions remain intact. One literal `ReliabilityFixture` registration is added, parameterized by theme and fixture kind instead of duplicating scenes. There are now ten compositions, nine with editable literal defaultProps. No independent project store, cloud service, AI automation, scene-template engine, or new workspace is introduced.

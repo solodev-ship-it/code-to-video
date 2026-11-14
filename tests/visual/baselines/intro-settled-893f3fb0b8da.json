@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "case": {
+    "brandId": null,
+    "compositionId": "CodeToVideoIntro",
+    "fontPolicy": "system-compatible",
+    "fps": 30,
+    "frame": 90,
+    "height": 1080,
+    "id": "intro-settled",
+    "props": {},
+    "schemaVersion": 1,
+    "styleId": null,
+    "width": 1920
+  },
+  "key": "intro-settled-893f3fb0b8da",
+  "environment": {
+    "os": {
+      "platform": "darwin",
+      "release": "25.6.0"
+    },
+    "arch": "arm64",
+    "node": "v24.7.0",
+    "remotion": "4.0.541",
+    "browser": {
+      "product": "HeadlessChrome/158.0.8127.2",
+      "revision": "@0000000000000000000000000000000000000000",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.2 Safari/537.36"
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "deviceScaleFactor": 1,
+    "render": {
+      "gl": "swangle",
+      "scale": 1,
+      "imageFormat": "png",
+      "fps": 30
+    }
+  },
+  "sourceHash": "224cc5905596403378287ae54e933b1924182d3a8440ed940392ef2ebdf052f3",
+  "sha256": "a8a30dd31ad53da51bb57e6aa68937971b1a2c856739af02d010ec760b1932e1",
+  "approval": {
+    "reviewer": "solodev-npm (project owner)",
+    "reason": "Owner reviewed intro-settled in the named e2e-resume-1794318265833-visual PNG set and responded \"All, look good\" on 2026-11-14; explicitly accepted installing the reviewed candidates as official baselines.",
+    "timestamp": "2026-11-14T14:04:33.239Z"
+  }
+}

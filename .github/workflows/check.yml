@@ -1,4 +1,4 @@
-name: Source and private candidate checks
+name: Source and package candidate checks
 on:
   pull_request:
   push:
@@ -22,4 +22,5 @@ jobs:
       - run: npm run check
       - run: npm run release:inventory
       - run: npm run release:pack
+      - run: npm run release:pack:preview
       # No browser acquisition/render, approval, write token, tag or publish job.

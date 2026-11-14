@@ -25,6 +25,10 @@ In the inventory, seven compositor platform variants and `@remotion/media` accou
 
 Some dependencies declare permissive licenses but omit root-level text. Retain the exact inventory and final clean-consumer lockfile; installed transitive versions may differ from the source lock. License-file presence alone is not substantive legal review.
 
+### Follow-up trace
+
+[LICENSE_GAP_TRACE.md](LICENSE_GAP_TRACE.md) now maps all twenty installed missing-root-text cases: full notices were traced/preserved for esbuild's same-version parent, esrecurse, glob-to-regexp and Kiwi's exact published source revision. The scanner's raw counts are not hidden or redefined. `svg-parser` full-text and Remotion component/package-scope questions remain explicit; no license/copyright was invented for them. The graph also includes MPL/CC-BY/Python/BSD/Apache terms, not only MIT. An optional [upstream clarification draft](REMOTION_CLARIFICATION_DRAFT.md) is prepared, not sent.
+
 ## Owner/reviewer decisions still needed
 
 Owner clarification, November 14: the author confirms this is personal work by one individual, with KrungTech used only as their project credit, not a separate company/team. That matches the pinned license's individual eligibility category on the stated facts; it is not blanket legal approval of all dependency/distribution questions. Reassess the applicable terms if the organization, team, distribution or use changes; do not assume future contributors automatically have identical eligibility.

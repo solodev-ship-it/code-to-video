@@ -2,6 +2,8 @@
 
 ## Current direction — November 14, 2026
 
+Final review follow-up: [LICENSE_GAP_TRACE.md](LICENSE_GAP_TRACE.md) traces all twenty installed missing-root-text cases and preserves four verified notices without changing the raw inventory. Remaining package/component-scope questions are explicit, not silently approved. The [final owner checklist](PREVIEW_RELEASE_CHECKLIST.md) and [0.1.0 draft notes](RELEASE_NOTES.md) replace the old stable-v1 draft as the next review artifact. Framework9294994 main-branch CI43608109589 has passed; no tag/publication is implied.
+
 The owner selected **`@krungtech/code-to-video@0.1.0` public preview**, not stable v1, and a free/open-source CLI/templates distribution using unmodified Remotion. Source metadata stays private/unscoped 0.1.0. `release:pack:preview` now prepares a separate scoped artifact (`private: false`, `publishConfig.access: public`) without publishing; the default `release:pack` still creates the private candidate. Both retain the same exact external dependency pins and archive exclusions. First-party MIT does not clear Remotion/dependency rights.
 
 Clean-consumer testing exposed upstream transitive drift: `@babel/helper-module-transforms@7.29.14` requests unavailable `@babel/traverse@^7.29.14`, causing ETARGET before installation completes. The scoped preview adds an explicit dependency constraint on `@babel/helper-module-transforms@7.29.13`, the version already present in the tested source lock; private packing/source lock/direct runtime versions stay unchanged. This is an evidenced installation fix, not a claim that every transitive dependency is frozen. Final clean-consumer lockfile/evidence must be retained and reviewed.

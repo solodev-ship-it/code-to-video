@@ -2,6 +2,9 @@
 
 ## Unreleased — release preparation
 
+- Trace the twenty missing-root-license-text warnings, preserving verified esbuild/esrecurse/glob-to-regexp/Kiwi notices. Keep Remotion/svg-parser gaps and non-MIT transitive terms explicit; no legal clearance inferred.
+- Prepare accurate0.1.0 preview release notes and a final owner rights/installed-Studio/tag/publication checklist. No release/tag/registry upload performed.
+
 - Prepare owner-selected @krungtech/code-to-video@0.1.0 public-preview metadata via explicit `release:pack:preview`; retain private source workspaces/default candidate mode and exact existing dependency pins.
 - Constrain the scoped preview's Babel helper-module-transforms to existing source-lock version 7.29.13 after a clean install exposed an upstream 7.29.14 requirement on unavailable traverse ^7.29.14. Source lock/private candidate remain unchanged.
 - Extend isolated consumer QA for scoped installation/npx binary resolution, preserved logical project identity, consumer lockfile and logical installation/project/browser footprint. No automatic publishing.

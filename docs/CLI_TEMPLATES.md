@@ -1,10 +1,11 @@
 # CLI and production templates
 
-**November16 preparation:** the next scoped preview artifact is **0.1.1**, staged with
-`npm run release:pack:preview -- --preview-version 0.1.1`. It is not published.
-The existing0.1.0 package/tag is unchanged. Owner confirmed title/label persistence
-after refresh; all nine hosted source/build probes pass at ba9435b. Installed
-platform rendering qualification is in progress; see [preview testing](PREVIEW_TESTING.md).
+**November16 preview checkpoint:** scoped **0.1.1** is prepared, **not published**.
+Owner confirmed title/label persistence after refresh. All nine source/build probes
+pass at ba9435b. The same0.1.1 archive passes installed create/typecheck, HTTP Save,
+graceful stop/restart, saved-input720p30 render and full decode on Linux x64,
+Windows x64 and macOS arm64 at5823e32 ([hosted run](https://github.com/solodev-ship-it/code-to-video/actions/runs/43806163663)).
+Node24/npm11 remains the supported setup. See [tester instructions](PREVIEW_TESTING.md).
 
 **Newer November15 source/local candidate (unpublished):** selected preview
 content-prop edits persist to `studio-props.json` and load on restart/render;

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 preview — prepared, not published
+
+- Fix selected-project Studio Save containment and persist validated content props in project-owned studio-props.json, including backups, conflict rejection and recovery.
+- Add runtime doctor/guards; retain Node24/npm11 support and existing dependencies.
+- Launch Remotion through Node for portable installed execution. The same staged archive passes installed Save/restart/H264720p render/full-decode smoke checks on Linux x64, Windows x64 and macOS arm64.
+- Preserve schema1/0.1.x projects; metadata remains session-only, with no AI narration or general editor.
+
 ## 0.1.0 — 2026-11-14 (public preview)
 
 - Published as [@krungtech/code-to-video@0.1.0](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0), with [GitHub pre-release v0.1.0](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0). Existing tag CI passed; existing draft/assets preserved.

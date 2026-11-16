@@ -2,15 +2,18 @@
 
 ## Availability
 
-The new0.1.1 scoped preview is being prepared and is **not on npm**. The published
+The new0.1.1 scoped preview is prepared for early technical testing and is **not on npm**. The published
 0.1.0 preview still has its known selected-project Save/persistence limitations.
 Do not use `npx @krungtech/code-to-video@0.1.1` until a separately approved release
 has actually been published. Source users can try the fixes now.
 
 Use Node24.7+ within24.x and npm11. Source/build probes pass all nine combinations
 of Ubuntu/macOS/Windows and Node22/24/26 at ba9435b. Node22/26 remain experimental
-and are rejected by the public operational CLI. Installed rendering qualification
-on the three operating systems is in progress; no cross-machine pixel promise.
+and are rejected by the public operational CLI. The same staged archive passes installed create/typecheck, HTTP Save, graceful
+stop/restart, saved-input H2641280×720/30FPS/60-frame render and full decode on
+Linux x64, Windows x64 and macOS arm64 ([run43806163663](https://github.com/solodev-ship-it/code-to-video/actions/runs/43806163663), source5823e32).
+This is a bounded smoke test, not arbitrary codec/media/hardware certification
+or a cross-machine pixel promise.
 
 ## From source
 
@@ -39,6 +42,9 @@ node bin/code-to-video.mjs render ../my-first-video TitleCard --output ../my-fir
 ## From a reviewed archive
 
 The final preparation report supplies the exact0.1.1 `.tgz` path and SHA256.
+The tested shared archive SHA256 is `cbe5d821eb9831eb64f212cf448dbeb98843f4e2311168221d49423628e8402d`.
+A final documentation-only repack may have a new archive hash; its runtime entries
+and package metadata must match the tested archive before reusing this evidence.
 Create an empty directory outside the repository and install that archive with
 `npm install /absolute/path/to/krungtech-code-to-video-0.1.1.tgz`.
 Use `npx --no-install code-to-video doctor`, then the same create/preview/render

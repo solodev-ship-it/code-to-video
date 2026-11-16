@@ -1,6 +1,6 @@
 # Code to Video
 
-**Next preview0.1.1 is being prepared, not published.** [Try from source or a reviewed local archive](docs/PREVIEW_TESTING.md).
+**Preview0.1.1 is prepared for early technical testing, not published.** [Try from source or a reviewed local archive](docs/PREVIEW_TESTING.md).
 
 **Unpublished improvements:** source/local candidates fix selected-project Save
 and persist content edits in project-owned `studio-props.json`, with runtime

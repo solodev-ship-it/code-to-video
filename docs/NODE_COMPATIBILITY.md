@@ -1,7 +1,8 @@
 # Node compatibility
 
 **Published0.1.1 supports Node24 only.** The0.1.2 candidate adds Node26 without
-requiring a downgrade. It is not published yet.
+requiring a downgrade. It is not published yet. Development and release work
+are paused at the owner's request on November 16, 2026.
 
 Candidate requirements:
 
@@ -27,12 +28,16 @@ Existing browser reused; esbuild install-script review warnings remain visible.
 Evidence: `renders/runtime-probes/node26-compat-fji1e4/` and
 `renders/release-checks/candidate-oarO0w/persistence-check-BzXQag/report.json`
 (Node24), `persistence-check-QKdOEo/report.json` (Node26).
-Workflow is prepared for six installed OS/runtime jobs and parses locally;
-it has not been run on a hosted runner for this change.
+Hosted qualification at commit `7998466` passes standard CI and five installed
+jobs on the same candidate: Linux x64 and Windows x64 on both Node versions,
+and macOS ARM64 on Node 24.7.0 (npm 11.18.0).
 
-Existing0.1.1 Node24 installed checks passed on Linux x64, Windows x64 and macOS
-arm64. New Node26 render qualification is scoped to this macOS arm64 environment;
-other platforms require their own run. Hosted matrix execution is separate.
+The macOS ARM64 / Node 26.13.0 job could not acquire a runner in three attempts;
+no test steps ran. GitHub annotations explicitly identify runner capacity.
+The six-job release gate remains incomplete; local evidence does not replace it.
+See [standard CI](https://github.com/solodev-ship-it/code-to-video/actions/runs/43862411724)
+and [installed platform run](https://github.com/solodev-ship-it/code-to-video/actions/runs/43862432717).
+No further retries or publication are scheduled while development is paused.
 
 ## For users
 

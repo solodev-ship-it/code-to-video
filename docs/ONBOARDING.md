@@ -1,13 +1,14 @@
 # Your first video
 
-**Status:** `0.1.1` is published. Its downloaded npm archive passes installed Save/restart/render checks. For source testing, see [preview testing](PREVIEW_TESTING.md).
-
-Using Node26? The unpublished0.1.2 candidate adds support; see
-[compatibility status](NODE_COMPATIBILITY.md). The0.1.1 commands below still require24.
+**Status:** Development is paused. `0.1.1` is the published early preview;
+its downloaded archive passes installed Save/restart/render checks. `0.1.2`
+remains unpublished, with its final hosted gate blocked on runner capacity.
+See [compatibility status](NODE_COMPATIBILITY.md) and [source testing](PREVIEW_TESTING.md).
 
 ## 1. Set up once
 
-Use **Node 24.7+ within 24.x**, **npm 11**, and a new folder with several GiB free.
+For published 0.1.1, use **Node 24.7+ within 24.x**, **npm 11**, and a new folder
+with several GiB free.
 
 ```sh
 npm init -y
@@ -51,7 +52,7 @@ Render it with composition ID `ThreePointExplainer` instead of `TitleCard`.
 
 ## If something goes wrong
 
-- **Runtime error:** run `npx code-to-video doctor`; use Node 24/npm 11.
+- **Runtime error:** run `npx code-to-video doctor`; use Node 24.7+ within 24.x and npm 11 for 0.1.1.
 - **Output exists:** choose a new MP4 filename.
 - **Save conflict:** stop preview and follow [recovery steps](PERSISTENT_PROJECT_EDITING.md#conflict-and-recovery-rules).
 

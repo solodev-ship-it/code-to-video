@@ -3,14 +3,14 @@
 Create a video project, edit its text in Remotion Studio, and render an MP4.
 Built with TypeScript, React and Remotion. No AI account needed.
 
-**0.1.1 is published as an early preview.** It includes persistent text edits and the installed Save fixes.
-
-**Node26:** support passes local checks in the unpublished0.1.2 candidate.
-Published0.1.1 still requires Node24. See [compatibility status](docs/NODE_COMPATIBILITY.md).
+**Development is paused.** Version **0.1.1** remains the published early preview.
+Node 26 support is implemented in source for **0.1.2**, which is not published.
+Its release gate remains incomplete because GitHub could not assign the final
+macOS ARM64 runner. See [compatibility status](docs/NODE_COMPATIBILITY.md).
 
 ## Get started
 
-Use **Node 24.7+ within 24.x** and **npm 11**.
+For published 0.1.1, use **Node 24.7+ within 24.x** and **npm 11**.
 
 Open a terminal in a new folder:
 

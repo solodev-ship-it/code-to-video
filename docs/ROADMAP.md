@@ -1,5 +1,12 @@
 # Implementation Roadmap
 
+**November 16, 2026 — development paused at the owner's request.**
+Published 0.1.1 remains available. Source includes Node 26 compatibility for
+unpublished 0.1.2; five hosted installed jobs pass, while the final macOS ARM64 /
+Node 26 job never acquired a runner in three attempts. The release gate remains
+incomplete. No further implementation, retries or publication are scheduled
+until the owner resumes work. See [compatibility status](NODE_COMPATIBILITY.md).
+
 **Authorized Node26 follow-up — technically complete locally:** public Node24/26 CLI
 passes source checks and installed Save/restart/render/full decode using a
 separate0.1.2 candidate, not a guard bypass or0.1.1 mutation.

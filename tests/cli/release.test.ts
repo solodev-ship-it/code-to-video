@@ -58,3 +58,11 @@ test('next preview stages0.1.1 without mutating0.1.0 source or legacy artifact m
   assert.deepEqual(next.dependencies,previewManifest(root,studio,ui,themes).dependencies);
   assert.equal(previewManifest(root,studio,ui,themes).version,'0.1.0');assert.equal(root.version,'0.1.0');assert.equal(root.private,true);
 });
+test('Node26 patch candidate retains bounded engines and unchanged dependency pins', async () => {
+  const root=await json('package.json');const studio=await json('apps/studio/package.json');const ui=await json('packages/ui/package.json');const themes=await json('packages/themes/package.json');
+  const next=previewManifest(root,studio,ui,themes,'0.1.2');
+  assert.equal(next.version,'0.1.2');
+  assert.equal(next.engines?.node,'>=24.7.0 <25 || >=26.13.0 <27');
+  assert.deepEqual(next.dependencies,previewManifest(root,studio,ui,themes,'0.1.1').dependencies);
+  assert.equal(root.version,'0.1.0');assert.equal(root.private,true);
+});

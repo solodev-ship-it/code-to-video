@@ -25,10 +25,10 @@ export function candidateManifest(root:Metadata,studio:Metadata,ui:Metadata,them
 
 // Explicit owner-selected preview artifact; the source workspace stays private.
 // Preparing public metadata never grants legal clearance or publishes anything.
-export function previewManifest(root:Metadata,studio:Metadata,ui:Metadata,themes:Metadata, version: '0.1.0' | '0.1.1' = '0.1.0') {
+export function previewManifest(root:Metadata,studio:Metadata,ui:Metadata,themes:Metadata, version: '0.1.0' | '0.1.1' | '0.1.2' = '0.1.0') {
   const candidate=candidateManifest(root,studio,ui,themes);
   assert.equal(candidate.version,'0.1.0','Only the selected 0.1.0 public preview is authorized');
-  assert(['0.1.0','0.1.1'].includes(version),'Unselected preview version');
+  assert(['0.1.0','0.1.1','0.1.2'].includes(version),'Unselected preview version');
   return {...candidate,version,name:'@krungtech/code-to-video',private:false,
     // A newer helper release requests unavailable @babel/traverse ^7.29.14.
     // Reuse the existing tested source-lock version; no workspace dependency bump.

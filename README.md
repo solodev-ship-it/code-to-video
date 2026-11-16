@@ -5,6 +5,9 @@ Built with TypeScript, React and Remotion. No AI account needed.
 
 **0.1.1 is published as an early preview.** It includes persistent text edits and the installed Save fixes.
 
+**Node26:** support passes local checks in the unpublished0.1.2 candidate.
+Published0.1.1 still requires Node24. See [compatibility status](docs/NODE_COMPATIBILITY.md).
+
 ## Get started
 
 Use **Node 24.7+ within 24.x** and **npm 11**.

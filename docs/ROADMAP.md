@@ -1,5 +1,10 @@
 # Implementation Roadmap
 
+**Authorized Node26 follow-up — technically complete locally:** public Node24/26 CLI
+passes source checks and installed Save/restart/render/full decode using a
+separate0.1.2 candidate, not a guard bypass or0.1.1 mutation.
+See [compatibility status](NODE_COMPATIBILITY.md). Publication remains separate.
+
 **November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
 Exact downloaded archive, installed Save/restart/render and full decode pass.
 See [release evidence](RELEASE_V1.md). Earlier unpublished-source notes below are historical.

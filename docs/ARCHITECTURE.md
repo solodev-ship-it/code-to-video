@@ -1,5 +1,10 @@
 # Architecture
 
+**Node26 follow-up:** bounded Node24/26 policy and0.1.2 candidate qualification
+pass locally, including installed public Save/restart/render/decode on both.
+No renderer/dependency changes or published-package mutation.
+See [compatibility status](NODE_COMPATIBILITY.md).
+
 **November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
 Exact downloaded archive, installed Save/restart/render and full decode pass.
 See [release evidence](RELEASE_V1.md). Earlier unpublished-source notes below are historical.

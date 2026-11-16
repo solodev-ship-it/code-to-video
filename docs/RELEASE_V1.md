@@ -1,5 +1,9 @@
 # Release status — 0.1.1 public preview
 
+**Node26 follow-up:** source checks pass on24.7/26.13; the same0.1.2 archive
+passes installed public-CLI Save/restart/render/full decode on both. It is not published. Published0.1.1
+still requires24; see [compatibility status](NODE_COMPATIBILITY.md).
+
 **November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
 The downloaded archive matches approved SHA-256
 `48f37c9e77633cbf7c0a1ff05617f53512da6bd8bf6dbbe9e3936b827d911123`.

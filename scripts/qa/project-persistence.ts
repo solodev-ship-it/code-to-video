@@ -20,7 +20,7 @@ const directory = await mkdtemp(path.join(path.dirname(path.resolve(process.argv
 const consumer = await realpath(await mkdtemp(path.join(os.tmpdir(), 'ctv-persistent-consumer-')));
 const commands: unknown[] = [];
 const report: Record<string,unknown> = {status:'failed', candidateSHA256:candidate.sha256, directory, consumer, commands, node:process.version, manualReview:'PENDING',
-  platform:process.platform, arch:process.arch, hosted, runtimeProbe, scope:runtimeProbe ? 'Experimental installed internal CLI main; public binary support unchanged' : 'Supported installed public CLI binary'};
+   platform:process.platform, arch:process.arch, hosted, runtimeProbe, scope:runtimeProbe ? 'Experimental installed internal CLI main; public binary support unchanged' : 'Supported installed public CLI binary'};
 const env: NodeJS.ProcessEnv = {...process.env, NODE_PATH:'', BROWSER:'none'};
 if (!hosted) assert.ok(env.REMOTION_BROWSER_EXECUTABLE, 'Provide an existing browser; local gate never downloads one');
 function run(executable: string, args: string[], name: string, cwd = consumer) {
@@ -62,8 +62,18 @@ try {
     await writeFile(bin, `import {main} from ${JSON.stringify(pathToFileURL(path.join(engine,'dist/scripts/cli.js')).href)};\nprocess.exitCode = await main(process.argv.slice(2), ${JSON.stringify(engine)});\n`, {flag:'wx'});
   }
   const project = path.join(consumer, 'sample');
-  run(process.execPath, [bin,'doctor'], 'installed doctor');
-  run(process.execPath, [bin, 'create', project], 'installed create');
+  if (runtimeProbe) {
+    run(process.execPath, [bin,'doctor'], 'experimental installed doctor');
+    run(process.execPath, [bin,'create',project], 'experimental installed create');
+  } else {
+    const doctor = JSON.parse(run(process.execPath, [process.env.npm_execpath!,'exec','--offline','--','code-to-video','doctor'], 'installed npm exec doctor'));
+    assert.equal(doctor.nodeSupported, true);
+    assert.equal(doctor.npmSupported, true);
+    assert.equal(doctor.node, process.version);
+    report.doctor = doctor;
+    assert.equal(run(process.execPath, [process.env.npm_execpath!,'exec','--offline','--','code-to-video','--version'], 'installed npm exec version').trim(), candidate.manifest.version);
+    run(process.execPath, [process.env.npm_execpath!,'exec','--offline','--','code-to-video','create',project], 'installed npm exec create');
+  }
   run(process.execPath, [require.resolve('typescript/bin/tsc'),'-p',path.join(project,'tsconfig.json')], 'installed project typecheck');
   const manifestFile = path.join(project, 'code-to-video.project.json');
   const manifest = JSON.parse(await readFile(manifestFile, 'utf8'));

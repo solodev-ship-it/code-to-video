@@ -1,5 +1,10 @@
 # Version and manifest compatibility — preparation policy
 
+**Node26 candidate:** source engines/guard now agree on
+`>=24.7.0 <25 || >=26.13.0 <27`, with npm11 unchanged. The separate0.1.2
+candidate is not published; immutable0.1.0/0.1.1 and schema1 are unchanged.
+See [qualification evidence](NODE_COMPATIBILITY.md).
+
 **November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
 Exact downloaded archive, installed Save/restart/render and full decode pass.
 See [release evidence](RELEASE_V1.md). Immutable archives and source-root version are unchanged.

@@ -1,5 +1,10 @@
 # Code to Video — Technical Blueprint
 
+**Node26 follow-up:** owner authorizes bounded Node24/26 public CLI compatibility,
+and source checks plus installed Save/restart/render/decode pass on a separate0.1.2 candidate.
+No publication or other-platform Node26 certification implied.
+See [compatibility status](NODE_COMPATIBILITY.md).
+
 **November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
 Exact downloaded archive, installed Save/restart/render and full decode pass.
 See [release evidence](RELEASE_V1.md). Earlier unpublished-source notes below are historical.

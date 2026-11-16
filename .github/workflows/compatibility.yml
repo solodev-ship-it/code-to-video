@@ -26,4 +26,4 @@ jobs:
       - run: npm run check
       - run: npm run build:cli
       # No browser installation/render, approvals or publication.
-      # engines remain Node24/npm11 pending separate installed/render evidence.
+      # Node22 remains experimental; Node24/26 installed rendering is a separate gate.

@@ -5,7 +5,9 @@ use the [short guide](ONBOARDING.md).
 
 ## From source
 
-Use Node 24.7+ within 24.x and npm 11. From the repository:
+Source/candidate testing accepts Node24.7+ within24.x or26.13+ within26.x,
+with npm11. Published0.1.1 still requires24; see [compatibility](NODE_COMPATIBILITY.md).
+From the repository:
 
 ```sh
 npm ci

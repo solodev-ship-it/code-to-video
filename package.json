@@ -56,9 +56,11 @@
     "release:pack:preview": "npm run build:cli && node --experimental-strip-types scripts/release/package.ts --public-preview",
     "release:inventory": "node --experimental-strip-types scripts/release/inventory.ts",
     "qa:package": "node --experimental-strip-types scripts/qa/release-install.ts",
+    "qa:persistence": "node --experimental-strip-types scripts/qa/project-persistence.ts",
     "prepack": "npm run build:cli"
   },
   "devDependencies": {
+    "@remotion/codemods": "4.0.541",
     "@remotion/bundler": "4.0.541",
     "@remotion/renderer": "4.0.541",
     "@types/pngjs": "6.0.5",
@@ -76,6 +78,7 @@
     "scripts/project-host.ts",
     "scripts/project-tooling.ts",
     "scripts/project-entry.ts",
+    "scripts/project-persistence.ts",
     "packages/projects/src/",
     "packages/themes/src/",
     "packages/themes/package.json",

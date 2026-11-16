@@ -1,5 +1,10 @@
 # Code to Video
 
+**Unpublished improvements:** source/local candidates fix selected-project Save
+and persist content edits in project-owned `studio-props.json`, with runtime
+diagnostics. [Behavior, recovery and compatibility evidence](docs/PERSISTENT_PROJECT_EDITING.md).
+Published0.1.0 is unchanged and retains its known Save/persistence limitations.
+
 A modular local video production framework built with **TypeScript, React, and Remotion**. AI-assisted workflows remain planned, not shipped.
 
 Developed by **Rorn Bunthong — KrungTech**. First-party framework code is [MIT licensed](LICENSE), copyright (c) 2026 Rorn Bunthong. KrungTech is a separate project credit, not an assignment of copyright. Remotion and other dependencies/assets retain their [own terms and notices](THIRD_PARTY_NOTICES.md).

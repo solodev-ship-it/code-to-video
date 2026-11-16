@@ -1,5 +1,17 @@
 # Implementation Roadmap
 
+**Latest authorized November15 source follow-up (unpublished):**
+[persistent project props/runtime readiness](PERSISTENT_PROJECT_EDITING.md)
+adds durable content edits and doctor;324-test checks pass on Node24 and
+experimentally22/26 on this Mac. Node24 installed persistence/restart/render/
+decode passes. Declared support unchanged; hosted OS matrix/manual review and
+broader installed/render compatibility remain pending.
+
+**November 15 authorized bug fix:** [selected-project Studio Save containment](STUDIO_SAVE_FIX.md)
+is fixed/tested in source and a separate local installed candidate. Fast check:
+311 tests plus fourteen Studio source checks. Manual fixed-candidate review
+pending; published0.1.0 unchanged. No project editor/AI/new release authorized.
+
 ## Status
 
 **Public preview released — November 14, 2026:** [@krungtech/code-to-video@0.1.0](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) and [GitHub v0.1.0 pre-release](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0) are available. Registry latest/integrity/approved archive and actual installed create/typecheck/Studio HTTP/render/full decode/exact settled frame passed. Existing tagc7cb071/tag-specific CI passed; existing draft/assets were preserved. This completes only the approved bounded0.1.0 preview, **not stable v1 or new feature authorization**. Licensing warnings and unverified installed-Studio manual interaction remain. [Current evidence](RELEASE_V1.md) and [onboarding](ONBOARDING.md) supersede historical availability statements below.

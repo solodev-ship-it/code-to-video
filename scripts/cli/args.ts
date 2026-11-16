@@ -1,6 +1,6 @@
 export type CreateOptions = {directory: string; template: string; id?: string; title?: string; brandId: string; styleId: string; motionId: string};
 export type CliCommand =
-  | {command:'help'} | {command:'version'}
+  | {command:'help'} | {command:'version'} | {command:'doctor'}
   | ({command:'create'} & CreateOptions)
   | {command:'preview'; directory:string; port?:number}
   | {command:'render'; directory:string; compositionId:string; output:string};
@@ -8,6 +8,7 @@ const createFlags = ['template','id','title','brand','style','motion'];
 export function parseArgs(argv: readonly string[]): CliCommand {
   if (!argv.length || argv.includes('--help') || argv.includes('-h')) return {command:'help'};
   if (argv.length === 1 && argv[0] === '--version') return {command:'version'};
+  if (argv.length === 1 && argv[0] === 'doctor') return {command:'doctor'};
   const command = argv[0];
   if (!['create','preview','render'].includes(command ?? '')) throw new Error(`Unknown command ${JSON.stringify(command)}; use --help`);
   const allowed = command === 'create' ? createFlags : command === 'preview' ? ['port'] : ['output'];
@@ -45,9 +46,11 @@ export const help = `code-to-video — local project tools
     [--style cinematic|minimal] [--motion elegant|energetic]
   preview <project-directory> [--port 3000]
   render <project-directory> <composition-id> --output <new-file.mp4>
+  doctor
   --help | --version
 
 Templates: title-card (TitleCard, 6 seconds), explainer (ThreePointExplainer, 8 seconds).
 Copy is labeled SAMPLE COPY. Create never overwrites an existing directory or installs packages.
-Selected project source is trusted code. Studio Save edits a disposable generated entry.
+Selected project source is trusted code. Studio content-prop edits persist to studio-props.json.
+Do not edit the manifest/sidecar concurrently with preview. Metadata edits remain session-only.
 `;

@@ -7,6 +7,7 @@ import {containedFile, loadProject} from '../packages/projects/src/load.ts';
 import {createProjectRegistry} from '../packages/projects/src/registry.ts';
 import {projectEntry} from './project-entry.ts';
 import {projectTooling} from './project-tooling.ts';
+import {startProjectPersistence} from './project-persistence.ts';
 
 export type ProjectMode = 'studio' | 'compositions' | 'render';
 export type ProjectCommand = {
@@ -55,6 +56,7 @@ export async function prepareProjectCommand(command: ProjectCommand) {
   let config: string | undefined;
   let project: Awaited<ReturnType<typeof loadProject>> | undefined;
   let themeModule: string | undefined;
+  let registry = createProjectRegistry();
   if (selected) {
     const projectRoot = path.resolve(selected);
     try {await access(path.join(projectRoot,'compositions/themes.ts')); themeModule = await containedFile(projectRoot,'compositions/themes.ts');}
@@ -63,7 +65,8 @@ export async function prepareProjectCommand(command: ProjectCommand) {
     const register = themeModule ? (await import(pathToFileURL(themeModule).href)).registerThemes : undefined;
     if (themeModule && typeof register !== 'function') throw new Error('compositions/themes.ts must export registerThemes(registry)');
     const version = JSON.parse(await readFile(path.join(root,'package.json'),'utf8')).version as string;
-    project = await loadProject(projectRoot, createProjectRegistry(register), version);
+    registry = createProjectRegistry(register);
+    project = await loadProject(projectRoot, registry, version);
     const existing = await readFile(path.join(root,'apps/studio/src/Root.tsx'),'utf8');
     const ids = new Set([...existing.matchAll(/id="([A-Za-z0-9-]+)"/g)].map(m => m[1]));
     ids.add('CodeToVideoIntro');
@@ -81,8 +84,11 @@ export async function prepareProjectCommand(command: ProjectCommand) {
   let cache:string|undefined;
   if (project) {
     // All preflight checks precede session staging and output creation.
-    await mkdir(path.join(root,'.cache/projects'), {recursive:true});
-    cache = await mkdtemp(path.join(root,'.cache/projects/session-'));
+    // Studio resolves editable source against its cwd (apps/studio). Keep its
+    // disposable registration inside that root; do not bypass server containment.
+    const sessionRoot = mode === 'studio' ? path.join(root,'apps/studio') : root;
+    await mkdir(path.join(sessionRoot,'.cache/projects'), {recursive:true});
+    cache = await mkdtemp(path.join(sessionRoot,'.cache/projects/session-'));
     publicDir = path.join(cache,'public');
     await cp(path.join(root,'apps/studio/public'), publicDir, {recursive:true,errorOnExist:true,force:false});
     const paths = new Set<string>();
@@ -108,16 +114,31 @@ export async function prepareProjectCommand(command: ProjectCommand) {
   // instead of silently acquiring another one during the render command.
   const browser = process.env.REMOTION_BROWSER_EXECUTABLE;
   return {executable: tooling.remotionExecutable, args:[mode,entry,...extra,...(config ? ['--config',config] : []),
-    ...(browser ? [`--browser-executable=${path.resolve(browser)}`] : [])], cwd:path.join(root,'apps/studio')};
+    ...(browser ? [`--browser-executable=${path.resolve(browser)}`] : [])], cwd:path.join(root,'apps/studio'),
+    persistence:mode === 'studio' && project ? {project, entry, registry} : undefined};
 }
 export async function runProjectCommand(command: ProjectCommand): Promise<number> {
   const launch = await prepareProjectCommand(command);
+  let persistenceFailed = false;
+  let child: ReturnType<typeof spawn> | undefined;
+  const persistence = launch.persistence ? await startProjectPersistence(
+    launch.persistence.project, launch.persistence.entry, command.frameworkRoot, launch.persistence.registry,
+    error => {persistenceFailed = true;console.error(`Project persistence failed: ${error.message}. Unsaved entry retained under .code-to-video/.`);child?.kill('SIGTERM');},
+  ) : undefined;
   return new Promise((resolve, reject) => {
-    const child = spawn(launch.executable, launch.args, {cwd:launch.cwd,stdio:'inherit',env:process.env});
-    const interrupt = () => child.kill('SIGINT'); const terminate = () => child.kill('SIGTERM');
+    let finished = false;
+    child = spawn(launch.executable, launch.args, {cwd:launch.cwd,stdio:'inherit',env:process.env});
+    const interrupt = () => child?.kill('SIGINT'); const terminate = () => child?.kill('SIGTERM');
     process.on('SIGINT',interrupt); process.on('SIGTERM',terminate);
     const cleanup = () => {process.off('SIGINT',interrupt);process.off('SIGTERM',terminate);};
-    child.once('error', error => {cleanup();reject(error);});
-    child.once('exit', (code, signal) => {cleanup();resolve(code ?? (signal ? 1 : 0));});
+    const finish = async (code: number, error?: Error) => {
+      if (finished) return;
+      finished = true;
+      cleanup();
+      try {await persistence?.close();if (error) reject(error);else resolve(persistenceFailed ? 1 : code);}
+      catch (failure) {reject(failure);}
+    };
+    child.once('error', error => {void finish(1, error);});
+    child.once('exit', (code, signal) => {void finish(code ?? (signal ? 1 : 0));});
   });
 }

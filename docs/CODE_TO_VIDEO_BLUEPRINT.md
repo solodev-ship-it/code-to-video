@@ -1,5 +1,16 @@
 # Code to Video — Technical Blueprint
 
+**Latest authorized source follow-up (unpublished):** persistent project content
+props, Node/npm diagnostics and experimental maintained-Node source checks are
+implemented/tested locally. [Exact scope/evidence](PERSISTENT_PROJECT_EDITING.md).
+No general editor, broader declared runtime support, hosted OS certification,
+AI/audio integration or new registry release is implied.
+
+**November 15 follow-up:** an owner-authorized [Studio Save containment fix](STUDIO_SAVE_FIX.md)
+is implemented/tested in source and a local installed candidate, not published.
+Published0.1.0 can reject selected-project Save as outside-root. Session-only
+Save does not persist project manifests; manual fixed-candidate review is pending.
+
 ## Current release checkpoint — November 14, 2026
 
 **@krungtech/code-to-video@0.1.0 public preview is released**, not stable v1. Registry version/latest and exact approved archive integrity were independently verified; actual registry-installed create/typecheck/Studio HTTP/render/full decode and exact settled-frame comparison passed. Existing v0.1.0 tag CI passed and the existing GitHub draft is now a public pre-release. Source workspace remains private/unscoped; immutable package/tag contents are unchanged. See [release evidence and links](RELEASE_V1.md) and [current installation commands](ONBOARDING.md). Licensing warnings and unverified installed-Studio manual play/scrub/Save remain disclosed; AI/new feature work is not included or authorized.

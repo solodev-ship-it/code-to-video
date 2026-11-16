@@ -1,5 +1,17 @@
 # Independent video projects — schema version 1
 
+**Newer November15 source/local candidate (unpublished):** Node `loadProject`
+applies validated project-owned `studio-props.json` overrides bound to the source
+manifest hash; selected preview persists content props there. The version1
+manifest contract is unchanged; authored manifest/scene files are not rewritten.
+See [persistence/runtime limits and evidence](PERSISTENT_PROJECT_EDITING.md).
+Earlier session-only descriptions below retain their historical scope.
+
+**November 15 source fix (unpublished):** selected-project Studio entries now
+stage in `apps/studio/.cache/projects`, inside Studio's root. Discovery/render
+staging is unchanged. Published0.1.0 retains the outside-root Save bug; see
+[Save fix](STUDIO_SAVE_FIX.md). This does not add manifest persistence.
+
 The later [CLI_TEMPLATES](CLI_TEMPLATES.md) milestone adds an optional compiled local binary and two scaffolds on top of this unchanged manifest contract. Shared host orchestration now lives in `scripts/project-host.ts`; `project-runner.ts` preserves the npm entry. Historical infrastructure-only boundaries below describe its original delivery.
 
 The local framework now loads a selected project outside the engine repository, adds its compositions to Studio, and renders a manifest composition to MP4. This private source integration does not require a management sibling, a published package, AI services or a new CLI binary. Production media and project source remain outside engine Git. Existing fifteen showcases are unchanged.

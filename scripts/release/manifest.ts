@@ -17,7 +17,7 @@ export function candidateManifest(root:Metadata,studio:Metadata,ui:Metadata,them
   for(const name of ['@remotion/cli','typescript','@types/node','@types/react','@types/react-dom']){
     const version=studio.devDependencies?.[name];assert(version,`Missing existing tooling dependency ${name}`);add(name,version);
   }
-  for(const name of ['@remotion/bundler','@remotion/renderer']){const version=root.devDependencies?.[name];assert(version);add(name,version);}
+   for(const name of ['@remotion/bundler','@remotion/renderer','@remotion/codemods']){const version=root.devDependencies?.[name];assert(version);add(name,version);}
   return {name:root.name,version:root.version,private:true,type:'module',description:'Private local-install release-preparation candidate; not a public release',
     license:root.license,author:root.author,engines:root.engines,bin:root.bin,dependencies:Object.fromEntries(Object.entries(dependencies).sort(([a],[b])=>a.localeCompare(b))),
     files:['bin','dist','templates','scripts','packages','apps','docs','README.md','LICENSE','CHANGELOG.md','THIRD_PARTY_NOTICES.md']};

@@ -1,5 +1,16 @@
 # CLI and production templates
 
+**Newer November15 source/local candidate (unpublished):** selected preview
+content-prop edits persist to `studio-props.json` and load on restart/render;
+`doctor` reports supported runtime/setup limits. See
+[persistence/runtime behavior](PERSISTENT_PROJECT_EDITING.md). Session-only
+descriptions below record earlier delivery, not this newer host behavior.
+
+**November 15 source fix (unpublished):** selected-project Studio registrations
+now stage within Studio's root so its default-props Save containment check passes.
+Published0.1.0 still has the outside-root Save bug. Save remains session-only.
+See [executed fix evidence and limits](STUDIO_SAVE_FIX.md).
+
 The optional local `code-to-video` CLI creates an independent schema version 1 project, opens it in Remotion Studio and renders an MP4. Two authored templates are included. The original fifteen showcases and npm Studio/render workflows remain available. This is local working software; registry publishing waits for the release milestone.
 
 Later [release preparation](RELEASE_V1.md) adds a separate private flattened candidate and a passing clean external-consumer install/render check. This does not make the ordinary workspace `npm pack` artifact a certified registry distribution. Use `npm run release:pack` for the private candidate; the source root remains private/unpublished. Host/tool/type resolution now supports hoisted candidate dependencies without fetching first-party workspace packages.

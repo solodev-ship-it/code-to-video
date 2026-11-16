@@ -1,5 +1,10 @@
 # Local authoring without an AI account
 
+**Published-preview limitation:** selected projects can reject Studio Save and do
+not persist edits across restarts. New source/local candidates fix Save and
+persist content props to project-owned `studio-props.json`; these changes are
+**not published**. See [persistence/runtime setup and recovery](PERSISTENT_PROJECT_EDITING.md).
+
 **0.1.0 is a published public preview, not stable v1.** Node **>=24.7.0 <25**, npm **>=11 <12** (tested 24.7.0/11.18.0) are required. Tested rendering platform: macOS/Apple Silicon; other platforms need their own checks. Allow several GiB of free space. Review [third-party terms](../THIRD_PARTY_NOTICES.md) before production use.
 
 ## Install the published 0.1.0 preview
@@ -55,7 +60,7 @@ npm run cli -- render ../my-title TitleCard --output ../my-title/outputs/title-v
 
 Studio is upstream Remotion tooling and may advertise LAN access; use a trusted network/firewall. Selecting project scene/theme code executes trusted code; validation is not a sandbox. Never run unknown code as if the manifest made it safe.
 
-Edit `code-to-video.project.json` for copy/theme/timing and `compositions/TitleCard.tsx` for authored structure. Sample copy is labeled; replace it and review rights/facts before publishing a video. Studio Save updates a disposable cache entry, **not** the source manifest. Explicitly persist intended props in JSON before restarting. No automatic text fitting, narration, audio or captions are supplied.
+Edit `code-to-video.project.json` for source copy/theme/timing and `compositions/TitleCard.tsx` for authored structure. Sample copy is labeled; replace it and review rights/facts before publishing a video. Published0.1.0 Save targets a disposable entry, not persistent project data. In the newer **unpublished source/local candidate**, selected preview content props persist to `studio-props.json`; retain it with the project, wait for the host's “Project props saved” message, and do not edit manifest/sidecar concurrently. Metadata remains session-only; theme/assets belong in the manifest. See [conflict and backup rules](PERSISTENT_PROJECT_EDITING.md). No automatic text fitting, narration, audio or captions are supplied.
 
 ## Maintainer local-archive consumer path
 

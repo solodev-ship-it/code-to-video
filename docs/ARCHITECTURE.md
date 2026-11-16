@@ -1,5 +1,18 @@
 # Architecture
 
+**Latest source follow-up (unpublished):** Node-only project loading applies
+manifest-bound `studio-props.json` data; selected preview watches/parses its
+generated entry and persists validated content props with backups/conflict checks.
+`scripts/project-persistence.ts` owns host writes; no browser code imports it.
+The binary preflights runtime versions; `doctor` and an experimental OS/Node
+matrix add diagnostics, not expanded support. [Scope/evidence](PERSISTENT_PROJECT_EDITING.md).
+
+**November 15 source-only correction:** selected-project Studio sessions stage
+under `apps/studio/.cache/projects` so their editable registration stays within
+the existing Remotion root. Discovery/render staging and containment checks are
+unchanged. This [tested fix](STUDIO_SAVE_FIX.md) is not published and does not
+implement manifest persistence.
+
 ## Current release boundary — November 14, 2026
 
 **@krungtech/code-to-video@0.1.0 public preview is released** as a separately staged scoped package; the source workspace remains private/unscoped. Actual registry integrity/latest/install/create/typecheck/Studio HTTP/render/full decode and exact-frame verification passed. The existing v0.1.0 tag/CI and GitHub pre-release preserve the approved archive. No runtime, API, dependencies, tag or baseline changed during final verification/publication. See [release evidence](RELEASE_V1.md). This is not stable v1, third-party legal clearance, a manual installed-Studio walkthrough or AI feature delivery.

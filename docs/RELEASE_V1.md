@@ -1,6 +1,15 @@
-# Release status — 0.1.0 public preview
+# Release status — 0.1.1 public preview
 
-**November16 preview checkpoint:** scoped **0.1.1** is prepared, **not published**.
+**November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
+The downloaded archive matches approved SHA-256
+`48f37c9e77633cbf7c0a1ff05617f53512da6bd8bf6dbbe9e3936b827d911123`.
+Fresh Node24.7/npm11.18 verification on macOS arm64 passes installed create/typecheck,
+HTTP Save, graceful flush, actual restart, source preservation, H.264 1280×720/30 FPS/60-frame
+render and full decode. Evidence: `renders/registry-checks/patch-011-WU9wMW/registry-verification.json`.
+Dependencies were installed offline from cache around the actual registry-downloaded archive;
+no source fallback or new browser download. npm emitted an esbuild install-script review warning.
+Immutable0.1.0 integrity is unchanged; no new tag/GitHub release was created.
+Manual installed-browser review remains separate and pending. Historical preparation follows.
 Owner confirmed title/label persistence after refresh. All nine source/build probes
 pass at ba9435b. The same0.1.1 archive passes installed create/typecheck, HTTP Save,
 graceful stop/restart, saved-input720p30 render and full decode on Linux x64,
@@ -9,7 +18,7 @@ Node24/npm11 remains the supported setup. See [tester instructions](PREVIEW_TEST
 
 ## Published and independently verified — November 14, 2026
 
-- [npm `@krungtech/code-to-video@0.1.0`](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) is available; registry `latest` is **0.1.0**. No second publication was attempted.
+- [npm `@krungtech/code-to-video@0.1.0`](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) remains available; it was registry `latest` at this November14 checkpoint.
 - The existing [GitHub v0.1.0 pre-release](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0) was promoted from draft, preserving its release identity, archive and checksum assets. The annotated tag still points to **c7cb0715fe7a19ed9d3f5763c0bbf502e6ab58e3**; [tag CI43612975576 passed](https://github.com/solodev-ship-it/code-to-video/actions/runs/43612975576).
 - Actual registry archive SHA-256: **`46da782d28ac5fef420961784e9244f1ca600c8573991d8ff674c61da14e1903`**, exactly the approved archive. npm integrity: `sha512-kuSmzqKBI32kakT6RmnSwFL9E06nVGl9Rm6iJ5DuxNSwkOy59CopKVZVckxSeel4BM+F2ONVBF457DrbIKM/GQ==`. Archive: **165 files / 572542 compressed / 1116870 unpacked bytes**, excluding dependencies/browser/caches.
 - Inspected one-off verifier `node --experimental-strip-types renders/maintenance/verify-registry-release.mjs` exited **0** under isolated Node24.7/npm11.18. Evidence retained locally at `renders/registry-checks/registry-HOjwaR/report.json` with logs, project source, video and settled frame.

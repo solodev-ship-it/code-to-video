@@ -1,6 +1,8 @@
 # CLI and production templates
 
-**November16 preview checkpoint:** scoped **0.1.1** is prepared, **not published**.
+**November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
+Exact downloaded archive, installed Save/restart/render and full decode pass.
+See [release evidence](RELEASE_V1.md). Earlier unpublished-source notes below are historical.
 Owner confirmed title/label persistence after refresh. All nine source/build probes
 pass at ba9435b. The same0.1.1 archive passes installed create/typecheck, HTTP Save,
 graceful stop/restart, saved-input720p30 render and full decode on Linux x64,
@@ -47,7 +49,7 @@ node /absolute/path/to/code-to-video/bin/code-to-video.mjs preview .
 node /absolute/path/to/code-to-video/bin/code-to-video.mjs render . TitleCard --output outputs/title-v1.mp4
 ```
 
-`code-to-video` is the registered package binary name. **The package is still private and unpublished.** Do not use a registry `npx code-to-video` command as if this implementation had been released. The intended public spelling is `npx code-to-video create ...` after the package has passed its release/install gate; only local execution is claimed here.
+`code-to-video` is the registered package binary name. Install `@krungtech/code-to-video@0.1.1` locally, then use `npx code-to-video create ...`; see [onboarding](ONBOARDING.md). The source workspace remains private.
 
 ## Templates
 

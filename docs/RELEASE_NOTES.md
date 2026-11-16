@@ -1,5 +1,10 @@
 # 0.1.0 public-preview release notes
 
+**November16 update:** `0.1.1` is now published and registry `latest`, with persistent
+content edits and installed Save fixes. Download integrity and actual installed
+Save/restart/render/decode pass; see [current release evidence](RELEASE_V1.md).
+The0.1.0 notes and limits below are historical; its package/tag remain unchanged.
+
 Released November 14, 2026: [**`@krungtech/code-to-video@0.1.0`**](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0), Git tag **`v0.1.0`**, [GitHub **pre-release**](https://github.com/solodev-ship-it/code-to-video/releases/tag/v0.1.0). Registry `latest` is0.1.0. The source workspace remains private at0.1.0; a separately allowlisted scoped artifact is the distribution. This preview is not stable v1. AI automation is not included.
 
 ## Implemented and reviewable

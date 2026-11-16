@@ -1,6 +1,8 @@
 # Architecture
 
-**November16 preview checkpoint:** scoped **0.1.1** is prepared, **not published**.
+**November16 publication checkpoint:** scoped **0.1.1** is published and registry `latest`.
+Exact downloaded archive, installed Save/restart/render and full decode pass.
+See [release evidence](RELEASE_V1.md). Earlier unpublished-source notes below are historical.
 Owner confirmed title/label persistence after refresh. All nine source/build probes
 pass at ba9435b. The same0.1.1 archive passes installed create/typecheck, HTTP Save,
 graceful stop/restart, saved-input720p30 render and full decode on Linux x64,

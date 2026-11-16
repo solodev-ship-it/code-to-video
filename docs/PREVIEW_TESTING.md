@@ -1,6 +1,6 @@
-# Try the preview before publication
+# Try the preview from source or a local archive
 
-`0.1.1` is prepared but not published yet. For normal installation after release,
+`0.1.1` is published and registry-verified. For normal installation,
 use the [short guide](ONBOARDING.md).
 
 ## From source

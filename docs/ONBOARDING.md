@@ -1,6 +1,6 @@
 # Your first video
 
-**Status:** `0.1.1` is prepared but not published. The registry commands below work after publication. To try it now, use the [source or local archive](PREVIEW_TESTING.md).
+**Status:** `0.1.1` is published. Its downloaded npm archive passes installed Save/restart/render checks. For source testing, see [preview testing](PREVIEW_TESTING.md).
 
 ## 1. Set up once
 

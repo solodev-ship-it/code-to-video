@@ -1,5 +1,11 @@
 # Local authoring without an AI account
 
+**November16 preparation:** the next scoped preview artifact is **0.1.1**, staged with
+`npm run release:pack:preview -- --preview-version 0.1.1`. It is not published.
+The existing0.1.0 package/tag is unchanged. Owner confirmed title/label persistence
+after refresh; all nine hosted source/build probes pass at ba9435b. Installed
+platform rendering qualification is in progress; see [preview testing](PREVIEW_TESTING.md).
+
 **Published-preview limitation:** selected projects can reject Studio Save and do
 not persist edits across restarts. New source/local candidates fix Save and
 persist content props to project-owned `studio-props.json`; these changes are

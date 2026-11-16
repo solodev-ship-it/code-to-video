@@ -6,8 +6,9 @@ import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {candidateManifest,previewManifest,assertArchivePaths} from './manifest.ts';
 const args=process.argv.slice(2);
-assert(args.length===0 || (args.length===1 && args[0]==='--public-preview'),'Usage: package.ts [--public-preview]');
+assert(args.length===0 || (args[0]==='--public-preview' && (args.length===1 || (args.length===3 && args[1]==='--preview-version' && args[2]==='0.1.1'))),'Usage: package.ts [--public-preview [--preview-version 0.1.1]]');
 const publicPreview=args[0]==='--public-preview';
+const previewVersion = args[2] === '0.1.1' ? '0.1.1' : '0.1.0';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const parent=path.join(root,'renders/release-checks');await mkdir(parent,{recursive:true});
 const directory=await mkdtemp(path.join(parent,'candidate-'));const stage=path.join(directory,'package');await mkdir(stage);
@@ -16,7 +17,8 @@ const hash=async(file:string)=>createHash('sha256').update(await readFile(file))
 const report:Record<string,unknown>={schemaVersion:1,status:'failed',releaseReady:false,private:!publicPreview,distribution:publicPreview?'public-preview':'private-candidate',firstPartyLicense:'MIT',thirdPartyReview:'PENDING',humanReview:'PENDING'};
 try {
   const source=await readJson('package.json');
-  const manifest=(publicPreview?previewManifest:candidateManifest)(source,await readJson('apps/studio/package.json'),await readJson('packages/ui/package.json'),await readJson('packages/themes/package.json'));
+  const metadata = [source,await readJson('apps/studio/package.json'),await readJson('packages/ui/package.json'),await readJson('packages/themes/package.json')] as const;
+  const manifest=publicPreview ? previewManifest(...metadata, previewVersion) : candidateManifest(...metadata);
   const entries=[...source.files,'README.md','LICENSE','CHANGELOG.md','THIRD_PARTY_NOTICES.md','docs/','packages/ui/README.md','packages/themes/README.md'];
   const files:Record<string,string>={};
   async function copy(relative:string):Promise<void> {
@@ -35,7 +37,8 @@ try {
   }
   for(const entry of entries)await copy(entry.replace(/\/$/,''));
   await writeFile(path.join(stage,'package.json'),JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});
-  const packed=spawnSync('npm',['pack','--json','--ignore-scripts','--pack-destination',directory],{cwd:stage,encoding:'utf8',timeout:120000});
+  assert(process.env.npm_execpath, 'Run packaging through npm run so npm CLI is known');
+  const packed=spawnSync(process.execPath,[process.env.npm_execpath,'pack','--json','--ignore-scripts','--pack-destination',directory],{cwd:stage,encoding:'utf8',timeout:120000});
   await writeFile(path.join(directory,'npm-pack.log'),packed.stdout+'\n'+packed.stderr,{flag:'wx'});
   assert.ifError(packed.error);assert.equal(packed.status,0,packed.stderr);
   const archive=JSON.parse(packed.stdout)[0];assertArchivePaths(archive.files.map((f:{path:string})=>f.path));

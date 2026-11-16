@@ -1,5 +1,11 @@
 # Persistent project props and runtime readiness
 
+**November16 preparation:** the next scoped preview artifact is **0.1.1**, staged with
+`npm run release:pack:preview -- --preview-version 0.1.1`. It is not published.
+The existing0.1.0 package/tag is unchanged. Owner confirmed title/label persistence
+after refresh; all nine hosted source/build probes pass at ba9435b. Installed
+platform rendering qualification is in progress; see [preview testing](PREVIEW_TESTING.md).
+
 ## November 15, 2026 — source and local candidate, not published
 
 The current source adds durable **content-prop** editing for selected projects.

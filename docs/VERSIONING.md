@@ -1,5 +1,11 @@
 # Version and manifest compatibility — preparation policy
 
+**November16 preparation:** the next scoped preview artifact is **0.1.1**, staged with
+`npm run release:pack:preview -- --preview-version 0.1.1`. It is not published.
+The existing0.1.0 package/tag is unchanged. Owner confirmed title/label persistence
+after refresh; all nine hosted source/build probes pass at ba9435b. Installed
+platform rendering qualification is in progress; see [preview testing](PREVIEW_TESTING.md).
+
 November 14 decision: the first public target is **@krungtech/code-to-video@0.1.0 preview**, preserving the existing 0.1.x compatibility cohort, not a 1.0 metadata bump. Source root stays private/unscoped; a separate `release:pack:preview` staging mode provides the scoped public artifact and refuses an unselected preview version. Earlier “not selected” statements below describe the initial preparation checkpoint. The npm distribution name is separate from the manifest's logical `framework.name: "code-to-video"` contract, which remains unchanged. Existing schema-1 0.1.x projects continue under the same validator; no migration or stable-1.0 promise is introduced.
 
 - Current framework/package/workspaces remain **0.1.0** and private. A public v1 version/tag/name has not been selected or authorized.

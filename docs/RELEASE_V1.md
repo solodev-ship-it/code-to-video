@@ -1,5 +1,11 @@
 # Release status — 0.1.0 public preview
 
+**November16 preparation:** the next scoped preview artifact is **0.1.1**, staged with
+`npm run release:pack:preview -- --preview-version 0.1.1`. It is not published.
+The existing0.1.0 package/tag is unchanged. Owner confirmed title/label persistence
+after refresh; all nine hosted source/build probes pass at ba9435b. Installed
+platform rendering qualification is in progress; see [preview testing](PREVIEW_TESTING.md).
+
 ## Published and independently verified — November 14, 2026
 
 - [npm `@krungtech/code-to-video@0.1.0`](https://www.npmjs.com/package/@krungtech/code-to-video/v/0.1.0) is available; registry `latest` is **0.1.0**. No second publication was attempted.

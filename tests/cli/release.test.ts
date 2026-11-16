@@ -50,3 +50,11 @@ test('public preview refuses unselected version and cannot bypass private-source
   assert.throws(()=>previewManifest({...root,license:undefined},studio,ui,themes),/human-selected/);
   assert.throws(()=>previewManifest(root,{...studio,dependencies:{...studio.dependencies,react:'^19.3.1'}},ui,themes),/exact pins/);
 });
+
+test('next preview stages0.1.1 without mutating0.1.0 source or legacy artifact metadata', async () => {
+  const root=await json('package.json');const studio=await json('apps/studio/package.json');const ui=await json('packages/ui/package.json');const themes=await json('packages/themes/package.json');
+  const next=previewManifest(root,studio,ui,themes,'0.1.1');
+  assert.equal(next.version,'0.1.1');assert.equal(next.private,false);
+  assert.deepEqual(next.dependencies,previewManifest(root,studio,ui,themes).dependencies);
+  assert.equal(previewManifest(root,studio,ui,themes).version,'0.1.0');assert.equal(root.version,'0.1.0');assert.equal(root.private,true);
+});

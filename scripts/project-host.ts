@@ -127,7 +127,7 @@ export async function runProjectCommand(command: ProjectCommand): Promise<number
   ) : undefined;
   return new Promise((resolve, reject) => {
     let finished = false;
-    child = spawn(launch.executable, launch.args, {cwd:launch.cwd,stdio:'inherit',env:process.env});
+    child = spawn(process.execPath, [launch.executable, ...launch.args], {cwd:launch.cwd,stdio:'inherit',env:process.env});
     const interrupt = () => child?.kill('SIGINT'); const terminate = () => child?.kill('SIGTERM');
     process.on('SIGINT',interrupt); process.on('SIGTERM',terminate);
     const cleanup = () => {process.off('SIGINT',interrupt);process.off('SIGTERM',terminate);};

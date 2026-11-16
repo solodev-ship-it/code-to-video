@@ -20,7 +20,7 @@ assert(packageName==='code-to-video' || packageName==='@krungtech/code-to-video'
 const publicPreview=packageName==='@krungtech/code-to-video';
 assert.equal(candidate.private,!publicPreview);
 assert.equal(candidate.manifest.private,!publicPreview);
-if(publicPreview){assert.equal(candidate.manifest.version,'0.1.0');assert.equal(candidate.manifest.publishConfig?.access,'public');}
+if(publicPreview){assert.ok(['0.1.0','0.1.1'].includes(candidate.manifest.version));assert.equal(candidate.manifest.publishConfig?.access,'public');}
 const hash=async(file:string)=>createHash('sha256').update(await readFile(file)).digest('hex');
 assert.equal(await hash(candidate.archive),candidate.sha256,'Archive changed after preparation');
 const directory=await mkdtemp(path.join(path.dirname(path.resolve(args[0]!)),'consumer-check-'));
@@ -88,7 +88,7 @@ try {
   const project=path.join(consumer,'sample');run(bin,['create',project,'--template','title-card','--id','InstalledSample'],'installed-create');
   const manifest=JSON.parse(await readFile(path.join(project,'code-to-video.project.json'),'utf8'));
   assert.equal(manifest.framework.name,'code-to-video','Scoped npm name must not change the logical project contract');
-  assert.equal(manifest.framework.version,'0.1.0');
+  assert.equal(manifest.framework.version,candidate.manifest.version);
   report.projectFootprint=await footprint(project);
   await cp(project,path.join(directory,'sample-source'),{recursive:true,errorOnExist:true,force:false});
   run(path.join(consumer,'node_modules/.bin/tsc'),['-p',path.join(project,'tsconfig.json')],'installed-project-typecheck');

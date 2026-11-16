@@ -25,14 +25,15 @@ export function candidateManifest(root:Metadata,studio:Metadata,ui:Metadata,them
 
 // Explicit owner-selected preview artifact; the source workspace stays private.
 // Preparing public metadata never grants legal clearance or publishes anything.
-export function previewManifest(root:Metadata,studio:Metadata,ui:Metadata,themes:Metadata) {
+export function previewManifest(root:Metadata,studio:Metadata,ui:Metadata,themes:Metadata, version: '0.1.0' | '0.1.1' = '0.1.0') {
   const candidate=candidateManifest(root,studio,ui,themes);
   assert.equal(candidate.version,'0.1.0','Only the selected 0.1.0 public preview is authorized');
-  return {...candidate,name:'@krungtech/code-to-video',private:false,
+  assert(['0.1.0','0.1.1'].includes(version),'Unselected preview version');
+  return {...candidate,version,name:'@krungtech/code-to-video',private:false,
     // A newer helper release requests unavailable @babel/traverse ^7.29.14.
     // Reuse the existing tested source-lock version; no workspace dependency bump.
     dependencies:Object.fromEntries(Object.entries({...candidate.dependencies,'@babel/helper-module-transforms':'7.29.13'}).sort(([a],[b])=>a.localeCompare(b))),
-    description:'Local React/Remotion video authoring CLI and templates — 0.1.0 public preview',
+    description:`Local React/Remotion video authoring CLI and templates — ${version} public preview`,
     repository:{type:'git',url:'git+https://github.com/solodev-ship-it/code-to-video.git'},
     homepage:'https://github.com/solodev-ship-it/code-to-video#readme',
     bugs:{url:'https://github.com/solodev-ship-it/code-to-video/issues'},
